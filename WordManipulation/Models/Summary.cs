@@ -23,8 +23,8 @@ namespace WordManipulation.Models
             ITranslator translator = new Translator();
             DayCalculator calc = new DayCalculator();
             TextGenerator textGenerator = new TextGenerator();
-            Agent agent = new Agent();            
-            string fileName = @"C:\Users\kwsmi\Desktop\εξώδικο";
+            Agent agent = new Agent();
+            string fileName = @"C:\ektheseis\kanonikes\" + Directory.GetFiles(@"C:\ektheseis\kanonikes\", " * ", SearchOption.TopDirectoryOnly).Length + "-" +DateTime.Today.ToString("dd.MM.yyyy"); 
             var doc = DocX.Create(fileName);
 
 
