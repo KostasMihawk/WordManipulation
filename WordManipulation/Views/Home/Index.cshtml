@@ -1,0 +1,286 @@
+﻿@using WordManipulation.Models
+@model WordManipulation.ViewModels.CreateVM
+@{
+    ViewBag.Title = "Home Page";
+    var Generator = new DropDownGenerator();
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <h2> ΦΟΡΜΑ ΕΚΘΕΣΗΣ</h2>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Place, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Place, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Place, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Baillif, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Baillif", new SelectList(Generator.GetBaillifs(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Attorney, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Attorney", new SelectList(Generator.GetAttorneysList(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SelectTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.SelectTime, htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Zone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Zone", new SelectList(Generator.GetZones(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Attacker, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Attacker", new SelectList(Generator.GetAttackers(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Defender, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Defender", new SelectList(Generator.GetDefenders(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Praxh, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(model => model.Praxh)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DocumentEnum, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.DocumentEnum, "Διαλέξτε είδος εγγράφου", htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            </div>
+        </div>
+        <div id="docDetails">
+            <div class="form-group" id="docNum">
+                @Html.LabelFor(model => model.DocumentNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DocumentNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DocumentNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="genNum">
+                @Html.LabelFor(model => model.GenikosArithmos, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.GenikosArithmos, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.GenikosArithmos, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="eidNum">
+                @Html.LabelFor(model => model.EidikosArithmos, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EidikosArithmos, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EidikosArithmos, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="curt">
+                @Html.LabelFor(model => model.Court, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Court, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Court, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="dik">
+                @Html.LabelFor(model => model.Dikasimos, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Dikasimos, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Dikasimos, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="pin">
+                @Html.LabelFor(model => model.Pinakio, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Pinakio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pinakio, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="exoDate">
+                @Html.LabelFor(model => model.HmeromhniaExodikou, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HmeromhniaExodikou, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.HmeromhniaExodikou, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="hmeromhnia">
+                @Html.LabelFor(model => model.Hmeromhnia, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Hmeromhnia, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Hmeromhnia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="room">
+                @Html.LabelFor(model => model.Room, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Room, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Room, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="ktirio">
+                @Html.LabelFor(model => model.Tmhma, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Tmhma, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Tmhma, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="sumv">
+                @Html.LabelFor(model => model.Sumbolaiografos, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Sumbolaiografos, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Sumbolaiografos, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" id="ofeil">
+                @Html.LabelFor(model => model.Ofeileths, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Ofeileths, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Ofeileths, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#docDetails").hide();
+
+            function InitialHide() {
+                $("#docNum").hide();
+                $("#genNum").hide();
+                $("#eidNum").hide();
+                $("#curt").hide();
+                $("#dik").hide();
+                $("#pin").hide();
+                $("#exoDate").hide();
+                $("#room").hide();
+                $("#tmhma").hide();
+                $("#hmeromhnia").hide();
+                $("#sumv").hide();
+                $("#ofeil").hide();
+                $("#ktirio").hide();
+            }
+
+            $("#DocumentEnum").change(function () {
+                $("#DocumentEnum option").filter(function () {
+                    return $(this).text() === "Διαλέξτε είδος εγγράφου";
+                }).prop("disabled", true);
+                $("#docDetails").show();
+                var selected = $("#DocumentEnum option:selected").val();
+                console.log(selected);
+                if (selected == 1) {
+                    InitialHide()
+                    $("#docNum").show();
+                    $("#curt").show();
+                }
+                else if (selected == 2) {
+                    InitialHide()
+                    $("#docNum").show();
+                    $("#curt").show();
+                }
+                else if (selected == 3) {
+                    InitialHide()
+                    $("#exoDate").show();
+                    $("#curt").show();
+                }
+                else if (selected == 4) {
+                    InitialHide()
+                    $("#docNum").show();
+                    $("#pin").show();
+                    $("#hmeromhnia").show();
+                    $("#dik").show();
+                    $("#curt").show();
+                }
+                else if (selected == 5) {
+                    InitialHide()
+                    $("#genNum").show();
+                    $("#eidNum").show();
+                    $("#pin").show();
+                    $("#hmeromhnia").show();
+                    $("#dik").show();
+                    $("#curt").show();
+                    $("#room").show();
+                    $("#tmhma").show();
+                }
+                else if (selected == 6) {
+                    InitialHide()
+                    $("#genNum").show();
+                    $("#eidNum").show();
+                    $("#pin").show();
+                    $("#hmeromhnia").show();
+                    $("#dik").show();
+                    $("#curt").show();
+                    $("#room").show();
+                    $("#tmhma").show();
+                    $("#docNum").show();
+                }
+                else if (selected == 7) {
+                    InitialHide()
+                    $("#genNum").show();
+                    $("#pin").show();
+                    $("#hmeromhnia").show();
+                    $("#dik").show();
+                    $("#curt").show();
+                    $("#room").show();
+                    $("#tmhma").show();
+                    $("#docNum").show();
+                }
+                else if (selected == 8) {
+                    InitialHide()
+                    $("#genNum").show();
+                    $("#eidNum").show();
+                    $("#pin").show();
+                    $("#hmeromhnia").show();
+                    $("#dik").show();
+                    $("#curt").show();
+                    $("#room").show();
+                    $("#tmhma").show();
+                    $("#docNum").show();
+                }
+                else if (selected == 9) {
+                    InitialHide()
+                    $("#genNum").show();
+                    $("#eidNum").show();
+                    $("#pin").show();
+                    $("#hmeromhnia").show();
+                    $("#dik").show();
+                    $("#curt").show();
+                    $("#room").show();
+                    $("#tmhma").show();
+                    $("#docNum").show();
+                }
+                else if (selected == 11) {
+                    InitialHide()
+                    $("#exoDate").show();                    
+                    $("#sumv").show();
+                    $("#ofeil").show();
+                }
+            });
+        });
+
+    </script>
+}
