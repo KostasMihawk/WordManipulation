@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WordManipulation.BML;
 using WordManipulation.Models;
 using WordManipulation.ViewModels;
+using Microsoft.Office.Interop.Word;
 
 namespace WordManipulation.Controllers
 {
@@ -29,8 +31,9 @@ namespace WordManipulation.Controllers
                 Summary s = new Summary();
                 var form = new Form();
                 form = agent.TranslateFormVm(vm);
-                agent.ManageText(form, vm.DocumentEnum);
-                s.CreateWordDocument(form);
+                agent.ManageText(form, vm.DocumentEnum);                               
+                Process.Start("WINWORD.EXE", s.CreateWordDocument(form));
+                
             }
             return RedirectToAction("Arxiki");
         }

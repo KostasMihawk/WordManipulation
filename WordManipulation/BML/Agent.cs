@@ -83,6 +83,9 @@ namespace WordManipulation.BML
                 case DocumentT.DilwshSunexisisPlirstiasmou:
                     form.DocumentType.EpikiromenoAdigrafo = "ακριβές επικυρωμένο αντίγραφο";
                     break;
+                case DocumentT.Anaggelia:
+                    form.DocumentType.EpikiromenoAdigrafo = "ακριβές επικυρωμένο αντίγραφο";
+                    break;
                 default:
                     break;
 

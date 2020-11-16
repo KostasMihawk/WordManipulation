@@ -55,8 +55,9 @@ namespace WordManipulation.Models
         AitisiAnastolisEparxeia=9,
         [Display(Name = "Αίτηση Αναίρεσης")]
         AitisiAneresis = 10,
-        [Display(Name = "Δήλωση Συνέχισης Πληστειριασμού")]
-        DilwshSunexisisPlirstiasmou
-        
+        [Display(Name = "Δήλωση Συνέχισης Πλειστηριασμού")]
+        DilwshSunexisisPlirstiasmou,
+        [Display(Name =("Αναγγελία"))]
+        Anaggelia
     }
 }
