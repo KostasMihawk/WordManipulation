@@ -23,8 +23,7 @@ namespace WordManipulation.Models
         public string EpilogosApofasis { get; set; }
         public string EpikiromenoAdigrafo { get; set; }
         public string HmeromhniaExodikou { get; set; }
-        public string Dikasimos { get; set; }
-        public string Sumbolaiografos { get; set; }
+        public string Dikasimos { get; set; }        
         public string Ofeileths { get; set; }
         
        

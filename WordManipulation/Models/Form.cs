@@ -21,6 +21,7 @@ namespace WordManipulation.Models
         public DocumentT DocumentT { get; set; }
         public DocumentType DocumentType { get; set; }
         public bool Praxh { get; set; }
+        public Attorney Sumbolaiografos { get; set; }
     }
 
     public enum SelectTime

@@ -36,7 +36,7 @@ namespace WordManipulation.BML
             form.DocumentType.Tmhma = vm.Tmhma;
             form.DocumentType.GenikosArithmosKatathesis = vm.GenikosArithmos;
             form.DocumentType.EidikosArithmosKatathesis = vm.EidikosArithmos;
-            form.DocumentType.Sumbolaiografos = vm.Sumbolaiografos;
+            form.Sumbolaiografos = generator.GetNotaries().SingleOrDefault(n => n.Id == vm.Sumbolaiografos);
             form.DocumentType.Ofeileths = vm.Ofeileths;
             return form;
         }

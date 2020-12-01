@@ -89,8 +89,8 @@ namespace WordManipulation.Models
                     return $"";
                 case DocumentT.DilwshSunexisisPlirstiasmou:
                     return $" {form.DocumentType.EpikiromenoAdigrafo} {form.DocumentType.Noun} {form.DocumentType.DocumentNumber}" +
-                        $" {form.DocumentType.Name} του {form.DocumentType.Sumbolaiografos} κατά του οφειλέτη {form.DocumentType.Ofeileths}" +
-                        $" για να λάβει γνώση και για τις νόμιμες συνέπειες."; ;
+                        $" {form.DocumentType.Name} του {form.Sumbolaiografos.Name} κατά του οφειλέτη {form.DocumentType.Ofeileths}" +
+                        $" για να λάβει γνώση και για τις νόμιμες συνέπειες,"; ;
                 case DocumentT.Anaggelia:
                          return $" την από {form.DocumentType.HmeromhniaExodikou} ΑΝΑΓΓΕΛΙΑ του πρώτου κατά αυτής {form.DocumentType.EpilogosApofasis}";
                 default:

@@ -21,15 +21,14 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Place, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Place, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.Place, new { htmlAttributes = new { @class = "form-control", @id="place" } })
             @Html.ValidationMessageFor(model => model.Place, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group" id="sumv">
         @Html.LabelFor(model => model.Sumbolaiografos, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Sumbolaiografos, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Sumbolaiografos, "", new { @class = "text-danger" })
+            @Html.DropDownList("Sumbolaiografos", new SelectList(Generator.GetNotaries(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
         </div>
     </div>
 
@@ -52,44 +51,35 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.Attacker, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.Praxh, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("Attacker", new SelectList(Generator.GetAttackers(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+            @Html.CheckBoxFor(model => model.Praxh)
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.Defender, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("Defender", new SelectList(Generator.GetDefenders(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
-        </div>
-    </div>
+    
 
     <div id="docDetails">
         <div class="form-group" id="docNum">
             @Html.LabelFor(model => model.DocumentNumber, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DocumentNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.DocumentNumber, new { htmlAttributes = new { @class = "form-control", @id = "docN"} })
                 @Html.ValidationMessageFor(model => model.DocumentNumber, "", new { @class = "text-danger" })
             </div>
-        </div>
-        <div class="form-group" id="hmeromhnia">
-            @Html.LabelFor(model => model.Hmeromhnia, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Hmeromhnia, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Hmeromhnia, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        </div>        
         <div class="form-group" id="ofeil">
             @Html.LabelFor(model => model.Ofeileths, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Ofeileths, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Ofeileths, new { htmlAttributes = new { @class = "form-control", @id = "ofe"} })
                 @Html.ValidationMessageFor(model => model.Ofeileths, "", new { @class = "text-danger" })
             </div>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Create" class="btn btn-default"  />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="AutoCreate" class="btn btn-default" id="koble" />
         </div>
     </div>
 </div>
@@ -102,7 +92,23 @@
     @section Scripts {
         <script type="text/javascript">
             $(document).ready(function () {
+                
+               
+                $("#koble").click(function () {
+                    $.ajax({
+                        url: "/api/AutoComplete",
+                        data: {docNum: $("#docN").val(), ofeileths: $("#ofe").val(), place: $("#place").val() },                      
+                        dataType: "json",
+                        cache: false,
+                        type: "GET",
+                        success: function (response) {
 
+                        },
+                        error: function (xhr) {
+
+                        }
+                    });
+                });
 
             })
         </script>

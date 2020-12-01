@@ -15,7 +15,7 @@ namespace WordManipulation.Models
             list.Add(new Baillif
             {
                 Id = id++,
-                Name = "Παρασκευή Μιχοπούλου",
+                Name = "Παρασκευή A. Μιχοπούλου",
                 City = "Αθήνα",
                 AFM = "152255360"
             });
@@ -31,6 +31,20 @@ namespace WordManipulation.Models
                 Id = id++,
                 Name = "Κενό",
                 City = "Αθήνα"
+            });
+            return list;
+        }
+
+        public List<Attorney> GetNotaries()
+        {
+            var id = 1;
+            var list = new List<Attorney>();
+            list.Add(new Attorney
+            {
+                Id = id++,
+                Name = "Ανδριανοπούλου Δήμητρας",
+                City = "Αθήνας",
+                Pronoun = "της"
             });
             return list;
         }

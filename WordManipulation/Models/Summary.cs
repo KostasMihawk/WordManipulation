@@ -97,9 +97,9 @@ namespace WordManipulation.Models
             firstParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             firstParagraph.Alignment = Alignment.both;
             firstParagraph.AppendLine();
-            firstParagraph.Append("Στ " + form.Place +", σήμερα " + translator.TranslateDayOfMonth(calc.CalculateDesiredDay(form.SelectTime)) + " (" + calc.CalculateDesiredDayString(form.SelectTime)).FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(") του μηνός " + translator.ConvertMonth(calc.CalculateDesiredMonth(form.SelectTime))).FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" του έτους " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα "+ translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime))+" και ώρα (     )").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append("Στ             , σήμερα                  (   )" );
+            firstParagraph.Append(" του μηνός " + translator.ConvertMonth(calc.CalculateDesiredMonth(form.SelectTime))).FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα "+ translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime))+" και ώρα ........").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(" ,εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Bailif.Name+ " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας "+form.Attorneys.Pronoun+" δικηγόρου "+form.Attorneys.City +" ").FontSize(fontsize).Font(fontFamily);
@@ -114,7 +114,7 @@ namespace WordManipulation.Models
             secondParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             secondParagraph.Alignment = Alignment.both;
             secondParagraph.Append("ήλθα για να επιδώσω προς την ").FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append(form.Defender.Text).FontSize(fontsize).Font(fontFamily);/*.Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);*/
             agent.BoldText(secondParagraph,fontFamily,fontsize, textGenerator.GenerateValidText(form, form.DocumentT));
             
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
@@ -153,13 +153,15 @@ namespace WordManipulation.Models
             return fileName;
         }
 
-        public void CreateSunexisiPlistiriasmou(Form form)
+        public string CreateSunexisiPlistiriasmou(Form form)
         {
+            var r = new Random();
             ITranslator translator = new Translator();
             DayCalculator calc = new DayCalculator();
             TextGenerator textGenerator = new TextGenerator();
             Agent agent = new Agent();
-            string fileName = @"C:\Users\kwsmi\Desktop\εξώδικο";
+            string fileName = @"C:\ektheseis\kanonikes\" + r.Next(1, 100000) + "-" + DateTime.Today.ToString("dd.MM.yyyy") + ".docx";
+            //string fileName = r.Next(1, 100000).ToString() + ".docx";
             var doc = DocX.Create(fileName);
 
 
@@ -167,7 +169,7 @@ namespace WordManipulation.Models
 
             Table t = doc.AddTable(7, 2);
 
-            t.SetColumnWidth(0, 320d);
+            t.SetColumnWidth(0, 350d);
             t.SetColumnWidth(1, 110d);
             t.SetBorder(TableBorderType.InsideH, new Border(BorderStyle.Tcbs_none, BorderSize.one, 0, Color.AntiqueWhite));
             t.Alignment = Alignment.center;
@@ -212,15 +214,16 @@ namespace WordManipulation.Models
             string fontFamily = "Times new roman";
             var headerFormat = new Formatting();
             headerFormat.FontFamily = new Xceed.Document.NET.Font("Times new roman");
-            headerFormat.Size = 12D;
+            headerFormat.Size = 13D;
             headerFormat.Bold = true;
             headerFormat.UnderlineStyle = UnderlineStyle.singleLine;
-            headerFormat.Spacing = 1.2;
+            headerFormat.Spacing = 1.2;            
             Paragraph headParagraph = doc.InsertParagraph("", false, headerFormat);
             headParagraph.AppendLine();
             headParagraph.AppendLine();
             Paragraph headerTextParagraph = doc.InsertParagraph(header, false, headerFormat);
-            headerTextParagraph.Append("                                                                                 ");
+            headerTextParagraph.Alignment = Alignment.both;
+            headerTextParagraph.Append("                                                                            ");
             headerTextParagraph.Append("Αριθμός.............").Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(12D).Spacing(1.2).Font(fontFamily).Alignment = Alignment.right;
 
             #endregion
@@ -233,22 +236,25 @@ namespace WordManipulation.Models
             firstParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             firstParagraph.Alignment = Alignment.both;
             firstParagraph.AppendLine();
-            firstParagraph.Append("Στ " + form.Place + ", σήμερα " + translator.TranslateDayOfMonth(calc.CalculateDesiredDay(form.SelectTime)) + " (" + calc.CalculateDesiredDayString(form.SelectTime)).FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(") του μηνός " + translator.ConvertMonth(calc.CalculateDesiredMonth(form.SelectTime))).FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" του έτους " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα " + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα (     )").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append("Στην " + form.Place + ", σήμερα στις .................").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append("(   ) του μηνός ..................").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(" του έτους " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα ........." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(" ,εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Bailif.Name + " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών ").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(form.DocumentType.Sumbolaiografos).UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(form.Sumbolaiografos.Name + " που εδρεύει στην Αθήνα, οδός Σκουφά 77, με Α.Φ.Μ. 055298233, ως επί του πλειστηριασμού υπαλλήλου, ").UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
 
 
 
             Paragraph secondParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             secondParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             secondParagraph.Alignment = Alignment.both;
-            secondParagraph.Append("ήλθα για να επιδώσω προς την ").FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append("ήλθα για να επιδώσω ").FontSize(fontsize).Font(fontFamily);
+           
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
-
+            secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ ").Bold().FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά του οφειλέτη " + form.DocumentType.Ofeileths + " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε., για να λάβει γνώση για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             thirdParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -282,6 +288,7 @@ namespace WordManipulation.Models
             #endregion
 
             doc.SaveAs(fileName);
+            return fileName;
         }
     }
 }

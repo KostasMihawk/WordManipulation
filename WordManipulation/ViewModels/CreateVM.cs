@@ -49,7 +49,7 @@ namespace WordManipulation.ViewModels
         [Display(Name = "Ειδικός Αριθμός")]
         public string EidikosArithmos { get; set; }
         [Display(Name = "Συμβολαιογράφος")]
-        public string Sumbolaiografos { get; set; }
+        public int Sumbolaiografos { get; set; }
         [Display(Name = "Οφειλέτης")]
         public string Ofeileths { get; set; }
     }

@@ -59,15 +59,9 @@ namespace WordManipulation.Controllers
                 Summary s = new Summary();
                 var form = new Form();
                 form = agent.TranslateFormVm(vm);
-                try
-                {
-                    s.CreateSunexisiPlistiriasmou(form);
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                agent.ManageText(form, vm.DocumentEnum);
+                Process.Start("WINWORD.EXE", s.CreateSunexisiPlistiriasmou(form));
+               
                 
             }
             return RedirectToAction("Arxiki");
