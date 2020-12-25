@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Windows.Controls;
 using WordManipulation.Models;
+using WordManipulation.ViewModels;
 
 namespace WordManipulation.Controllers.API
 {
@@ -15,7 +16,7 @@ namespace WordManipulation.Controllers.API
     {
         private object agent;
 
-        public string Get(int bailif=1, int notary=1, string docNum = "123/20", string ofeileths ="γιαννης", string place ="")
+        public string Get(int bailif=1, int notary=1, string docNum = "123/20", string ofeileths ="γιαννης", string place ="", int gender = 0, int keao = 0, bool praxh = false)
         {
             DropDownGenerator generator = new DropDownGenerator();
             Summary s = new Summary();
@@ -28,12 +29,21 @@ namespace WordManipulation.Controllers.API
             form.DocumentType = new DocumentType();
             form.DocumentType.DocumentNumber = docNum;
             form.DocumentType.Ofeileths = ofeileths;
+            form.Gender = (Gender)gender;
             form.Place = place;
-            List<string> foreis = new List<string> { "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα",
-                "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων ως εκπρόσωπο του Ελληνικού Δημοσίου κατοικοεδρεύοντα στην Αθήνα",
-            "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201",
-            "Προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ                     .",
-            "προς " };
+            form.Praxh = praxh;
+            form.KEAO = (KEAO)keao;
+            //ylopoihsh me dictionary h tupple
+            //se ka8e adikeimeno st lista na fortwnei diaforetiko bool(form.praxh)
+            Dictionary<string, LegalEntity> foreis = new Dictionary<string, LegalEntity> {
+                { "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα", LegalEntity.EllinikoDimosio},
+                { "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.) ως εκπρόσωπο του Ελληνικού Δημοσίου κατοικοεδρεύοντα στην Αθήνα", LegalEntity.EllinikoDimosio },
+                { "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201", LegalEntity.Trapezes },
+                { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ .",LegalEntity.EllinikoDimosio },
+            { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO), LegalEntity.LoipesUpirisies },
+                { "προς "  + s.EpiloghGenousPanw(form.Gender) +  ofeileths, LegalEntity.FusikoProswpo },
+                { " " ,LegalEntity.Empty} };
+
 
 
             //form = agent.TranslateFormVm(vm);
@@ -49,7 +59,8 @@ namespace WordManipulation.Controllers.API
             Process p = new Process();
             foreach (var doc in foreis)
             {
-                form.Defender.Text = doc;
+                form.Defender.Text = doc.Key;
+                form.Defender.legalEntity = doc.Value;
                 fileName = s.CreateSunexisiPlistiriasmou(form);
                 Process.Start("WINWORD.EXE", fileName);
                 info.FileName = fileName;
@@ -68,5 +79,27 @@ namespace WordManipulation.Controllers.API
 
             return "Hello World";
         }
+        public string EpilogiKeaoA(KEAO keao)
+        {
+            if (keao == KEAO.AAthina)
+                return " A ";
+            else if (keao == KEAO.BAthina)
+                return " B ";
+            else
+                return "";
+        }
+
+        public string EpilogiKeaoB(KEAO keao)
+        {
+            if (keao == KEAO.AAthina)
+                return " Αθήνας ";
+            else if (keao == KEAO.BAthina)
+                return " Αθήνας ";
+            else if (keao == KEAO.Peireas)
+                return  " Πειραιά ";
+            else
+                return " Ελευσίνας ";
+        }
+
     }
 }

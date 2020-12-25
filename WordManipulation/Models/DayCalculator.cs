@@ -53,15 +53,15 @@ namespace WordManipulation.Models
         {
             if (selectTime == SelectTime.Today)
             {
-                return DateTime.Today.Year;
+                return DateTime.Today.Year + 1;
             }
             else if (selectTime == SelectTime.Tomorrow)
             {
-                return DateTime.Today.AddDays(1).Year;
+                return DateTime.Today.AddDays(1).Year + 1;
             }
             else
             {
-                return DateTime.Today.AddDays(7).Year;
+                return DateTime.Today.AddDays(7).Year + 1;
             }
         }
 

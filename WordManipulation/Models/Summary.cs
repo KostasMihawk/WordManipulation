@@ -236,10 +236,10 @@ namespace WordManipulation.Models
             firstParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             firstParagraph.Alignment = Alignment.both;
             firstParagraph.AppendLine();
-            firstParagraph.Append("Στην " + form.Place + ", σήμερα στις .................").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append("Στ ...................... " + form.Place + " σήμερα στις ................. ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("(   ) του μηνός ..................").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" του έτους " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα ........." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" ,εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι ένα (" + calc.CalculateDesiredYear(form.SelectTime) + ") ,ημέρα .................." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(",εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Bailif.Name + " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Sumbolaiografos.Name + " που εδρεύει στην Αθήνα, οδός Σκουφά 77, με Α.Φ.Μ. 055298233, ως επί του πλειστηριασμού υπαλλήλου, ").UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
@@ -249,12 +249,25 @@ namespace WordManipulation.Models
             Paragraph secondParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             secondParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             secondParagraph.Alignment = Alignment.both;
-            secondParagraph.Append("ήλθα για να επιδώσω ").FontSize(fontsize).Font(fontFamily);
-           
+
+            if (form.Defender.Text == " ")
+            {
+                secondParagraph.Append("ήλθα για να επιδώσω προς " + EpiloghGenousPanw(form.Gender) + form.DocumentType.Ofeileths).FontSize(fontsize).Font(fontFamily).Alignment = Alignment.left;
+                secondParagraph.AppendLine();
+                secondParagraph.AppendLine();
+                secondParagraph.AppendLine();
+            }
+            else
+            {
+                secondParagraph.Append("ήλθα για να επιδώσω ").FontSize(fontsize).Font(fontFamily);
+            }
+
+
+
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ ").Bold().FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά του οφειλέτη " + form.DocumentType.Ofeileths + " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε., για να λάβει γνώση για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
+            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε., για να λάβει γνώση, για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             thirdParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -262,7 +275,8 @@ namespace WordManipulation.Models
             if (form.Praxh)
             {
 
-                thirdParagraph.Append("Και αφού δεν βρήκα τον νόμιμο εκπρόσωπο της  άνω  τραπεζικής εταιρίας στα γραφεία της στην οδό " + form.Defender.Address + ", ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλό της ……………………..…………….………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω έγγραφο.").FontSize(fontsize).Font(fontFamily);
+                //thirdParagraph.Append("Και αφού δεν βρήκα τον νόμιμο εκπρόσωπο τ..  στα γραφεία τ.. στην οδό .........................................., ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλό της ……………………..…………….………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω έγγραφο.").FontSize(fontsize).Font(fontFamily);
+                thirdParagraph.Append(KeimenoPraxis(form.Defender.legalEntity)).FontSize(fontsize).Font(fontFamily);
 
             }
             else
@@ -276,19 +290,79 @@ namespace WordManipulation.Models
             Paragraph forthParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             forthParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             forthParagraph.Alignment = Alignment.both;
-            forthParagraph.AppendLine("Σε πίστωση των παραπάνω συνέταξα την παρούσα έκθεση επιδόσεως σε δύο όμοια πρωτότυπα η οποία αφού διαβάστηκε και βεβαιώθηκε υπογράφεται όπως ακολουθεί.").FontSize(fontsize).Font(fontFamily);
+            forthParagraph.Append("Σε πίστωση των παραπάνω συνέταξα την παρούσα έκθεση επιδόσεως σε δύο όμοια πρωτότυπα η οποία αφού διαβάστηκε και βεβαιώθηκε υπογράφεται όπως ακολουθεί.").FontSize(fontsize).Font(fontFamily);
             forthParagraph.AppendLine();
             forthParagraph.AppendLine();
             forthParagraph.AppendLine(".. παραλαβ...... ");
             if (!form.Praxh)
                 forthParagraph.Append(" εξουσιοδοτημεν.... Υπαλληλος");
-            forthParagraph.Append("                                ");
+            forthParagraph.Append("                                                                                              ");
             forthParagraph.Append("Η  Δικαστική   Επιμελήτρια").FontSize(fontsize).Font(fontFamily);
 
             #endregion
 
             doc.SaveAs(fileName);
             return fileName;
+        }
+
+        public string EpiloghGenousKatw(Gender gender)
+        {
+            if (gender == Gender.Man)
+                return "του ";
+            else
+                return "της ";
+        }
+
+        public string EpiloghGenousPanw(Gender gender)
+        {
+            if (gender == Gender.Man)
+                return "τον ";
+            else
+                return "την ";
+        }
+
+        public string EpiloghGenousOfeileti(Gender gender)
+        {
+            if (gender == Gender.Man)
+                return " οφειλέτη ";
+            else
+                return " οφειλέτιδας ";
+        }
+
+        public string KeimenoPraxis(LegalEntity legalEntity)
+        {
+            string praxh = null;
+            switch (legalEntity)
+            {
+                case LegalEntity.EllinikoDimosio:
+                    praxh = "Αφού δεν βρήκα τον ίδιο στην έδρα του Νομικού Συμβουλίου του Κράτους επί της οδού Ακαδημίας & Χαρ. Τρικούπη, όπου σύμφωνα με τον Νόμο γίνονται οι επιδόσεις προς αυτόν, ούτε Διευθυντή ή συνεργάτη του, αλλά τον εξουσιοδοτημένο γιά την παραλαβή Πάρεδρο Ν.Σ.Κ. ............................................, επέδωσα σ΄ αυτόν το άνω δικόγραφο.";
+                    break;
+                case LegalEntity.EFka:
+                    praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο του άνω Ν.Π.Δ.Δ.στην οδό Αγίου Κωνσταντίνου αρ. 16 ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. ";
+                    break;
+                case LegalEntity.LoipesUpirisies:
+                    praxh = "Αφού δεν βρήκα στην έδρα της άνω υπηρεσίας στην οδό ………………., τον Διευθυντή αυτής, ούτε Προϊστάμενο ή συνεργάτη του, αλλά τ… εξουσιοδοτημέν.. για την παραλαβή υπάλληλο …………………………………………, όπως μου δήλωσε, επέδωσα σ΄ατυτ.. το άνω δικόγραφο.";
+                    break;
+                case LegalEntity.Olp:
+                    praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο του άνω Ν.Π.Δ.Δ.στην οδό Αγίου Κωνσταντίνου αρ. 16 ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. ";
+                    break;
+                case LegalEntity.Tel:
+                    praxh = "Αφού δεν βρήκα στην έδρα της άνω υπηρεσίας στην οδό ………………., τον Διευθυντή αυτής, ούτε Προϊστάμενο ή συνεργάτη του, αλλά τ… εξουσιοδοτημέν.. για την παραλαβή υπάλληλο …………………………………………, όπως μου δήλωσε, επέδωσα σ΄ατυτ.. το άνω δικόγραφο.";
+                    break;
+                case LegalEntity.Trapezes:
+                    praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στα γραφεία της, στην οδό ….. ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. ";
+                    break;
+                case LegalEntity.Dimos:
+                    praxh = "Και αφού δεν βρήκα τον Δήμαρχο του δήμου αυτού στην έδρα του στην οδό ……………………………………………., ούτε τον αντιδήμαρχο, ούτε διευθυντή ή προϊστάμενο, αλλά τ… εντεταλμέν…  για την παραλαβή δικογράφων υπάλληλο αυτού………………………………………… όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.";
+                    break;
+                case LegalEntity.FusikoProswpo:
+                    break;
+                case LegalEntity.Empty:
+                    break;
+                default:
+                    break;
+            }
+            return praxh;
         }
     }
 }

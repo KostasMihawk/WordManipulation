@@ -11,5 +11,19 @@ namespace WordManipulation.Models
         public string Name { get; set; }
         public string Text { get; set; }
         public string Address { get; set; }
+        public LegalEntity legalEntity { get; set; }
+    }
+
+    public enum LegalEntity
+    {
+         EllinikoDimosio,
+         EFka,
+         LoipesUpirisies,
+         Olp,
+         Tel,
+         Trapezes, 
+         Dimos,
+         FusikoProswpo,
+         Empty
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WordManipulation.ViewModels;
 
 namespace WordManipulation.Models
 {
@@ -22,6 +23,8 @@ namespace WordManipulation.Models
         public DocumentType DocumentType { get; set; }
         public bool Praxh { get; set; }
         public Attorney Sumbolaiografos { get; set; }
+        public Gender Gender { get; set; }
+        public KEAO KEAO { get; set; }
     }
 
     public enum SelectTime

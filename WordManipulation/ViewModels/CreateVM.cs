@@ -52,5 +52,30 @@ namespace WordManipulation.ViewModels
         public int Sumbolaiografos { get; set; }
         [Display(Name = "Οφειλέτης")]
         public string Ofeileths { get; set; }
+        [Display(Name = "Γένος")]
+        public Gender Gender { get; set; }
+        [Display(Name = "ΚΕΑΟ")]
+        public KEAO KEAO { get; set; }
     }
+
+    public enum Gender
+    {
+        [Display(Name = "Ανδρας")]
+        Man,
+        [Display(Name = "Γυναίκα")]
+        Woman
+    }
+
+    public enum KEAO
+    {
+        [Display(Name = "Α Αθήνας")]
+        AAthina,
+        [Display(Name = "Β Αθήνας")]
+        BAthina,
+        [Display(Name = "Πειραιά")]
+        Peireas,
+        [Display(Name = "Ελευσίνας")]
+        Eleusina
+    }
+
 }
