@@ -61,7 +61,7 @@ namespace WordManipulation.Models
             }
             else
             {
-                return DateTime.Today.AddDays(7).Year + 1;
+                return DateTime.Today.AddDays(7).Year;
             }
         }
 

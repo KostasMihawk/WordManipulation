@@ -36,10 +36,10 @@ namespace WordManipulation.Controllers.API
             //ylopoihsh me dictionary h tupple
             //se ka8e adikeimeno st lista na fortwnei diaforetiko bool(form.praxh)
             Dictionary<string, LegalEntity> foreis = new Dictionary<string, LegalEntity> {
-                { "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα", LegalEntity.EllinikoDimosio},
+                { "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα", LegalEntity.EFka},
                 { "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.) ως εκπρόσωπο του Ελληνικού Δημοσίου κατοικοεδρεύοντα στην Αθήνα", LegalEntity.EllinikoDimosio },
                 { "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201", LegalEntity.Trapezes },
-                { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ .",LegalEntity.EllinikoDimosio },
+                { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ .",LegalEntity.LoipesUpirisies },
             { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO), LegalEntity.LoipesUpirisies },
                 { "προς "  + s.EpiloghGenousPanw(form.Gender) +  ofeileths, LegalEntity.FusikoProswpo },
                 { " " ,LegalEntity.Empty} };

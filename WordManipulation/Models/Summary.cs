@@ -266,7 +266,7 @@ namespace WordManipulation.Models
 
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ ").Bold().FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append(form.DocumentType.DocumentNumber + "ΠΡΑΞΗΣ (ΠΙΝΑΚΑ ΚΑΤΑΤΑΞΗΣ - ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ) ").Bold().FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε., για να λάβει γνώση, για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
