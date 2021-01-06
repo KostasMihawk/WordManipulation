@@ -238,7 +238,7 @@ namespace WordManipulation.Models
             firstParagraph.AppendLine();
             firstParagraph.Append("Στ ...................... " + form.Place + " σήμερα στις ................. ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("(   ) του μηνός ..................").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι ένα (" + calc.CalculateDesiredYear(form.SelectTime) + ") ,ημέρα .................." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι ένα (" + calc.CalculateDesiredYear(form.SelectTime) + "), ημέρα .................." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(",εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Bailif.Name + " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών ").FontSize(fontsize).Font(fontFamily);
@@ -266,7 +266,7 @@ namespace WordManipulation.Models
 
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append(form.DocumentType.DocumentNumber + "ΠΡΑΞΗΣ (ΠΙΝΑΚΑ ΚΑΤΑΤΑΞΗΣ - ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ) ").Bold().FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΑΞΗΣ (ΠΙΝΑΚΑ ΚΑΤΑΤΑΞΗΣ - ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ) ").Bold().FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε., για να λάβει γνώση, για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
@@ -347,7 +347,7 @@ namespace WordManipulation.Models
                     praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο του άνω Ν.Π.Δ.Δ.στην οδό Αγίου Κωνσταντίνου αρ. 16 ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. ";
                     break;
                 case LegalEntity.Tel:
-                    praxh = "Αφού δεν βρήκα στην έδρα της άνω υπηρεσίας στην οδό ………………., τον Διευθυντή αυτής, ούτε Προϊστάμενο ή συνεργάτη του, αλλά τ… εξουσιοδοτημέν.. για την παραλαβή υπάλληλο …………………………………………, όπως μου δήλωσε, επέδωσα σ΄ατυτ.. το άνω δικόγραφο.";
+                    praxh = "Αφού δεν βρήκα στην έδρα της άνω υπηρεσίας στην οδό "+ Dieu8unisiTrapeas(Bank.Ethniki)+", τον Διευθυντή αυτής, ούτε Προϊστάμενο ή συνεργάτη του, αλλά τ… εξουσιοδοτημέν.. για την παραλαβή υπάλληλο …………………………………………, όπως μου δήλωσε, επέδωσα σ΄ατυτ.. το άνω δικόγραφο.";
                     break;
                 case LegalEntity.Trapezes:
                     praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στα γραφεία της, στην οδό ….. ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. ";
@@ -364,5 +364,42 @@ namespace WordManipulation.Models
             }
             return praxh;
         }
+
+        public string Dieu8unisiTrapeas(Bank bank)
+        {
+            string address = string.Empty;
+            switch (bank)
+            {                
+                case Bank.Ethniki:
+                    address = "Αιόλου 86";
+                    break;
+                case Bank.Peiraos:
+                    address = "Λ. Αλεξάνδρας 170";
+                    break;
+                case Bank.Intrum:
+                    address = "Λ. Μεσογείων";
+                    break;
+                case Bank.Eurobank:
+                    address = "Πανεπιστημίου 36";
+                    break;
+                case Bank.Alfa:
+                    address = "Πανεπιστημίου 36";
+                    break;
+                case Bank.DoValue:
+                    address = "Κύπρου 27";
+                    break;
+            }
+            return address;
+        }
+
+        public enum Bank
+    {
+        Ethniki,
+        Peiraos,
+        Intrum,
+        Eurobank,
+        Alfa,
+        DoValue
+    }
     }
 }
