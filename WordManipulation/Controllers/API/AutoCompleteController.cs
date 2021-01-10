@@ -40,7 +40,7 @@ namespace WordManipulation.Controllers.API
                 { "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.) ως εκπρόσωπο του Ελληνικού Δημοσίου κατοικοεδρεύοντα στην Αθήνα", LegalEntity.EllinikoDimosio },
                 { "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201", LegalEntity.Trapezes },
                 { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ .",LegalEntity.LoipesUpirisies },
-            { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO), LegalEntity.LoipesUpirisies },
+                { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO), LegalEntity.LoipesUpirisies },
                 { "προς "  + s.EpiloghGenousPanw(form.Gender) +  ofeileths, LegalEntity.FusikoProswpo },
                 { " " ,LegalEntity.Empty} };
 
@@ -57,6 +57,7 @@ namespace WordManipulation.Controllers.API
             info.WindowStyle = ProcessWindowStyle.Hidden;
             string fileName;
             Process p = new Process();
+            
             foreach (var doc in foreis)
             {
                 form.Defender.Text = doc.Key;
@@ -72,11 +73,6 @@ namespace WordManipulation.Controllers.API
                 //System.Threading.Thread.Sleep(3000);
                 
             }
-
-          
-          
-
-
             return "Hello World";
         }
         public string EpilogiKeaoA(KEAO keao)
