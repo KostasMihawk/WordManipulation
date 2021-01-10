@@ -266,7 +266,7 @@ namespace WordManipulation.Models
 
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append(form.DocumentType.DocumentNumber + "ΠΡΑΞΗΣ "+isPinakas(form.IsPinakas)+" ").Bold().FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΑΞΗΣ "+isPinakas(form.IsPinakas)+" ").Bold().FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + IsBankEmpty(form.IsBankEmpty) +", για να λάβει γνώση και για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
@@ -333,7 +333,7 @@ namespace WordManipulation.Models
         {
             if (isBankEmpty)
             {
-                return " ";
+                return "";
             }
             else
             {
