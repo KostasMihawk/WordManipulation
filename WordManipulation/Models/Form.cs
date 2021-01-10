@@ -25,6 +25,8 @@ namespace WordManipulation.Models
         public Attorney Sumbolaiografos { get; set; }
         public Gender Gender { get; set; }
         public KEAO KEAO { get; set; }
+        public bool IsPinakas { get; set; }
+        public bool IsBankEmpty { get; set; }
     }
 
     public enum SelectTime

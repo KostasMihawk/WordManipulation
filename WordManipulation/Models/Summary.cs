@@ -255,7 +255,7 @@ namespace WordManipulation.Models
                 secondParagraph.Append("ήλθα για να επιδώσω προς " + EpiloghGenousPanw(form.Gender) + form.DocumentType.Ofeileths).FontSize(fontsize).Font(fontFamily).Alignment = Alignment.left;
                 secondParagraph.AppendLine();
                 secondParagraph.AppendLine();
-                secondParagraph.AppendLine();
+                secondParagraph.AppendLine(); 
             }
             else
             {
@@ -266,8 +266,8 @@ namespace WordManipulation.Models
 
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append(form.DocumentType.DocumentNumber + "ΠΡΑΞΗΣ (ΠΙΝΑΚΑ ΚΑΤΑΤΑΞΗΣ - ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ) ").Bold().FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε., για να λάβει γνώση, για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
+            secondParagraph.Append(form.DocumentType.DocumentNumber + "ΠΡΑΞΗΣ "+isPinakas(form.IsPinakas)+" ").Bold().FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + IsBankEmpty(form.IsBankEmpty) +", για να λάβει γνώση και για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             thirdParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -327,6 +327,30 @@ namespace WordManipulation.Models
                 return " οφειλέτη ";
             else
                 return " οφειλέτιδας ";
+        }
+
+        public string IsBankEmpty(bool isBankEmpty)
+        {
+            if (isBankEmpty)
+            {
+                return " ";
+            }
+            else
+            {
+                return " μετά από επίσπευση της Εθνικής Τράπεζας της Ελλάδος Α.Ε.";
+            }
+        }
+
+        public string isPinakas(bool isPinakas)
+        {
+            if (isPinakas)
+            {
+                return "(ΠΙΝΑΚΑ ΚΑΤΑΤΑΞΗΣ ΔΑΝΕΙΣΤΩΝ - ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ)";
+            }
+            else
+            {
+                return "(ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ)";
+            }
         }
 
         public string KeimenoPraxis(LegalEntity legalEntity)

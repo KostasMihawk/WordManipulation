@@ -81,6 +81,18 @@
                 @Html.LabelFor(model => model.KEAO, htmlAttributes: new { @class = "control-label col-md-2" })
                 @Html.EnumDropDownListFor(model => model.KEAO, htmlAttributes: new { @class = "form-control", @id = "keao" })
             </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsBankEmpty, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.CheckBoxFor(model => model.IsBankEmpty, htmlAttributes: new { @id = "IsBankEmpty" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsPinakas, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.CheckBoxFor(model => model.IsPinakas, htmlAttributes: new { @id = "IsPinakas" })
+                </div>
+            </div>
 
         </div>
         <div class="form-group">
@@ -107,7 +119,7 @@
             $("#koble").click(function () {
                 $.ajax({
                     url: "/api/AutoComplete",
-                    data: { docNum: $("#docN").val(), ofeileths: $("#ofe").val(), place: $("#place").val(), gender: $("#gender").val(), keao: $("#keao").val(), praxh: $("#praxh").prop("checked") },
+                    data: { docNum: $("#docN").val(), ofeileths: $("#ofe").val(), place: $("#place").val(), gender: $("#gender").val(), keao: $("#keao").val(), praxh: $("#praxh").prop("checked"), isPinakas: $("#IsPinakas").prop("checked"), isBankEmpty: $("#IsBankEmpty").prop("checked") },
                     dataType: "json",
                     cache: false,
                     type: "GET",

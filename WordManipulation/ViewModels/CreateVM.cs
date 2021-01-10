@@ -56,6 +56,10 @@ namespace WordManipulation.ViewModels
         public Gender Gender { get; set; }
         [Display(Name = "ΚΕΑΟ")]
         public KEAO KEAO { get; set; }
+        [Display(Name ="Με Πίνακα")]
+        public bool IsPinakas { get; set; }
+        [Display(Name = "Χωρίς Τράπεζα")]
+        public bool IsBankEmpty { get; set; }
     }
 
     public enum Gender

@@ -16,7 +16,7 @@ namespace WordManipulation.Controllers.API
     {
         private object agent;
 
-        public string Get(int bailif=1, int notary=1, string docNum = "123/20", string ofeileths ="γιαννης", string place ="", int gender = 0, int keao = 0, bool praxh = false)
+        public string Get(int bailif=1, int notary=1, string docNum = "123/20", string ofeileths ="γιαννης", string place ="", int gender = 0, int keao = 0, bool praxh = false, bool isPinakas = false, bool isBankEmpty = false)
         {
             DropDownGenerator generator = new DropDownGenerator();
             Summary s = new Summary();
@@ -33,6 +33,8 @@ namespace WordManipulation.Controllers.API
             form.Place = place;
             form.Praxh = praxh;
             form.KEAO = (KEAO)keao;
+            form.IsPinakas = isPinakas;
+            form.IsBankEmpty = isBankEmpty;
             //ylopoihsh me dictionary h tupple
             //se ka8e adikeimeno st lista na fortwnei diaforetiko bool(form.praxh)
             Dictionary<string, LegalEntity> foreis = new Dictionary<string, LegalEntity> {
