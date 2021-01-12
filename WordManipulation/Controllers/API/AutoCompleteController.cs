@@ -39,12 +39,13 @@ namespace WordManipulation.Controllers.API
             //se ka8e adikeimeno st lista na fortwnei diaforetiko bool(form.praxh)
             Dictionary<string, LegalEntity> foreis = new Dictionary<string, LegalEntity> {
                 { "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα", LegalEntity.EFka},
-                { "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.) ως εκπρόσωπο του Ελληνικού Δημοσίου κατοικοεδρεύοντα στην Αθήνα", LegalEntity.EllinikoDimosio },
+                { "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.), ως εκπρόσωπο του Ελληνικού Δημοσίου, κατοικοεδρεύοντα στην Αθήνα", LegalEntity.EllinikoDimosio },
                 { "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201", LegalEntity.Trapezes },
-                { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ .",LegalEntity.LoipesUpirisies },
-                { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO), LegalEntity.LoipesUpirisies },
+                { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ ",LegalEntity.LoipesUpirisies },
+                { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO) +", ", LegalEntity.LoipesUpirisies },
                 { "προς "  + s.EpiloghGenousPanw(form.Gender) +  ofeileths, LegalEntity.FusikoProswpo },
-                { " " ,LegalEntity.Empty} };
+                { " " ,LegalEntity.Empty},
+                {"αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",LegalEntity.Trapezes } };
 
 
 

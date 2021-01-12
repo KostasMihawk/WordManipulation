@@ -66,4 +66,11 @@ namespace WordManipulation.Models
         [Display(Name =("Αναγγελία"))]
         Anaggelia
     }
+
+    public enum Bank
+    {
+        NoBank,
+        Ethniki
+    }
+}
 }

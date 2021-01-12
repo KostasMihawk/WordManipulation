@@ -67,7 +67,9 @@ namespace WordManipulation.ViewModels
         [Display(Name = "Ανδρας")]
         Man,
         [Display(Name = "Γυναίκα")]
-        Woman
+        Woman,
+        [Display(Name = "Γαμώ Το μουνί")]
+        Etaireia
     }
 
     public enum KEAO

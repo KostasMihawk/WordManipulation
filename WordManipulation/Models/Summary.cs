@@ -238,7 +238,7 @@ namespace WordManipulation.Models
             firstParagraph.AppendLine();
             firstParagraph.Append("Στ ...................... " + form.Place + " σήμερα στις .......................... ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("(   ) του μηνός ..........................").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι ένα (" + calc.CalculateDesiredYear(form.SelectTime) + ") ,ημέρα ........................." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι ένα (" + calc.CalculateDesiredYear(form.SelectTime) + "), ημέρα ........................." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(",εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Bailif.Name + " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών ").FontSize(fontsize).Font(fontFamily);
@@ -267,7 +267,7 @@ namespace WordManipulation.Models
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΑΞΗΣ "+isPinakas(form.IsPinakas)+" ").Bold().FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender)+ EpiloghGenousOfeileti(form.Gender)  + form.DocumentType.Ofeileths + IsBankEmpty(form.IsBankEmpty) +", για να λάβει γνώση και για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
+            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά "+ EpiloghGenousKatw(form.Gender) + EpiloghGenousOfeileti(form.Gender) + DisplayEpwnumiaEtaireias(form.Gender) + form.DocumentType.Ofeileths + IsBankEmpty(form.IsBankEmpty) +", για να λάβει γνώση και για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             thirdParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -293,9 +293,9 @@ namespace WordManipulation.Models
             forthParagraph.Append("Σε πίστωση των παραπάνω συνέταξα την παρούσα έκθεση επιδόσεως σε δύο όμοια πρωτότυπα η οποία αφού διαβάστηκε και βεβαιώθηκε υπογράφεται όπως ακολουθεί.").FontSize(fontsize).Font(fontFamily);
             forthParagraph.AppendLine();
             forthParagraph.AppendLine();
-            forthParagraph.AppendLine(".. παραλαβ...... ");
+            forthParagraph.AppendLine(".. παραλαβ...... ").Font(fontFamily);
             if (!form.Praxh)
-                forthParagraph.Append(" εξουσιοδοτημεν.... Υπαλληλος");
+                forthParagraph.Append(" εξουσιοδοτημεν.... Υπαλληλος").Font(fontFamily);
             forthParagraph.Append("                                                                                              ");
             forthParagraph.Append("Η  Δικαστική   Επιμελήτρια").FontSize(fontsize).Font(fontFamily);
 
@@ -317,6 +317,8 @@ namespace WordManipulation.Models
         {
             if (gender == Gender.Man)
                 return "τον ";
+            else if (gender == Gender.Woman)
+                return "την ";
             else
                 return "την ";
         }
@@ -325,8 +327,18 @@ namespace WordManipulation.Models
         {
             if (gender == Gender.Man)
                 return " οφειλέτη ";
+            else if (gender == Gender.Woman)
+                return " οφειλέτιδος ";
             else
-                return " οφειλέτιδας ";
+                return "οφειλέτριας "; 
+        }
+
+        public string DisplayEpwnumiaEtaireias(Gender gender)
+        {
+            if (gender == Gender.Etaireia)
+                return "εταιρείας με την επωνυμία ";
+            else
+                return "";
         }
 
         public string IsBankEmpty(bool isBankEmpty)
@@ -388,5 +400,6 @@ namespace WordManipulation.Models
             }
             return praxh;
         }
-    }
-}
+    } 
+
+   
