@@ -17,14 +17,14 @@ namespace WordManipulation.Models
 {
     public class Summary
     {
-        
+
         public string CreateWordDocument(Form form)
         {
             ITranslator translator = new Translator();
             DayCalculator calc = new DayCalculator();
             TextGenerator textGenerator = new TextGenerator();
             Agent agent = new Agent();
-            string fileName = @"C:\ektheseis\kanonikes\" + Directory.GetFiles(@"C:\ektheseis\kanonikes\", " * ", SearchOption.TopDirectoryOnly).Length + "-" +DateTime.Today.ToString("dd.MM.yyyy") + ".docx"; 
+            string fileName = @"C:\ektheseis\kanonikes\" + Directory.GetFiles(@"C:\ektheseis\kanonikes\", " * ", SearchOption.TopDirectoryOnly).Length + "-" + DateTime.Today.ToString("dd.MM.yyyy") + ".docx";
             var doc = DocX.Create(fileName);
 
 
@@ -32,9 +32,9 @@ namespace WordManipulation.Models
 
             Table t = doc.AddTable(7, 2);
 
-            t.SetColumnWidth(0,320d);
-            t.SetColumnWidth(1,110d);
-            t.SetBorder(TableBorderType.InsideH, new Border(BorderStyle.Tcbs_none,BorderSize.one,0,Color.AntiqueWhite));
+            t.SetColumnWidth(0, 320d);
+            t.SetColumnWidth(1, 110d);
+            t.SetBorder(TableBorderType.InsideH, new Border(BorderStyle.Tcbs_none, BorderSize.one, 0, Color.AntiqueWhite));
             t.Alignment = Alignment.center;
 
 
@@ -93,21 +93,21 @@ namespace WordManipulation.Models
             var firstParagraphFormat = new Formatting();
             double fontsize = 12;
             firstParagraphFormat.Spacing = 1.2;
-            Paragraph firstParagraph = doc.InsertParagraph("",false, firstParagraphFormat);
+            Paragraph firstParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             firstParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             firstParagraph.Alignment = Alignment.both;
             firstParagraph.AppendLine();
-            firstParagraph.Append("Στ             , σήμερα                  (   )" );
+            firstParagraph.Append("Στ             , σήμερα                  (   )");
             firstParagraph.Append(" του μηνός " + translator.ConvertMonth(calc.CalculateDesiredMonth(form.SelectTime))).FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα "+ translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime))+" και ώρα ........").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι " + calc.CalculateDesiredYear(form.SelectTime) + " ,ημέρα " + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(" ,εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(form.Bailif.Name+ " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας "+form.Attorneys.Pronoun+" δικηγόρου "+form.Attorneys.City +" ").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(form.Bailif.Name + " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας " + form.Attorneys.Pronoun + " δικηγόρου " + form.Attorneys.City + " ").FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Attorneys.Name).UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(", πληρεξούσιου  ").FontSize(fontsize).Font(fontFamily);
-            firstParagraph.Append(form.Attacker.Intro).FontSize(fontsize).Font(fontFamily); 
-            firstParagraph.Append(form.Attacker.OfficialName).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily); 
-            firstParagraph.Append(form.Attacker.RandomText).FontSize(fontsize).Font(fontFamily); 
+            firstParagraph.Append(form.Attacker.Intro).FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(form.Attacker.OfficialName).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
+            firstParagraph.Append(form.Attacker.RandomText).FontSize(fontsize).Font(fontFamily);
             firstParagraph.Append(form.Attacker.Closer).FontSize(fontsize).Font(fontFamily);
 
             Paragraph secondParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
@@ -115,16 +115,16 @@ namespace WordManipulation.Models
             secondParagraph.Alignment = Alignment.both;
             secondParagraph.Append("ήλθα για να επιδώσω προς την ").FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(form.Defender.Text).FontSize(fontsize).Font(fontFamily);/*.Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);*/
-            agent.BoldText(secondParagraph,fontFamily,fontsize, textGenerator.GenerateValidText(form, form.DocumentT));
-            
+            agent.BoldText(secondParagraph, fontFamily, fontsize, textGenerator.GenerateValidText(form, form.DocumentT));
+
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             thirdParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             thirdParagraph.Alignment = Alignment.both;
             if (form.Praxh)
             {
-                
+
                 thirdParagraph.Append("Και αφού δεν βρήκα τον νόμιμο εκπρόσωπο της  άνω  τραπεζικής εταιρίας στα γραφεία της στην οδό " + form.Defender.Address + ", ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλό της ……………………..…………….………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω έγγραφο.").FontSize(fontsize).Font(fontFamily);
-                
+
             }
             else
             {
@@ -141,11 +141,11 @@ namespace WordManipulation.Models
             forthParagraph.AppendLine();
             forthParagraph.AppendLine();
             forthParagraph.AppendLine(".. παραλαβ...... ");
-            if(!form.Praxh)
+            if (!form.Praxh)
                 forthParagraph.Append(" εξουσιοδοτημεν.... Υπαλληλος");
             forthParagraph.Append("                                ");
             forthParagraph.Append("Η  Δικαστική   Επιμελήτρια").FontSize(fontsize).Font(fontFamily);
-           
+
 
             #endregion
 
@@ -217,7 +217,7 @@ namespace WordManipulation.Models
             headerFormat.Size = 13D;
             headerFormat.Bold = true;
             headerFormat.UnderlineStyle = UnderlineStyle.singleLine;
-            headerFormat.Spacing = 1.2;            
+            headerFormat.Spacing = 1.2;
             Paragraph headParagraph = doc.InsertParagraph("", false, headerFormat);
             headParagraph.AppendLine();
             headParagraph.AppendLine();
@@ -255,7 +255,7 @@ namespace WordManipulation.Models
                 secondParagraph.Append("ήλθα για να επιδώσω προς " + EpiloghGenousPanw(form.Gender) + form.DocumentType.Ofeileths).FontSize(fontsize).Font(fontFamily).Alignment = Alignment.left;
                 secondParagraph.AppendLine();
                 secondParagraph.AppendLine();
-                secondParagraph.AppendLine(); 
+                secondParagraph.AppendLine();
             }
             else
             {
@@ -266,8 +266,8 @@ namespace WordManipulation.Models
 
             secondParagraph.Append(form.Defender.Text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
             secondParagraph.Append(" ακριβές αντίγραφο της υπ΄ αριθμόν ").FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΑΞΗΣ "+isPinakas(form.IsPinakas)+" ").Bold().FontSize(fontsize).Font(fontFamily);
-            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά "+ EpiloghGenousKatw(form.Gender) + EpiloghGenousOfeileti(form.Gender) + DisplayEpwnumiaEtaireias(form.Gender) + form.DocumentType.Ofeileths + IsBankEmpty(form.IsBankEmpty) +", για να λάβει γνώση και για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily); 
+            secondParagraph.Append(form.DocumentType.DocumentNumber + " ΠΡΑΞΗΣ " + isPinakas(form.IsPinakas) + " ").Bold().FontSize(fontsize).Font(fontFamily);
+            secondParagraph.Append("της ως άνω συμβολαιογράφου κατά " + EpiloghGenousKatw(form.Gender) + EpiloghGenousOfeileti(form.Gender) + DisplayEpwnumiaEtaireias(form.Gender) + form.DocumentType.Ofeileths + IsBankEmpty(form.IsBankEmpty) + ", για να λάβει γνώση και για τις νόμιμες συνέπειες.").FontSize(fontsize).Font(fontFamily);
 
             Paragraph thirdParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
             thirdParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -305,6 +305,22 @@ namespace WordManipulation.Models
             return fileName;
         }
 
+        public string CreateLoanerContinuation(LoanerInvitationViewmodel vm)
+        {
+            var r = new Random();
+            ITranslator translator = new Translator();
+            DayCalculator calc = new DayCalculator();
+            TextGenerator textGenerator = new TextGenerator();
+            Agent agent = new Agent();
+            string fileName = string.Empty;
+            if (vm.Debtor != null)
+            {
+                 fileName = @"C:\ektheseis\kanonikes\" + vm.Debtor;
+            }
+            //fileName = @"C:\ektheseis\kanonikes\" + r.Next(1, 100000) + "-" + DateTime.Today.ToString("dd.MM.yyyy") + ".docx";           
+            var doc = DocX.Create(fileName);
+        }
+
         public string EpiloghGenousKatw(Gender gender)
         {
             if (gender == Gender.Man)
@@ -330,7 +346,7 @@ namespace WordManipulation.Models
             else if (gender == Gender.Woman)
                 return " οφειλέτιδος ";
             else
-                return "οφειλέτριας "; 
+                return "οφειλέτριας ";
         }
 
         public string DisplayEpwnumiaEtaireias(Gender gender)
@@ -400,6 +416,9 @@ namespace WordManipulation.Models
             }
             return praxh;
         }
-    } 
+    }
+}
+
+     
 
    
