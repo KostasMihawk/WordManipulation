@@ -154,6 +154,7 @@
     <Compile Include="Models\Attorney.cs" />
     <Compile Include="Models\AutoCreate.cs" />
     <Compile Include="Models\Baillif.cs" />
+    <Compile Include="Models\BankModel.cs" />
     <Compile Include="Models\DayCalculator.cs" />
     <Compile Include="Models\Defender.cs" />
     <Compile Include="Models\DocumentType.cs" />
@@ -207,6 +208,7 @@
     <Content Include="Views\Home\Arxiki.cshtml" />
     <Content Include="Views\Home\Plistiriamsos.cshtml" />
     <Content Include="Views\LoanerInvitation\LoanerInvitation.cshtml" />
+    <Content Include="Views\LoanerInvitation\CreateLoanerInvitation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

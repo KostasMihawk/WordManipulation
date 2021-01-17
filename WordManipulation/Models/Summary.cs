@@ -305,21 +305,68 @@ namespace WordManipulation.Models
             return fileName;
         }
 
-        public string CreateLoanerContinuation(LoanerInvitationViewmodel vm)
-        {
-            var r = new Random();
-            ITranslator translator = new Translator();
-            DayCalculator calc = new DayCalculator();
-            TextGenerator textGenerator = new TextGenerator();
-            Agent agent = new Agent();
-            string fileName = string.Empty;
-            if (vm.Debtor != null)
-            {
-                 fileName = @"C:\ektheseis\kanonikes\" + vm.Debtor;
-            }
-            //fileName = @"C:\ektheseis\kanonikes\" + r.Next(1, 100000) + "-" + DateTime.Today.ToString("dd.MM.yyyy") + ".docx";           
-            var doc = DocX.Create(fileName);
-        }
+        //public string CreateLoanerContinuation(Form form, BankModel bm, string debtor)
+        //{
+        //    var r = new Random();
+        //    ITranslator translator = new Translator();
+        //    DayCalculator calc = new DayCalculator();
+        //    TextGenerator textGenerator = new TextGenerator();
+        //    Agent agent = new Agent();
+        //    string fileName = string.Empty;
+        //    if (!string.IsNullOrEmpty(debtor))
+        //    {
+        //        fileName = @"C:\ektheseis\kanonikes\" +bm.Name + ".docx";
+        //    }
+        //    else
+        //    {
+        //        fileName = @"C:\ektheseis\kanonikes\" + r.Next(1, 100000) + "-" + DateTime.Today.ToString("dd.MM.yyyy") + ".docx";            }
+                     
+        //    var doc = DocX.Create(fileName);
+
+        //     #region TableCreate
+
+        //    Table t = doc.AddTable(7, 2);
+
+        //    t.SetColumnWidth(0, 350d);
+        //    t.SetColumnWidth(1, 110d);
+        //    t.SetBorder(TableBorderType.InsideH, new Border(BorderStyle.Tcbs_none, BorderSize.one, 0, Color.AntiqueWhite));
+        //    t.Alignment = Alignment.center;
+
+
+        //    t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Bold().Alignment = Alignment.center;
+        //    t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: " + form.Zone.Name);
+        //    t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Alignment = Alignment.center;
+        //    t.Rows[1].Cells[1].Paragraphs.First().Append("");
+        //    t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Alignment = Alignment.center;
+        //    t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: " + form.Zone.Value.ToString("F"));
+        //    t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Alignment = Alignment.center;
+        //    t.Rows[3].Cells[1].Paragraphs.First().Append("");
+        //    t.Rows[4].Cells[0].Paragraphs.First().Append("Π.Μιχοπούλου: 6986413493").Alignment = Alignment.center;
+        //    t.Rows[4].Cells[1].Paragraphs.First().Append("ΦΠΑ 24%: " + form.Zone.Tax.ToString("F"));
+        //    t.Rows[5].Cells[0].Paragraphs.First().Append("Μ.Ζούζουλα: 6955119261").Alignment = Alignment.center;
+        //    t.Rows[5].Cells[1].Paragraphs.First().Append("");
+        //    t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Alignment = Alignment.center;
+        //    t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: " + form.Zone.TaxedValue.ToString("F"));
+
+        //    var color = Color.AntiqueWhite;
+        //    t.Rows[0].Cells[0].FillColor = color;
+        //    t.Rows[0].Cells[1].FillColor = color;
+        //    t.Rows[1].Cells[0].FillColor = color;
+        //    t.Rows[1].Cells[1].FillColor = color;
+        //    t.Rows[2].Cells[0].FillColor = color;
+        //    t.Rows[2].Cells[1].FillColor = color;
+        //    t.Rows[3].Cells[0].FillColor = color;
+        //    t.Rows[3].Cells[1].FillColor = color;
+        //    t.Rows[4].Cells[0].FillColor = color;
+        //    t.Rows[4].Cells[1].FillColor = color;
+        //    t.Rows[5].Cells[0].FillColor = color;
+        //    t.Rows[5].Cells[1].FillColor = color;
+        //    t.Rows[6].Cells[0].FillColor = color;
+        //    t.Rows[6].Cells[1].FillColor = color;
+
+        //    doc.InsertTable(t);
+        //    #endregion
+        //}
 
         public string EpiloghGenousKatw(Gender gender)
         {
