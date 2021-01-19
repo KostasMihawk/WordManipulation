@@ -53,6 +53,11 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
@@ -123,11 +128,26 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Xceed.Compression.Formats.v6.8, Version=6.8.20412.20130, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xceed.Compression.Formats.6.8.20412.1505\lib\net40\Xceed.Compression.Formats.v6.8.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Compression.v6.8, Version=6.8.20412.20130, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xceed.Compression.6.8.20412.1505\lib\net40\Xceed.Compression.v6.8.dll</HintPath>
+    </Reference>
     <Reference Include="Xceed.Document.NET, Version=1.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>..\packages\DocX.1.7.1\lib\net40\Xceed.Document.NET.dll</HintPath>
     </Reference>
+    <Reference Include="Xceed.FileSystem.v6.8, Version=6.8.20412.20130, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xceed.FileSystem.6.8.20412.1505\lib\net40\Xceed.FileSystem.v6.8.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.FileSystem.Windows.v6.8, Version=6.8.20412.20130, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xceed.FileSystem.Windows.6.8.20412.1505\lib\net40\Xceed.FileSystem.Windows.v6.8.dll</HintPath>
+    </Reference>
     <Reference Include="Xceed.Words.NET, Version=1.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>..\packages\DocX.1.7.1\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Zip.v6.8, Version=6.8.20412.20130, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xceed.Zip.6.8.20412.1505\lib\net40\Xceed.Zip.v6.8.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

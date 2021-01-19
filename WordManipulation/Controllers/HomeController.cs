@@ -60,7 +60,7 @@ namespace WordManipulation.Controllers
                 var form = new Form();
                 form = agent.TranslateFormVm(vm);
                 agent.ManageText(form, vm.DocumentEnum);
-                Process.Start("WINWORD.EXE", s.CreateSunexisiPlistiriasmou(form));
+                //Process.Start("WINWORD.EXE", s.CreateSunexisiPlistiriasmou(form));
                
                 
             }

@@ -69,8 +69,8 @@ namespace WordManipulation.Controllers.API
                 {
                     form.Defender.Text = doc.Key;
                     form.Defender.legalEntity = doc.Value;
-                    fileName = s.CreateSunexisiPlistiriasmou(form);
-                    zip.AddFile(fileName, @"C:\ektheseis\kanonikes");
+                    //fileName = s.CreateSunexisiPlistiriasmou(form);
+                    //zip.AddFile(fileName, @"C:\ektheseis\kanonikes");
                     //Process.Start("WINWORD.EXE", fileName);
                     //info.FileName = fileName;
 

@@ -8,6 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using WordManipulation.Models;
 using WordManipulation.ViewModels;
+using System.IO.Compression;
+
+
+
 
 namespace WordManipulation.Controllers
 {
@@ -53,8 +57,9 @@ namespace WordManipulation.Controllers
                 { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ ",LegalEntity.LoipesUpirisies },
                 { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO) +", ", LegalEntity.LoipesUpirisies },
                 { "προς "  + s.EpiloghGenousPanw(form.Gender) +  ofeileths, LegalEntity.FusikoProswpo },
-                { " " ,LegalEntity.Empty},
-                {"αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",LegalEntity.Trapezes } };
+                { "_" ,LegalEntity.Empty},
+                //{"αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",LegalEntity.Trapezes } 
+            };
 
 
 
@@ -63,41 +68,30 @@ namespace WordManipulation.Controllers
 
             form.Defender = new Defender();
 
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.Verb = "print";
-            info.CreateNoWindow = true;
-            info.WindowStyle = ProcessWindowStyle.Hidden;
-            string fileName;
-            Process p = new Process();
-
-            using (ZipFile zip = new ZipFile())
-            {
-                zip.AlternateEncodingUsage = ZipOption.AsNecessary;                
-                foreach (var doc in foreis)
-                {
-                    form.Defender.Text = doc.Key;
-                    form.Defender.legalEntity = doc.Value;
-                    fileName = s.CreateSunexisiPlistiriasmou(form);
-                    zip.AddFile(fileName, @"C:\ektheseis\kanonikes");
-                    //Process.Start("WINWORD.EXE", fileName);
-                    //info.FileName = fileName;
-
-                    //p.StartInfo = info;
-                    //p.Start();
-
-                    //p.WaitForInputIdle();
-                    //System.Threading.Thread.Sleep(3000);
-
-                }
-                string zipName = String.Format("Zip_{0}.zip", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"));
-                using (MemoryStream memoryStream = new MemoryStream())
-                {
-                    zip.Save(memoryStream);
-                    return File(memoryStream.ToArray(), "application/zip", zipName);
-                }
-            }
 
             
+
+            using(MemoryStream stream = new MemoryStream())
+            {
+                
+                using(ZipFile zip = new ZipFile(System.Text.Encoding.UTF8))
+                {
+                    zip.AlternateEncodingUsage = ZipOption.AsNecessary;
+                    foreach (var doc in foreis)
+                    {                        
+                        form.Defender.Text = doc.Key;
+                        form.Defender.legalEntity = doc.Value;
+                        zip.AddEntry(doc.Key + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
+                    }
+                    zip.Save(stream);
+                }
+                return File(stream.ToArray(), "application/zip", "test.zip");
+            }
+           
+
+
+
+
         }
 
         public string EpilogiKeaoA(KEAO keao)
