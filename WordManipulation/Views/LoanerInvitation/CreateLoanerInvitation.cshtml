@@ -27,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Notary, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Sumbolaiografos", new SelectList(Generator.GetNotaries(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
+                @Html.DropDownList("Notary", new SelectList(Generator.GetNotaries(), "Id", "Name", 1), htmlAttributes: new { @class = "form-control", @style = "width:300px" })
             </div>
         </div>
 

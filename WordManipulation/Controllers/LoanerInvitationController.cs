@@ -29,25 +29,26 @@ namespace WordManipulation.Controllers
         }
 
         [HttpPost()]
-        public ActionResult CreateLoanerInvitation(int bailif = 1, int notary = 1, string docNum = "123/20", string ofeileths = "γιαννης", string place = "", int gender = 0, int keao = 0, bool praxh = false, bool isPinakas = false, bool isBankEmpty = false)
+        //public ActionResult CreateLoanerInvitation(int bailif = 1, int notary = 1, string docNum = "123/20", string ofeileths = "γιαννης", string place = "", int gender = 0, int keao = 0, bool praxh = false, bool isPinakas = false, bool isBankEmpty = false)
+        public ActionResult CreateLoanerInvitation(LoanerInvitationViewmodel vm)
         {
             DropDownGenerator generator = new DropDownGenerator();
             Summary s = new Summary();
 
             var form = new Form();
             form.DocumentT = DocumentT.DilwshSunexisisPlirstiasmou;
-            form.Bailif = generator.GetBaillifs().SingleOrDefault(b => b.Id == bailif);
-            form.Sumbolaiografos = generator.GetNotaries().SingleOrDefault(n => n.Id == notary);
+            form.Bailif = generator.GetBaillifs().SingleOrDefault(b => b.Id == vm.Baillif);
+            form.Sumbolaiografos = generator.GetNotaries().SingleOrDefault(n => n.Id == vm.Notary);
             form.Zone = generator.GetZones().SingleOrDefault(a => a.Id == 1);
             form.DocumentType = new DocumentType();
-            form.DocumentType.DocumentNumber = docNum;
-            form.DocumentType.Ofeileths = ofeileths;
-            form.Gender = (Gender)gender;
-            form.Place = place;
-            form.Praxh = praxh;
-            form.KEAO = (KEAO)keao;
-            form.IsPinakas = isPinakas;
-            form.IsBankEmpty = isBankEmpty;
+            form.DocumentType.DocumentNumber = vm.CaseNumber;
+            form.DocumentType.Ofeileths = vm.Debtor;
+            form.Gender = vm.Gender;
+            form.Place = vm.Location;
+            form.Praxh = vm.FinishText;
+            form.KEAO = vm.KEAO;
+            form.IsPinakas = vm.IsTable;
+            form.IsBankEmpty = vm.IsBank;
             //ylopoihsh me dictionary h tupple
             //se ka8e adikeimeno st lista na fortwnei diaforetiko bool(form.praxh)
             Dictionary<string, LegalEntity> foreis = new Dictionary<string, LegalEntity> {
@@ -56,7 +57,7 @@ namespace WordManipulation.Controllers
                 { "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201", LegalEntity.Trapezes },
                 { "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ ",LegalEntity.LoipesUpirisies },
                 { "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO) +", ", LegalEntity.LoipesUpirisies },
-                { "προς "  + s.EpiloghGenousPanw(form.Gender) +  ofeileths, LegalEntity.FusikoProswpo },
+                { "προς "  + s.EpiloghGenousPanw(form.Gender) +  vm.Debtor, LegalEntity.FusikoProswpo },
                 { "_" ,LegalEntity.Empty},
                 //{"αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",LegalEntity.Trapezes } 
             };
