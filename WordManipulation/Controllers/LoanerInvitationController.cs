@@ -39,7 +39,7 @@ namespace WordManipulation.Controllers
             form.DocumentT = DocumentT.DilwshSunexisisPlirstiasmou;
             form.Bailif = generator.GetBaillifs().SingleOrDefault(b => b.Id == vm.Baillif);
             form.Sumbolaiografos = generator.GetNotaries().SingleOrDefault(n => n.Id == vm.Notary);
-            form.Zone = generator.GetZones().SingleOrDefault(a => a.Id == 1);
+            form.Zone = generator.GetZones().SingleOrDefault(a => a.Id == vm.Zone);
             form.DocumentType = new DocumentType();
             form.DocumentType.DocumentNumber = vm.CaseNumber;
             form.DocumentType.Ofeileths = vm.Debtor;
@@ -49,6 +49,7 @@ namespace WordManipulation.Controllers
             form.KEAO = vm.KEAO;
             form.IsPinakas = vm.IsTable;
             form.IsBankEmpty = vm.IsBank;
+            form.KEAO = vm.KEAO;
             //ylopoihsh me dictionary h tupple
             //se ka8e adikeimeno st lista na fortwnei diaforetiko bool(form.praxh)
             Dictionary<string, LegalEntity> foreis = new Dictionary<string, LegalEntity> {
@@ -86,9 +87,15 @@ namespace WordManipulation.Controllers
                         form.Defender.Text = doc.Text;
                         form.Defender.legalEntity = doc.LegalEntity;
                         if (doc.Name == "keao")
+                        {
                             doc.Text = "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO) + ", ";
+                            form.Defender.Text = doc.Text;
+                        }                            
                         if (doc.LegalEntity == LegalEntity.FusikoProswpo)
+                        {
                             doc.Text = "προς " + s.EpiloghGenousPanw(form.Gender) + vm.Debtor;
+                            form.Defender.Text = doc.Text;
+                        }                            
                         zip.AddEntry(doc.ZipDocumentTitle + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
                     }
                     zip.Save(stream);
@@ -115,13 +122,13 @@ namespace WordManipulation.Controllers
         public string EpilogiKeaoB(KEAO keao)
         {
             if (keao == KEAO.AAthina)
-                return " Αθήνας ";
+                return " Αθήνας";
             else if (keao == KEAO.BAthina)
-                return " Αθήνας ";
+                return " Αθήνας";
             else if (keao == KEAO.Peireas)
-                return " Πειραιά ";
+                return " Πειραιά";
             else
-                return " Ελευσίνας ";
+                return " Ελευσίνας";
         }
     }
 }
