@@ -67,6 +67,9 @@ namespace WordManipulation.Controllers
             //form = agent.TranslateFormVm(vm);
             //agent.ManageText(form, vm.DocumentEnum);
 
+            var EnhacedList = generator.GetBanks();
+
+
             form.Defender = new Defender();
 
 
@@ -78,11 +81,15 @@ namespace WordManipulation.Controllers
                 using(ZipFile zip = new ZipFile(System.Text.Encoding.UTF8))
                 {
                     zip.AlternateEncodingUsage = ZipOption.AsNecessary;
-                    foreach (var doc in foreis)
+                    foreach (var doc in EnhacedList)
                     {                        
-                        form.Defender.Text = doc.Key;
-                        form.Defender.legalEntity = doc.Value;
-                        zip.AddEntry(doc.Key + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
+                        form.Defender.Text = doc.Text;
+                        form.Defender.legalEntity = doc.LegalEntity;
+                        if (doc.Name == "keao")
+                            doc.Text = "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO) + ", ";
+                        if (doc.LegalEntity == LegalEntity.FusikoProswpo)
+                            doc.Text = "προς " + s.EpiloghGenousPanw(form.Gender) + vm.Debtor;
+                        zip.AddEntry(doc.ZipDocumentTitle + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
                     }
                     zip.Save(stream);
                 }

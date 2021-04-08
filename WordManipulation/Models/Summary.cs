@@ -242,13 +242,14 @@ namespace WordManipulation.Models
                 firstParagraph.Alignment = Alignment.both;
                 firstParagraph.AppendLine();
                 firstParagraph.Append("Στ ...................... " + form.Place + " σήμερα στις .......................... ").FontSize(fontsize).Font(fontFamily);
-                firstParagraph.Append("(   ) του μηνός ..........................").FontSize(fontsize).Font(fontFamily);
+                firstParagraph.Append("(   ) του μηνός Απριλίου").FontSize(fontsize).Font(fontFamily);
                 firstParagraph.Append(" του έτους δύο χιλιάδες είκοσι ένα (" + calc.CalculateDesiredYear(form.SelectTime) + "), ημέρα ........................." + translator.ConvertNameOfDay(calc.CalculateDaysName(form.SelectTime)) + " και ώρα ........").FontSize(fontsize).Font(fontFamily);
                 firstParagraph.Append(",εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ").FontSize(fontsize).Font(fontFamily);
-                firstParagraph.Append(form.Bailif.Name + " με Α.Φ.Μ.: " + form.Bailif.AFM + ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
+                firstParagraph.Append(form.Bailif.Name +  ", μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ").FontSize(fontsize).Font(fontFamily);
+                //" με Α.Φ.Μ.: " + form.Bailif.AFM +
                 firstParagraph.Append("κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών ").FontSize(fontsize).Font(fontFamily);
-                firstParagraph.Append(form.Sumbolaiografos.Name + " που εδρεύει στην Αθήνα, οδός Σκουφά 77, με Α.Φ.Μ. 055298233, ως επί του πλειστηριασμού υπαλλήλου, ").UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontsize).Font(fontFamily);
-
+                firstParagraph.Append(form.Sumbolaiografos.Name + " , ως επί του πλειστηριασμού υπαλλήλου, ").FontSize(fontsize).Font(fontFamily);
+                //που εδρεύει στην Αθήνα, οδός Σκουφά 77, με Α.Φ.Μ. 055298233
 
 
                 Paragraph secondParagraph = doc.InsertParagraph("", false, firstParagraphFormat);
@@ -301,7 +302,7 @@ namespace WordManipulation.Models
                 forthParagraph.AppendLine(".. παραλαβ...... ").Font(fontFamily);
                 if (!form.Praxh)
                     forthParagraph.Append(" εξουσιοδοτημεν.... Υπαλληλος").Font(fontFamily);
-                forthParagraph.Append("                                                                                              ");
+                forthParagraph.Append("                                                                        ");
                 forthParagraph.Append("Η  Δικαστική   Επιμελήτρια").FontSize(fontsize).Font(fontFamily);
 
                 #endregion
@@ -462,7 +463,7 @@ namespace WordManipulation.Models
                     praxh = "Αφού δεν βρήκα στην έδρα της άνω υπηρεσίας στην οδό ………………., τον Διευθυντή αυτής, ούτε Προϊστάμενο ή συνεργάτη του, αλλά τ… εξουσιοδοτημέν.. για την παραλαβή υπάλληλο …………………………………………, όπως μου δήλωσε, επέδωσα σ΄αυτ.. το άνω δικόγραφο.";
                     break;
                 case LegalEntity.Trapezes:
-                    praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην οδό Αιόλου αρ.86, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο";
+                    praxh = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην οδό Αιόλου αρ.86, ούτε Διευθυντή ή συνεργάτη, για τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο";
                     break;
                 case LegalEntity.Dimos:
                     praxh = "Και αφού δεν βρήκα τον Δήμαρχο του δήμου αυτού στην έδρα του στην οδό ……………………………………………., ούτε τον αντιδήμαρχο, ούτε διευθυντή ή προϊστάμενο, αλλά τ… εντεταλμέν…  για την παραλαβή δικογράφων υπάλληλο αυτού………………………………………… όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.";

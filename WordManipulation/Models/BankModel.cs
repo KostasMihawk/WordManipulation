@@ -11,5 +11,6 @@ namespace WordManipulation.Models
         public string Name { get; set; }
         public string Text { get; set; }
         public LegalEntity LegalEntity { get; set; }
+        public string ZipDocumentTitle { get; set; }
     }
 }

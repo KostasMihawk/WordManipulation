@@ -68,7 +68,7 @@ namespace WordManipulation.ViewModels
         Man,
         [Display(Name = "Γυναίκα")]
         Woman,
-        [Display(Name = "Γαμώ Το μουνί")]
+        [Display(Name = "Τράπεζα/Εταιρεία")]
         Etaireia
     }
 
