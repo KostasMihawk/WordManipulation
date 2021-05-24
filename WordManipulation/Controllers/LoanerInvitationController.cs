@@ -73,30 +73,23 @@ namespace WordManipulation.Controllers
 
             form.Defender = new Defender();
 
+            var ZipFiles = new List<EkthesiEpidoshsModel>();
+            ZipFiles = generator.GetZipFiles();
 
-            
 
-            using(MemoryStream stream = new MemoryStream())
-            {
-                
+            using (MemoryStream stream = new MemoryStream())
+            {                
                 using(ZipFile zip = new ZipFile(System.Text.Encoding.UTF8))
                 {
                     zip.AlternateEncodingUsage = ZipOption.AsNecessary;
-                    foreach (var doc in EnhacedList)
-                    {                        
-                        form.Defender.Text = doc.Text;
-                        form.Defender.legalEntity = doc.LegalEntity;
-                        if (doc.Name == "keao")
-                        {
-                            doc.Text = "προς το " + EpilogiKeaoA(form.KEAO) + "Περιφερειακό ΚΕΑΟ " + EpilogiKeaoB(form.KEAO) + ", ";
-                            form.Defender.Text = doc.Text;
-                        }                            
-                        if (doc.LegalEntity == LegalEntity.FusikoProswpo)
-                        {
-                            doc.Text = "προς " + s.EpiloghGenousPanw(form.Gender) + vm.Debtor;
-                            form.Defender.Text = doc.Text;
-                        }                            
-                        zip.AddEntry(doc.ZipDocumentTitle + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
+                    foreach (var doc in ZipFiles)
+                    {
+                        form.Defender.Text = doc.Perigrafh;
+                        form.Defender.IsFusikoProsopo = doc.FusikoProswpo;
+                        form.Defender.Praxi = doc.Praxh;
+                        form.Defender.Address = doc.Location;
+                        form.Defender.KeimenoPraxis = doc.Kleisimo;
+                        zip.AddEntry(doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
                     }
                     zip.Save(stream);
                 }
