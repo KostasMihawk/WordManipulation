@@ -164,6 +164,7 @@
     <Compile Include="BML\DocXConstructor.cs" />
     <Compile Include="BML\DocXManager.cs" />
     <Compile Include="BML\GenderManager.cs" />
+    <Compile Include="BML\TextManager.cs" />
     <Compile Include="Controllers\API\AutoCompleteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoanerInvitationController.cs" />

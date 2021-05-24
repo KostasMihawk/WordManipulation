@@ -249,8 +249,9 @@ namespace WordManipulation.BML
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             GenderManager genderManager = new GenderManager();
+            TextManager textManager = new TextManager();
             //DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"{defender},");
-            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν {documentNumber} ΠΡΑΞΗΣ της ως άνω συμβολαιογράφου κατά {genderManager.EpiloghArthrouBasiGenous(gender)} " +//ΕΔΩ ΧΡΕΙΑΖΕΤΑΙ ΝΑ ΤΣΕΚΑΡΩ ΑΝ ΕΙΝΑΙ ΜΕ ΠΙΝΑΚΑ ΚΑΙ ΝΑ ΒΑΛΩ ΤΟ ΑΝΤΙΣΤΟΙΧΟ ΤΕΧΤ
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν {documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} της ως άνω συμβολαιογράφου κατά {genderManager.EpiloghArthrouBasiGenous(gender)} " +//ΕΔΩ ΧΡΕΙΑΖΕΤΑΙ ΝΑ ΤΣΕΚΑΡΩ ΑΝ ΕΙΝΑΙ ΜΕ ΠΙΝΑΚΑ ΚΑΙ ΝΑ ΒΑΛΩ ΤΟ ΑΝΤΙΣΤΟΙΧΟ ΤΕΧΤ
                 $"{ofeiletis} , για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
