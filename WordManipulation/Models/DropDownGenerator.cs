@@ -438,7 +438,7 @@ namespace WordManipulation.Models
             list.Add(new EkthesiEpidoshsModel
             {
                 Location = "Ελευσίνα",
-                Name = "ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
+                Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
                 Perigrafh = "προς το ΚΕΑΟ Ελευσίνας,",
                 Praxh = false,
                 FusikoProswpo = false
