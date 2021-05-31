@@ -122,11 +122,11 @@ namespace WordManipulation.BML
             DocXConstructor.AddNewLine(introParagraph);
             if(isFusikoProsopo)
             {
-                DocXConstructor.AddToParagraph(introParagraph, $"Στην {location} , σήμερα στις ...................................... ");
+                DocXConstructor.AddToParagraph(introParagraph, $"{location} , σήμερα στις ...................................... ");
             }
             else
             {
-                DocXConstructor.AddToParagraph(introParagraph, $"Στην {locationUpiresias} , σήμερα στις ...................................... ");
+                DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias} , σήμερα στις ...................................... ");
             }
             DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός Ιουνίου  του έτους δύο χιλιάδες είκοσι ένα (2021), ημέρα .......................................... και ώρα ........");
             DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας");
@@ -170,11 +170,11 @@ namespace WordManipulation.BML
             paragraph.Alignment = Alignment.both;
             if(isFusikoProsopo)
             {
-                DocXConstructor.AddToParagraph(paragraph, $"Στην {location},");
+                DocXConstructor.AddToParagraph(paragraph, $"{location},");
             }
             else
             {
-                DocXConstructor.AddToParagraph(paragraph, $"Στην {locationUpiresias},");
+                DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias},");
             }            
             DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός Ιουνίου του έτους δύο χιλιάδες είκοσι ένα (2021) , ημέρα ................................ και ώρα ........," +
                 $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif} , μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών {notary} " +
@@ -182,23 +182,39 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX ParagrafosPraxis(DocX doc, bool isPraxi, string keimenoPraxis)
+        public DocX ParagrafosPraxis(DocX doc, bool? isPraxi, string keimenoPraxis)
         {
-            Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
-            paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
-            paragraph.Alignment = Alignment.both;
-            if(isPraxi)
+           
+            if(isPraxi == true)
             {
+                Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+                paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+                paragraph.Alignment = Alignment.both;
                 DocXConstructor.AddToParagraph(paragraph, keimenoPraxis);
+                if(string.IsNullOrEmpty(keimenoPraxis))
+                {
+                    DocXConstructor.AddNewLine(paragraph);
+                    DocXConstructor.AddNewLine(paragraph);
+                    DocXConstructor.AddNewLine(paragraph);
+                }
+                return doc;
+            }
+            else if(isPraxi == false)
+            {
+                Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+                paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+                paragraph.Alignment = Alignment.both;
+                DocXConstructor.AddNewLine(paragraph);
+                DocXConstructor.AddNewLine(paragraph);
+                DocXConstructor.AddNewLine(paragraph);
+                DocXConstructor.AddNewLine(paragraph);
+                return doc;
             }
             else
             {
-                DocXConstructor.AddNewLine(paragraph);
-                DocXConstructor.AddNewLine(paragraph);
-                DocXConstructor.AddNewLine(paragraph);
-                DocXConstructor.AddNewLine(paragraph);
+                return doc;
             }
-            return doc;
+            
         }
 
         public DocX ParagrafosSuntaxisEkthesis(DocX doc)
@@ -210,14 +226,13 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX ParagrafosUpografis(DocX doc, bool isPraxi)
+        public DocX ParagrafosUpografis(DocX doc, bool? isPraxi)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
-            DocXConstructor.AddNewLine(paragraph);
-            DocXConstructor.AddNewLine(paragraph);
-            if(isPraxi)
+            DocXConstructor.AddNewLine(paragraph);            
+            if(isPraxi == true)
             {
                 DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ......                                                                     Η  Δικαστική   Επιμελήτρια ");
             }

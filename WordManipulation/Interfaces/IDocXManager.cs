@@ -17,9 +17,9 @@ namespace WordManipulation.Interfaces
         DocX CreateIntroParagraph(DocX doc, string location, string locationUpiresias, bool isFusikoProsopo, string epispeudon);
         DocX EpispeudonParagraph(DocX doc, bool isFusikoProsopo, Gender gender, string ofeileths, string upiresia);
         DocX ParagraphAkrivesAdigrafo(DocX doc, Gender gender, string documentNumber, string sumbolaiografos, string ofeileths);
-        DocX ParagrafosPraxis(DocX doc, bool isPraxi, string keimenoPraxis);
+        DocX ParagrafosPraxis(DocX doc, bool? isPraxi, string keimenoPraxis);
         DocX ParagrafosSuntaxisEkthesis(DocX doc);
-        DocX ParagrafosUpografis(DocX doc, bool isPraxi);
+        DocX ParagrafosUpografis(DocX doc, bool? isPraxi);
         MemoryStream CreateAndReturnDocAsMemoryStream(DocX doc);
         MemoryStream EntoliSunexisisPlistiriasmou(Form form);
         MemoryStream PraxiPlistiriasmou(Form form);

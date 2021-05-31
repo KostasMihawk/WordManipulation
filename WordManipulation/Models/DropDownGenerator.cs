@@ -404,7 +404,7 @@ namespace WordManipulation.Models
             var list = new List<EkthesiEpidoshsModel>();
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Αθήνα",
+                Location = "Στην Αθήνα",
                 Name = "Ε.Φ.Κ.Α.",
                 Perigrafh = "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα,",
                 Praxh = true,
@@ -413,34 +413,34 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Αθήνα",
+                Location = "Στην Αθήνα",
                 Name = "Α' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς το Α Περιφερειακό ΚΕΑΟ Αθηνών,",
-                Praxh = false,
+                Praxh = null,
                 FusikoProswpo = false                
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Αθήνα",
+                Location = "Στην Αθήνα",
                 Name = "Β' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς το Β Περιφερειακό ΚΕΑΟ Αθηνών,",
-                Praxh = false,
+                Praxh = null,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Πειραιά",
+                Location = "Στον Πειραιά",
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
                 Perigrafh = "προς το ΚΕΑΟ Πειραιά,",
-                Praxh = false,
+                Praxh = null,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Ελευσίνα",
+                Location = "Στην Ελευσίνα",
                 Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
                 Perigrafh = "προς το ΚΕΑΟ Ελευσίνας,",
-                Praxh = false,
+                Praxh = null,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -453,7 +453,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Πειραιά",
+                Location = "Στον Πειραιά",
                 Name = "ΤΕΛ",
                 Perigrafh = "προς την Τελωνειακή Περιφέρεια Αττικής,",
                 Praxh = true,
@@ -463,7 +463,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Περαιά",
+                Location = "Στον Περαιά",
                 Name = "ΟΛΠ",
                 Perigrafh = "προς τον Οργανισμό Λιμένος Πειραιώς Α.Ε.,",
                 Praxh = true,
@@ -472,7 +472,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Αθήνα",
+                Location = "Στην Αθήνα",
                 Name = "ΑΑΔΕ (Υπουργος Οικονομικων)",
                 Perigrafh = "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.), ως εκπρόσωπο του Ελληνικού Δημοσίου, κατοικοεδρεύοντα στην Αθήνα,",
                 Praxh = true,
@@ -497,7 +497,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location ="Αθήνα",
+                Location = "Στην Αθήνα",
                 Name = "Εθνική Τράπεζα",
                 Perigrafh = "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201",
                 Praxh = true,
@@ -506,7 +506,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Αθήνα",
+                Location = "Στην Αθήνα",
                 Name = "Intrum",
                 Perigrafh = "αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",
                 Praxh = true,
