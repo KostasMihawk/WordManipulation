@@ -294,7 +294,7 @@ namespace WordManipulation.BML
             {
                 CreatePricingAndNameTable(doc, form.Zone, form.Defender.IsFusikoProsopo);
                 AddHeaderToDocument(doc, null);
-                CreateIntroParagraphGiaPraxiDaneistwn(doc, form.Place, form.Defender.Address, form.Defender.IsFusikoProsopo, form.Bailif.Name, form.Sumbolaiografos.Name);
+                CreateIntroParagraphGiaPraxiDaneistwn(doc, form.Place, form.Defender.Address, form.Defender.IsFusikoProsopo, form.Bailif.Name, form.Sumbolaiografos.Description);
                 ParagrapfosProsOfeilethPraxisDaneistwn(doc, form.Gender, form.Defender.IsFusikoProsopo, form.DocumentType.Ofeileths, form.Defender.Text);
                 ParagrafosAkrivesAdigrafouPraxisDaneistwn(doc, form.Gender, form.Defender.Text, form.DocumentType.DocumentNumber, form.DocumentType.Ofeileths, form.IsPinakas);
                 ParagrafosPraxis(doc, form.Defender.Praxi, form.Defender.KeimenoPraxis);
