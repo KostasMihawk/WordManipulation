@@ -14,7 +14,8 @@ namespace WordManipulation.BML
 {
     public class DocXManager:IDocXManager
     {
-        private string fontFamily = "Times new roman";        
+        private string fontFamily = "Times new roman";
+        DateManager dateMagager;
         private Formatting Formatting = new Formatting
         {
             Spacing = 1.2,
@@ -24,6 +25,7 @@ namespace WordManipulation.BML
         public DocXManager()
         {
             DocXConstructor = new DocXConstructor();
+            dateMagager = new DateManager();
         }
         public DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo)
         {
@@ -128,7 +130,7 @@ namespace WordManipulation.BML
             {
                 DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias} , σήμερα στις ...................................... ");
             }
-            DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός Ιουνίου  του έτους δύο χιλιάδες είκοσι ένα (2021), ημέρα .......................................... και ώρα ........");
+            DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι ένα (2021), ημέρα .......................................... και ώρα ........");
             DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας");
             DocXConstructor.AddToParagraph(introParagraph, $" {epispeudon} ,");            
             return doc;
@@ -176,8 +178,8 @@ namespace WordManipulation.BML
             {
                 DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias},");
             }            
-            DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός Ιουνίου του έτους δύο χιλιάδες είκοσι ένα (2021) , ημέρα ................................ και ώρα ........," +
-                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif} , μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας της συμβολαιογράφου Αθηνών {notary} " +
+            DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι ένα (2021) , ημέρα ................................ και ώρα ........," +
+                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif} , μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας  {notary} " +
                 $",ως επί του πλειστηριασμού υπαλλήλου," );
             return doc;
         }
@@ -266,7 +268,7 @@ namespace WordManipulation.BML
             GenderManager genderManager = new GenderManager();
             TextManager textManager = new TextManager();
             //DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"{defender},");
-            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν {documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} της ως άνω συμβολαιογράφου κατά {genderManager.EpiloghArthrouBasiGenous(gender)} " +//ΕΔΩ ΧΡΕΙΑΖΕΤΑΙ ΝΑ ΤΣΕΚΑΡΩ ΑΝ ΕΙΝΑΙ ΜΕ ΠΙΝΑΚΑ ΚΑΙ ΝΑ ΒΑΛΩ ΤΟ ΑΝΤΙΣΤΟΙΧΟ ΤΕΧΤ
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν {documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} της ως άνω συμβολαιογράφου κατά {genderManager.EpiloghArthrouBasiGenous(gender)}" +//ΕΔΩ ΧΡΕΙΑΖΕΤΑΙ ΝΑ ΤΣΕΚΑΡΩ ΑΝ ΕΙΝΑΙ ΜΕ ΠΙΝΑΚΑ ΚΑΙ ΝΑ ΒΑΛΩ ΤΟ ΑΝΤΙΣΤΟΙΧΟ ΤΕΧΤ
                 $"{ofeiletis} , για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }

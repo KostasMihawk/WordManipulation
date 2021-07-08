@@ -161,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BML\Agent.cs" />
+    <Compile Include="BML\DateManager.cs" />
     <Compile Include="BML\DocXConstructor.cs" />
     <Compile Include="BML\DocXManager.cs" />
     <Compile Include="BML\GenderManager.cs" />
