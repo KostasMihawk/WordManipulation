@@ -144,11 +144,13 @@ namespace WordManipulation.BML
             GenderManager genderManager = new GenderManager();
             if (isFusikoProsopo)
             {
-                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω προς {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths},");                
+                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"προς {genderManager.EpilogiArthrouBasiGenousGenikiPtwsh(gender)} {ofeileths},");
             }
             else
             {
-                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"ήλθα για να επιδώσω {upiresia}");
+                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"{upiresia}");
             }
             return doc;
         }
@@ -252,11 +254,13 @@ namespace WordManipulation.BML
             GenderManager genderManager = new GenderManager();
             if(isFusikoProsopo)
             {
-                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω προς {genderManager.EpilogiArthrouBasiGenousGenikiPtwsh(gender)} {ofeiletis} ");
+                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"προς {genderManager.EpilogiArthrouBasiGenousGenikiPtwsh(gender)} {ofeiletis}, ");
             }
             else
             {
-                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"ήλθα για να επιδώσω {upiresia}");
+                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, upiresia);
             }
             return doc;
         }
@@ -266,10 +270,10 @@ namespace WordManipulation.BML
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             GenderManager genderManager = new GenderManager();
-            TextManager textManager = new TextManager();
-            //DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"{defender},");
-            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν {documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} της ως άνω συμβολαιογράφου κατά {genderManager.EpiloghArthrouBasiGenous(gender)}" +//ΕΔΩ ΧΡΕΙΑΖΕΤΑΙ ΝΑ ΤΣΕΚΑΡΩ ΑΝ ΕΙΝΑΙ ΜΕ ΠΙΝΑΚΑ ΚΑΙ ΝΑ ΒΑΛΩ ΤΟ ΑΝΤΙΣΤΟΙΧΟ ΤΕΧΤ
-                $"{ofeiletis} , για να λάβει γνώση και για τις νόμιμες συνέπειες.");
+            TextManager textManager = new TextManager();            
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν ");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} ");
+            DocXConstructor.AddToParagraph(paragraph, $"της ως άνω συμβολαιογράφου κατά { genderManager.EpiloghArthrouBasiGenous(gender)}{ofeiletis} , για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
 
