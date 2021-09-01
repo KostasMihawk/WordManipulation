@@ -188,6 +188,7 @@
     <Compile Include="Models\DropDownGenerator.cs" />
     <Compile Include="Models\EkthesiEpidoshsModel.cs" />
     <Compile Include="Models\Form.cs" />
+    <Compile Include="Models\LoanerInvitationModel.cs" />
     <Compile Include="Models\Summary.cs" />
     <Compile Include="Models\TextGenerator.cs" />
     <Compile Include="Models\Translator.cs" />
