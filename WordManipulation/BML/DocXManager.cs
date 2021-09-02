@@ -40,37 +40,37 @@ namespace WordManipulation.BML
 
             if (isFusikoProswpo)
             {
-                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Bold().Alignment = Alignment.center;
-                t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: " + zone.Name);
-                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Alignment = Alignment.center;
-                t.Rows[1].Cells[1].Paragraphs.First().Append("");
-                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Alignment = Alignment.center;
-                t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: " + zone.Value.ToString("F"));
-                t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Alignment = Alignment.center;
-                t.Rows[3].Cells[1].Paragraphs.First().Append("");
-                t.Rows[4].Cells[0].Paragraphs.First().Append("Π.Μιχοπούλου: 6986413493").Alignment = Alignment.center;
-                t.Rows[4].Cells[1].Paragraphs.First().Append("ΦΠΑ 24%: " + zone.Tax.ToString("F"));
-                t.Rows[5].Cells[0].Paragraphs.First().Append("Μ.Ζούζουλα: 6955119261").Alignment = Alignment.center;
-                t.Rows[5].Cells[1].Paragraphs.First().Append("");
-                t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Alignment = Alignment.center;
-                t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: " + zone.TaxedValue.ToString("F"));
+                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
+                t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: " + zone.Name).Font(fontFamily);
+                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[1].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: " + zone.Value.ToString("F")).Font(fontFamily);
+                t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[3].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[4].Cells[0].Paragraphs.First().Append("Π .Μιχοπούλου: 6986413493").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[4].Cells[1].Paragraphs.First().Append("ΦΠΑ 24%: " + zone.Tax.ToString("F")).Font(fontFamily);
+                t.Rows[5].Cells[0].Paragraphs.First().Append("Μ .Ζούζουλα: 6955119261").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[5].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: " + zone.TaxedValue.ToString("F")).Font(fontFamily);
             }
             else
             {
-                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Bold().Alignment = Alignment.center;
-                t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: A");
-                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Alignment = Alignment.center;
-                t.Rows[1].Cells[1].Paragraphs.First().Append("");
-                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Alignment = Alignment.center;
-                t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: 35.00");
-                t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Alignment = Alignment.center;
-                t.Rows[3].Cells[1].Paragraphs.First().Append("");
-                t.Rows[4].Cells[0].Paragraphs.First().Append("Π.Μιχοπούλου: 6986413493").Alignment = Alignment.center;
-                t.Rows[4].Cells[1].Paragraphs.First().Append("ΦΠΑ 24%: 8.40");
-                t.Rows[5].Cells[0].Paragraphs.First().Append("Μ.Ζούζουλα: 6955119261").Alignment = Alignment.center;
-                t.Rows[5].Cells[1].Paragraphs.First().Append("");
-                t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Alignment = Alignment.center;
-                t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: 43.40");
+                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
+                t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: A").Font(fontFamily);
+                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[1].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: 35.00").Font(fontFamily);
+                t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[3].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[4].Cells[0].Paragraphs.First().Append("Π.Μιχοπούλου: 6986413493").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[4].Cells[1].Paragraphs.First().Append("ΦΠΑ 24%: 8.40").Font(fontFamily);
+                t.Rows[5].Cells[0].Paragraphs.First().Append("Μ.Ζούζουλα: 6955119261").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[5].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: 43.40").Font(fontFamily);
             }
 
 
@@ -175,15 +175,15 @@ namespace WordManipulation.BML
             paragraph.Alignment = Alignment.both;
             if(isFusikoProsopo)
             {
-                DocXConstructor.AddToParagraph(paragraph, $"{location},");
+                DocXConstructor.AddToParagraph(paragraph, $"{location}, ");
             }
             else
             {
-                DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias},");
+                DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias}, ");
             }            
-            DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι ένα (2021) , ημέρα ................................ και ώρα ........," +
-                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif} , μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας  {notary} " +
-                $",ως επί του πλειστηριασμού υπαλλήλου," );
+            DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι ένα (2021), ημέρα ................................ και ώρα ........," +
+                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif} , μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας {notary}" +
+                $", ως επί του πλειστηριασμού υπαλλήλου," );
             return doc;
         }
 
@@ -243,7 +243,7 @@ namespace WordManipulation.BML
             }
             else
             {
-                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπαλληλος                        Η  Δικαστική   Επιμελήτρια ");
+                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
             }
             return doc;
         }
@@ -274,7 +274,7 @@ namespace WordManipulation.BML
             TextManager textManager = new TextManager();            
             DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν ");
             DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} ");
-            DocXConstructor.AddToParagraph(paragraph, $"της ως άνω συμβολαιογράφου κατά { genderManager.EpiloghArthrouBasiGenous(gender)}{ofeiletis} , για να λάβει γνώση και για τις νόμιμες συνέπειες.");
+            DocXConstructor.AddToParagraph(paragraph, $"της ως άνω συμβολαιογράφου κατά { genderManager.EpiloghArthrouBasiGenous(gender)}{ofeiletis}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
 
