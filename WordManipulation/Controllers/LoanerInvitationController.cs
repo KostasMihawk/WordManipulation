@@ -34,23 +34,7 @@ namespace WordManipulation.Controllers
             DropDownGenerator generator = new DropDownGenerator();
             Summary s = new Summary();
 
-            var form = new Form();
-            form.DocumentT = DocumentT.DilwshSunexisisPlirstiasmou;
-            form.Bailif = generator.GetBaillifs().SingleOrDefault(b => b.Id == vm.Baillif);
-            form.Sumbolaiografos = generator.GetNotaries().SingleOrDefault(n => n.Id == vm.Notary);
-            form.Zone = generator.GetZones().SingleOrDefault(a => a.Id == vm.Zone);
-            form.DocumentType = new DocumentType();
-            form.DocumentType.DocumentNumber = vm.CaseNumber;
-            form.DocumentType.Ofeileths = vm.Debtor;
-            form.Gender = vm.Gender;
-            form.Place = vm.Location;
-            form.Praxh = vm.FinishText;
-            form.KEAO = vm.KEAO;
-            form.IsPinakas = vm.IsTable;
-            form.IsBankEmpty = vm.IsBank;
-            form.KEAO = vm.KEAO;  
-
-            form.Defender = new Defender();
+            var LoanerInvitationModel = new LoanerInvitationModel(vm);           
 
             var ZipFiles = new List<EkthesiEpidoshsModel>();
             ZipFiles = generator.GetZipFiles();
@@ -63,12 +47,8 @@ namespace WordManipulation.Controllers
                     zip.AlternateEncodingUsage = ZipOption.AsNecessary;
                     foreach (var doc in ZipFiles)
                     {
-                        form.Defender.Text = doc.Perigrafh;
-                        form.Defender.IsFusikoProsopo = doc.FusikoProswpo;
-                        form.Defender.Praxi = doc.Praxh;
-                        form.Defender.Address = doc.Location;
-                        form.Defender.KeimenoPraxis = doc.Kleisimo;
-                        zip.AddEntry(doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(form));                       
+                        LoanerInvitationModel.fillZipEntries(doc);
+                        zip.AddEntry(doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));                       
                     }
                     zip.Save(stream);
                 }
@@ -77,5 +57,7 @@ namespace WordManipulation.Controllers
         }
 
        
+
+
     }
 }

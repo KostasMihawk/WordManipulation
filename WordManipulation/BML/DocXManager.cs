@@ -35,6 +35,7 @@ namespace WordManipulation.BML
             t.SetColumnWidth(1, 110d);
             t.SetBorder(TableBorderType.InsideH, new Border(BorderStyle.Tcbs_none, BorderSize.one, 0, Color.AntiqueWhite));
             t.Alignment = Alignment.center;
+            
 
 
             if (isFusikoProswpo)
@@ -278,34 +279,34 @@ namespace WordManipulation.BML
         }
 
       
-        public MemoryStream EntoliSunexisisPlistiriasmou(Form form)
+        public MemoryStream EntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model)
         {
             using (DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
             {
-                CreatePricingAndNameTable(doc, form.Zone, form.Defender.IsFusikoProsopo);
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
                 AddHeaderToDocument(doc, null);
-                CreateIntroParagraph(doc, form.Place, form.Defender.Address, form.Defender.IsFusikoProsopo, form.Defender.Epispeudon);
-                EpispeudonParagraph(doc, form.Defender.IsFusikoProsopo, form.Gender, form.DocumentType.Ofeileths, form.Defender.Text);
-                ParagraphAkrivesAdigrafo(doc, form.Gender, form.DocumentType.DocumentNumber, form.Sumbolaiografos.GiaSunexisi, form.DocumentType.Ofeileths);
-                ParagrafosPraxis(doc, form.Defender.Praxi, form.Defender.KeimenoPraxis);
+                CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon);
+                EpispeudonParagraph(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
+                ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor);
+                ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
-                ParagrafosUpografis(doc, form.Defender.Praxi);
+                ParagrafosUpografis(doc, model.PraxiUpiresias);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }
 
-        public MemoryStream PraxiPlistiriasmou(Form form)
+        public MemoryStream PraxiPlistiriasmou(LoanerInvitationModel model)
         {
             using(DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
             {
-                CreatePricingAndNameTable(doc, form.Zone, form.Defender.IsFusikoProsopo);
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
                 AddHeaderToDocument(doc, null);
-                CreateIntroParagraphGiaPraxiDaneistwn(doc, form.Place, form.Defender.Address, form.Defender.IsFusikoProsopo, form.Bailif.Name, form.Sumbolaiografos.Description);
-                ParagrapfosProsOfeilethPraxisDaneistwn(doc, form.Gender, form.Defender.IsFusikoProsopo, form.DocumentType.Ofeileths, form.Defender.Text);
-                ParagrafosAkrivesAdigrafouPraxisDaneistwn(doc, form.Gender, form.Defender.Text, form.DocumentType.DocumentNumber, form.DocumentType.Ofeileths, form.IsPinakas);
-                ParagrafosPraxis(doc, form.Defender.Praxi, form.Defender.KeimenoPraxis);
+                CreateIntroParagraphGiaPraxiDaneistwn(doc,model.Location, model.Address, model.IsFusikoProsopo, model.Baillif.Name, model.Notary.Description);
+                ParagrapfosProsOfeilethPraxisDaneistwn(doc, model.Gender, model.IsFusikoProsopo, model.Debtor, model.Upiresia);
+                ParagrafosAkrivesAdigrafouPraxisDaneistwn(doc, model.Gender, model.Upiresia, model.CaseNumber, model.Debtor, model.IsTable);
+                ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
-                ParagrafosUpografis(doc, form.Defender.Praxi);
+                ParagrafosUpografis(doc, model.PraxiUpiresias);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }

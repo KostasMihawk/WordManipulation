@@ -6,19 +6,15 @@ using WordManipulation.ViewModels;
 
 namespace WordManipulation.Models
 {
-    public class LoanerInvitationModel
+    public class SunexisiPlistiriasmouModel
     {
-        public Baillif Baillif { get; set; }
         public Attorney Notary { get; set; }
         public Zone Zone { get; set; }
         public string CaseNumber { get; set; }
         public string Debtor { get; set; }
         public Gender Gender { get; set; }
         public string Location { get; set; }
-        public bool PraxhPelath { get; set; }
-        public KEAO KEAO { get; set; }
-        public bool IsTable { get; set; }
-        public bool IsBank { get; set; }
+        public string Epispeudon { get; set; }
 
         //We need the following attributes to fill up the zip procedure
         public bool IsFusikoProsopo { get; set; }
@@ -27,24 +23,21 @@ namespace WordManipulation.Models
         public string KeimenoPraxis { get; set; }
         public bool? PraxiUpiresias { get; set; }
 
-        public LoanerInvitationModel()
+        public SunexisiPlistiriasmouModel()
         {
 
         }
-        public LoanerInvitationModel(LoanerInvitationViewmodel vm)
+
+        public SunexisiPlistiriasmouModel(SunexisiPlistirasmouViewmodel vm)
         {
             DropDownGenerator generator = new DropDownGenerator();
-            this.Baillif = generator.GetBaillifs().SingleOrDefault(b => b.Id == vm.Baillif);
             this.Notary = generator.GetNotaries().SingleOrDefault(n => n.Id == vm.Notary);
             this.Zone = generator.GetZones().SingleOrDefault(a => a.Id == vm.Zone);
             this.CaseNumber = vm.CaseNumber;
             this.Debtor = vm.Debtor;
             this.Gender = vm.Gender;
             this.Location = vm.Location;
-            this.KEAO = vm.KEAO;
-            this.IsTable = vm.IsTable;
-            this.IsBank = vm.IsBank;
-            this.PraxhPelath = vm.Praxi;
+            this.Epispeudon = vm.Epispeudon??"";
         }
 
         public void fillZipEntries(EkthesiEpidoshsModel zipEntry)
@@ -55,6 +48,5 @@ namespace WordManipulation.Models
             this.Address = zipEntry.Location;
             this.KeimenoPraxis = zipEntry.Kleisimo;
         }
-
     }
 }

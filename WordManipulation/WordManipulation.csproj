@@ -190,6 +190,7 @@
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\LoanerInvitationModel.cs" />
     <Compile Include="Models\Summary.cs" />
+    <Compile Include="Models\SunexisiPlistiriasmouModel.cs" />
     <Compile Include="Models\TextGenerator.cs" />
     <Compile Include="Models\Translator.cs" />
     <Compile Include="Models\WordOpen.cs" />

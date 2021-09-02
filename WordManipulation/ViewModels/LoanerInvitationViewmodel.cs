@@ -17,7 +17,7 @@ namespace WordManipulation.ViewModels
         [Display(Name = "Ζώνη")]
         public int Zone { get; set; }
         [Display(Name = "Πράξη")]
-        public bool FinishText { get; set; }
+        public bool Praxi { get; set; }
         [Display(Name = "Αριθμός")]
         public string CaseNumber { get; set; }
         [Display(Name = "Οφειλέτης")]

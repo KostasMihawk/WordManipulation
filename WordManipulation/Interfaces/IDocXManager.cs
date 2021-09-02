@@ -21,8 +21,8 @@ namespace WordManipulation.Interfaces
         DocX ParagrafosSuntaxisEkthesis(DocX doc);
         DocX ParagrafosUpografis(DocX doc, bool? isPraxi);
         MemoryStream CreateAndReturnDocAsMemoryStream(DocX doc);
-        MemoryStream EntoliSunexisisPlistiriasmou(Form form);
-        MemoryStream PraxiPlistiriasmou(Form form);
+        MemoryStream EntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model);
+        MemoryStream PraxiPlistiriasmou(LoanerInvitationModel model);
         
     }
 }
