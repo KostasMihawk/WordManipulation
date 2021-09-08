@@ -328,77 +328,7 @@ namespace WordManipulation.Models
             });
             return list;
         }
-
-        public List<BankModel> GetBanks()
-        {
-            var id = 1;
-            var list = new List<BankModel>();
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "efka",
-                Text = "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα",
-                LegalEntity = LegalEntity.EFka,
-                ZipDocumentTitle = "Ε.Φ.Κ.Α."
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "aade",
-                Text = "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.), ως εκπρόσωπο του Ελληνικού Δημοσίου, κατοικοεδρεύοντα στην Αθήνα",
-                LegalEntity = LegalEntity.EllinikoDimosio,
-                ZipDocumentTitle = "Α.Α.Δ.Ε."
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "ethinkiTrapeza",
-                Text = "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201",
-                LegalEntity = LegalEntity.Trapezes,
-                ZipDocumentTitle= "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ Α.Ε."
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "doy",
-                Text = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ ",
-                LegalEntity = LegalEntity.LoipesUpirisies,
-                ZipDocumentTitle = "Δ.Ο.Υ."
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "keao",
-                Text = "", 
-                LegalEntity = LegalEntity.LoipesUpirisies,
-                ZipDocumentTitle = "Κ.Ε.Α.Ο."
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "ofeileths",
-                Text = "",
-                LegalEntity = LegalEntity.FusikoProswpo,
-                ZipDocumentTitle = "ΟΦΕΙΛΕΤΗΣ"
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "intrum",
-                Text = "αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",
-                LegalEntity = LegalEntity.Trapezes,
-                ZipDocumentTitle = "INTRUM"
-            });
-            list.Add(new BankModel
-            {
-                Id = id++,
-                Name = "Empty",
-                Text = "",
-                LegalEntity = LegalEntity.Empty,
-                ZipDocumentTitle = "Μπαλαντερ"
-            });
-            return list;
-        }
+        
 
         public List<EkthesiEpidoshsModel> GetZipFiles()
         {
@@ -449,7 +379,7 @@ namespace WordManipulation.Models
                 Location = "                 ",
                 Name = "Δ.Ο.Υ. (Εφοριες)",
                 Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ, ",
-                Praxh = false,
+                Praxh = null,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
