@@ -182,7 +182,7 @@ namespace WordManipulation.BML
                 DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias}, ");
             }            
             DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι ένα (2021), ημέρα ................................ και ώρα ........," +
-                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif} , μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας {notary}" +
+                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif}, μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας {notary}" +
                 $", ως επί του πλειστηριασμού υπαλλήλου," );
             return doc;
         }
@@ -239,7 +239,7 @@ namespace WordManipulation.BML
             DocXConstructor.AddNewLine(paragraph);            
             if(isPraxi == true)
             {
-                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ......                                                                     Η  Δικαστική   Επιμελήτρια ");
+                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ......                                                                     Η Δικαστική Επιμελήτρια ");
             }
             else
             {
