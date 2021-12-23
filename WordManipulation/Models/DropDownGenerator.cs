@@ -346,7 +346,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Αθήνα",
                 Name = "Α' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
-                Perigrafh = "προς το Α' Περιφερειακό ΚΕΑΟ Αθηνών,",
+                Perigrafh = "προς τη Α' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
                 Praxh = null,
                 FusikoProswpo = false                
             });
@@ -354,7 +354,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Αθήνα",
                 Name = "Β' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
-                Perigrafh = "προς το Β' Περιφερειακό ΚΕΑΟ Αθηνών,",
+                Perigrafh = "προς τη Β' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
                 Praxh = null,
                 FusikoProswpo = false
             });
@@ -362,7 +362,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στον Πειραιά",
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
-                Perigrafh = "προς το ΚΕΑΟ Πειραιά,",
+                Perigrafh = "προς την Περιφερειακή Διεύθυνση ΚΕΑΟ Πειραιά,",
                 Praxh = null,
                 FusikoProswpo = false
             });
@@ -370,7 +370,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Ελευσίνα",
                 Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
-                Perigrafh = "προς το ΚΕΑΟ Ελευσίνας,",
+                Perigrafh = "προς τη Περιφερειακή Διεύθυνση ΚΕΑΟ Ελευσίνας,",
                 Praxh = null,
                 FusikoProswpo = false
             });
