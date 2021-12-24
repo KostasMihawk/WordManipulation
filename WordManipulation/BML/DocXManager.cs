@@ -241,9 +241,13 @@ namespace WordManipulation.BML
             {
                 DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ......                                                                     Η Δικαστική Επιμελήτρια ");
             }
-            else
+            else if(isPraxi == false)
             {
                 DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
+            }
+            else
+            {
+                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
             }
             return doc;
         }

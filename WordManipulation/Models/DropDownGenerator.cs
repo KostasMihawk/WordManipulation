@@ -347,7 +347,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "Α' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Α' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
-                Praxh = null,
+                Praxh = false,
                 FusikoProswpo = false                
             });
             list.Add(new EkthesiEpidoshsModel
@@ -355,7 +355,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "Β' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Β' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
-                Praxh = null,
+                Praxh = false,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -363,7 +363,7 @@ namespace WordManipulation.Models
                 Location = "Στον Πειραιά",
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
                 Perigrafh = "προς την Περιφερειακή Διεύθυνση ΚΕΑΟ Πειραιά,",
-                Praxh = null,
+                Praxh = false,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -371,7 +371,7 @@ namespace WordManipulation.Models
                 Location = "Στην Ελευσίνα",
                 Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
                 Perigrafh = "προς τη Περιφερειακή Διεύθυνση ΚΕΑΟ Ελευσίνας,",
-                Praxh = null,
+                Praxh = false,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -379,7 +379,7 @@ namespace WordManipulation.Models
                 Location = "                 ",
                 Name = "Δ.Ο.Υ. (Εφοριες)",
                 Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ, ",
-                Praxh = null,
+                Praxh = false,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -406,7 +406,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "ΑΑΔΕ (Υπουργος Οικονομικων)",
                 Perigrafh = "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.), ως εκπρόσωπο του Ελληνικού Δημοσίου, κατοικοεδρεύοντα στην Αθήνα,",
-                Praxh = true,
+                Praxh = null,
                 FusikoProswpo = false,
                 Kleisimo = "Αφού δεν βρήκα τον ίδιο στην έδρα του Νομικού Συμβουλίου του Κράτους επί της οδού Ακαδημίας & Χαρ. Τρικούπη, όπου σύμφωνα με τον Νόμο γίνονται οι επιδόσεις προς αυτόν, ούτε Διευθυντή ή συνεργάτη του, αλλά τον εξουσιοδοτημένο γιά την παραλαβή Πάρεδρο Ν.Σ.Κ. ............................................, επέδωσα σ΄ αυτόν το άνω δικόγραφο."
             });
