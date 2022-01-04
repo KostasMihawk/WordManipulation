@@ -394,7 +394,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Στον Περαιά",
+                Location = "Στον Πειραιά",
                 Name = "ΟΛΠ",
                 Perigrafh = "προς τον Οργανισμό Λιμένος Πειραιώς Α.Ε.,",
                 Praxh = true,
