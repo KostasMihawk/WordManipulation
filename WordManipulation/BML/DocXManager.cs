@@ -215,6 +215,14 @@ namespace WordManipulation.BML
                 DocXConstructor.AddNewLine(paragraph);
                 return doc;
             }
+            else if(isPraxi == null && !string.IsNullOrEmpty(keimenoPraxis))
+            {
+                Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+                paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+                paragraph.Alignment = Alignment.both;
+                DocXConstructor.AddToParagraph(paragraph, keimenoPraxis);
+                return doc;
+            }
             else
             {
                 return doc;
@@ -231,23 +239,27 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX ParagrafosUpografis(DocX doc, bool? isPraxi)
+        public DocX ParagrafosUpografis(DocX doc, bool? isPraxi, bool isFusikoProsopo)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             DocXConstructor.AddNewLine(paragraph);            
-            if(isPraxi == true)
+            if(isFusikoProsopo == true)
             {
-                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ......                                                                     Η Δικαστική Επιμελήτρια ");
+                DocXConstructor.AddToParagraph(paragraph, $".. .....ρα...........                                                                     Η Δικαστική Επιμελήτρια ");
             }
-            else if(isPraxi == false)
+            else if(isFusikoProsopo == false)
             {
                 DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
             }
-            else
+            else if(isFusikoProsopo == false && isPraxi == null)
             {
                 DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
+            }
+            else
+            {
+
             }
             return doc;
         }
@@ -294,7 +306,7 @@ namespace WordManipulation.BML
                 ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
-                ParagrafosUpografis(doc, model.PraxiUpiresias);
+                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }
@@ -310,7 +322,7 @@ namespace WordManipulation.BML
                 ParagrafosAkrivesAdigrafouPraxisDaneistwn(doc, model.Gender, model.Upiresia, model.CaseNumber, model.Debtor, model.IsTable);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
-                ParagrafosUpografis(doc, model.PraxiUpiresias);
+                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }
