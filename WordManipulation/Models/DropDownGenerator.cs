@@ -328,8 +328,10 @@ namespace WordManipulation.Models
             });
             return list;
         }
-        
 
+
+
+        //Praxi equals 
         public List<EkthesiEpidoshsModel> GetZipFiles()
         {
             var list = new List<EkthesiEpidoshsModel>();

@@ -247,9 +247,9 @@ namespace WordManipulation.BML
             DocXConstructor.AddNewLine(paragraph);            
             if(isFusikoProsopo == true)
             {
-                DocXConstructor.AddToParagraph(paragraph, $".. .....ρα...........                                                                     Η Δικαστική Επιμελήτρια ");
+                DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
             }
-            else if(isFusikoProsopo == false)
+            else if(isFusikoProsopo == false && isPraxi == false)
             {
                 DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
             }
@@ -259,7 +259,7 @@ namespace WordManipulation.BML
             }
             else
             {
-
+                DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
             }
             return doc;
         }
