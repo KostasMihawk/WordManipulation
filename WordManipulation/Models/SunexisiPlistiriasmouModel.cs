@@ -22,8 +22,11 @@ namespace WordManipulation.Models
         public string Upiresia { get; set; }
         public string KeimenoPraxis { get; set; }
         public bool? PraxiUpiresias { get; set; }
+        public Kleisimo HasKleisimo { get; set; }
+        public Signature Signature { get; set; }
+    
 
-        public SunexisiPlistiriasmouModel()
+    public SunexisiPlistiriasmouModel()
         {
 
         }
@@ -47,6 +50,8 @@ namespace WordManipulation.Models
             this.PraxiUpiresias = zipEntry.Praxh;
             this.Address = zipEntry.Location;
             this.KeimenoPraxis = zipEntry.Kleisimo;
+            this.Signature = zipEntry.Signature;
+            this.HasKleisimo = zipEntry.HasKleisimo;
         }
     }
 }

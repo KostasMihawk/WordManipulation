@@ -13,5 +13,21 @@ namespace WordManipulation.Models
         public bool? Praxh { get; set; }
         public bool FusikoProswpo { get; set; }
         public string Kleisimo { get; set; }
+        public Kleisimo HasKleisimo { get; set; }
+        public Signature Signature { get; set; }
+    }
+
+    public enum Signature
+    {
+        paredros,
+        ypallilos,
+        paralavon,
+        genericMartyras
+    }
+     public enum Kleisimo
+    {
+        exei,
+        denExei,
+        MegaloKeno
     }
 }

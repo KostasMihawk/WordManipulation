@@ -239,27 +239,44 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX ParagrafosUpografis(DocX doc, bool? isPraxi, bool isFusikoProsopo)
+        public DocX ParagrafosUpografis(DocX doc, bool? isPraxi, bool isFusikoProsopo, Signature signature)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             DocXConstructor.AddNewLine(paragraph);            
-            if(isFusikoProsopo == true)
+            //if(isFusikoProsopo == true)
+            //{
+            //    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
+            //}
+            //else if(isFusikoProsopo == false && isPraxi == false)
+            //{
+            //    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
+            //}
+            //else if(isFusikoProsopo == false && isPraxi == null)
+            //{
+            //    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
+            //}
+            //else
+            //{
+            //    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
+            //}
+            switch(signature)
             {
-                DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
-            }
-            else if(isFusikoProsopo == false && isPraxi == false)
-            {
-                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
-            }
-            else if(isFusikoProsopo == false && isPraxi == null)
-            {
-                DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
-            }
-            else
-            {
-                DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
+                case Signature.paralavon:
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ.....                                             Η Δικαστική Επιμελήτρια ");
+                    break;
+                case Signature.paredros:
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
+                    break;
+                case Signature.ypallilos:
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
+                    break;
+                case Signature.genericMartyras:
+                    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
+                    break;
+                default:
+                    break;
             }
             return doc;
         }
@@ -306,7 +323,7 @@ namespace WordManipulation.BML
                 ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
-                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo);
+                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }
@@ -322,7 +339,7 @@ namespace WordManipulation.BML
                 ParagrafosAkrivesAdigrafouPraxisDaneistwn(doc, model.Gender, model.Upiresia, model.CaseNumber, model.Debtor, model.IsTable);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
-                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo);
+                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }

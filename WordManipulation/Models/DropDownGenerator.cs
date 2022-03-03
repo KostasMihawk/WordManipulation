@@ -342,6 +342,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς το Ν.Π.Δ.Δ. με την επωνυμία e-ΕΦΚΑ που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα,",
                 Praxh = true,
                 FusikoProswpo = false,
+                Signature = Signature.paralavon,
+                HasKleisimo = Kleisimo.exei,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο του άνω Ν.Π.Δ.Δ. στην έδρα του επί της οδού Αγίου Κωνσταντίνου αρ. 16, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτού …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. " /// <------
             });
             list.Add(new EkthesiEpidoshsModel
@@ -350,6 +352,8 @@ namespace WordManipulation.Models
                 Name = "Α' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Α' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
                 Praxh = false,
+                HasKleisimo = Kleisimo.denExei,
+                Signature= Signature.ypallilos,
                 FusikoProswpo = false                
             });
             list.Add(new EkthesiEpidoshsModel
@@ -358,6 +362,8 @@ namespace WordManipulation.Models
                 Name = "Β' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Β' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
                 Praxh = false,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -366,6 +372,8 @@ namespace WordManipulation.Models
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
                 Perigrafh = "προς την Περιφερειακή Διεύθυνση ΚΕΑΟ Πειραιά,",
                 Praxh = false,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -374,6 +382,8 @@ namespace WordManipulation.Models
                 Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
                 Perigrafh = "προς τη Περιφερειακή Διεύθυνση ΚΕΑΟ Ελευσίνας,",
                 Praxh = false,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -382,6 +392,8 @@ namespace WordManipulation.Models
                 Name = "Δ.Ο.Υ. (Εφοριες)",
                 Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ, ",
                 Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo= Kleisimo.denExei,
                 FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
@@ -390,6 +402,8 @@ namespace WordManipulation.Models
                 Name = "ΤΕΛ",
                 Perigrafh = "προς την Τελωνειακή Περιφέρεια Αττικής,",
                 Praxh = null,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
                 FusikoProswpo = false   
             });
             list.Add(new EkthesiEpidoshsModel
@@ -399,6 +413,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς τον Οργανισμό Λιμένος Πειραιώς Α.Ε.,",
                 Praxh = true,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο του άνω Ν.Π.Δ.Δ. στην οδό Ακτή Μιαούλη αρ. 10 ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. "
             });
             list.Add(new EkthesiEpidoshsModel
@@ -408,6 +424,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.), ως εκπρόσωπο του Ελληνικού Δημοσίου, κατοικοεδρεύοντα στην Αθήνα,",
                 Praxh = null,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paredros,
                 Kleisimo = "Αφού δεν βρήκα τον ίδιο στην έδρα του Νομικού Συμβουλίου του Κράτους επί της οδού Ακαδημίας & Χαρ. Τρικούπη, όπου σύμφωνα με τον Νόμο γίνονται οι επιδόσεις προς αυτόν, ούτε Διευθυντή ή συνεργάτη του, αλλά τον εξουσιοδοτημένο γιά την παραλαβή Πάρεδρο Ν.Σ.Κ. ............................................, επέδωσα σ΄ αυτόν το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -416,6 +434,8 @@ namespace WordManipulation.Models
                 Name = "Οφειλέτης",
                 Perigrafh = "προς τον ",
                 Praxh = true,
+                HasKleisimo = Kleisimo.MegaloKeno,
+                Signature = Signature.genericMartyras,
                 FusikoProswpo = true
             });
             list.Add(new EkthesiEpidoshsModel
@@ -433,6 +453,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς την επισπεύδουσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «Εθνική Τράπεζα της Ελλάδος Α.Ε.», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα με ΑΦΜ 094014201",
                 Praxh = true,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature= Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Αιόλου αρ.86, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -442,6 +464,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς την αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και το διακριτικό τίτλο «INTRUM HELLAS ΑΕΔΑΔΠ», όπως μετονομάστηκε από «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, ως διαχειρίστρια των απαιτήσεων της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ Α.Ε», που εδρεύει στην Αθήνα και εκπροσωπείται νόμιμα, η οποία είχε καταστεί οιονεί καθολική διάδοχος των περουσιακών στοιχείων της «ΓΕΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε», ",
                 Praxh = true,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην λεωφ. Μεσογείων 109-111, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -451,6 +475,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς την QQUANT MASTER SERVICER ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και τον διακριτικό τίτλο «QQUANT MASTER SERVICER ΜΟΝΟΠΡΟΣΩΠΗ Α.Ε.Δ.Α.Δ.Π.» (η οποία έφερε πρότερον την επωνυμία «QQUANT MASTER SERVICER ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και τον διακριτικό τίτλο «QQUANT MASTER SERVICER Α.Ε.Δ.Α.Δ.Π.»), η οποία εδρεύει στο Αμαρούσιο Αττικής οδός Παραδείσου αρ. 16 και εκπροσωπείται νόμιμα, ως εντολοδόχος και ειδική πληρεξούσια, αντιπρόσωπος, αντίκλητος και διαχειρίστρια των απαιτήσεων σύμφωνα με τις διατάξεις του Ν. 4354/2015, όπως αυτός τροποποιημένος ισχύει, της εταιρείας ειδικού σκοπού με την επωνυμία «Asopus LP», συσταθείσας σύμφωνα με το δίκαιο της πολιτείας του Delaware (Ντελαγουερ) των Ηνωμένων Πολιτειών της Αμερικής, η οποία εδρεύει στο Corporation Trust Centre, 1209 Orange Street, City Of Wilmington 1980 και εκπροσωπείται  νόμιμα, οι οποίες απαιτήσεις έχουν μεταβιβαστεί στο πλάισιο τιτλοποίησης αξιώσεων σύμφωνα με τις διατάξεις του Ν. 3156/2003, από την ανώνυμη τραπεζική εταιρεία με την επωνυμία «ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.», η οποία εδρεύει στην Αθήνα οδός Αιόλου αρ. 86",
                 Praxh = true,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Παραδείσου 16, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -460,6 +486,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς την «INTRUM HELLAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και τον διακριτικό τίτλο «INTRUM HELLAS Α.Ε.Δ.Α.Δ.Π.» (πρώην «ALTERNATIVE FINANCIAL SOLUTIONS ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΩΝ» και τον διακριτικό τίτλο «ALTERNATIVE FINANCIAL SOLUTIONS Μ.Α.Ε.Δ.Α.Δ.Π»), η οποία εδρεύει στο Δήμο Αθηναίων επί της Λεωφόρου Μεσογείων αρ. 109-111 και εκπροσωπείται νόμιμα,",
                 Praxh = true,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην Λεωφ. Μεσογείων 109-111, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -468,6 +496,8 @@ namespace WordManipulation.Models
                 Name = "ALfa me citibank",
                 Perigrafh = "προς την αναγγελθείσα ανώνυμη τραπεζική εταιρεία με την επωνυμία «ΑΛΦΑ ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ» και τον διακριτικό τίτλο «ALPHA BANK», η οποία εδρεύει στην Αθήνα οδός Σταδίου αρ. 40 και εκπροσωπείται νόμιμα, υπό την ιδιότητα της ως καθολικής διαδόχου της ανώνυμης εταιρείας με την επωνυμία «ΑΛΦΑ ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ» (και ήδη μετονομασθείσας σε «ALPHA ΥΠΗΡΕΣΙΩΝ ΚΑΙ ΣΥΜΜΕΤΕΧΩΝ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ»), κατόπιν διάσπασης της τελευταίας με απόσχιση του κλάδου της τραπεζικής δραστηριότητας και εισφοράς του στη νεοσυσταθείσα εταιρεία – πιστωτικό ίδρυμα, ενεργούσας για τις απαιτήσεις της ιδίας καθώς και ως ειδικής διαδόχου της «CITIBANK INTERNATIONAL PLC»,",
                 Praxh = true,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
                 FusikoProswpo = false,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην οδό Σταδίου 40, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
@@ -478,6 +508,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς την αναγγελθείσα ανώνυμη εταιρεία με την επωνυμία «doValue Greece Ανώνυμη Εταιρεία Διαχείρισης Απαιτήσεων από Δάνεια και Πιστώσεις» και τον διακριτικό τίτλο «doValue Greece» πρώην «EUROBANK FPS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ» και τον διακριτικό τίτλο «EUROBANK FINANCIAL PLANNING SERVICES», η οποία εδρεύει στο Μοσχάτο Αττικής οδός Κύπρου αρ. 27 και Αρχιμήδους και εκπροσωπείται νόμιμα, ως μη δικαιούχος και μη υπόχρεος διάδικος και υπό την ιδιότητα της ως διαχειρίστριας των απαιτήσεων της αλλοδαπής εταιρείας ειδικού σκοπού με την επωνυμία «CAIRO No 2 FINANCE DESIGNATED ACTIVITY COMPANY», η οποία εδρεύει στο Δουβλίνο Ιρλανδίας οδός George’s Dock αρ. 3, 4ος  όροφος, IFSC, Δουβλίνο 1 και εκπροσωπείται νόμιμα και η οποία κατέστη ειδική διάδοχος της ανώνυμης τραπεζικής εταιρείας με την επωνυμία «ΤΡΑΠΕΖΑ EUROBANK ERGASIAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ», η οποία εδρεύει στην Αθήνα οδός Όθωνος αρ. 8 και εκπροσωπείται νόμιμα,",
                 Praxh = true,
                 FusikoProswpo = false,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην οδό Κύπρου 27 και Αρχιμήδους, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             

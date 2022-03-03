@@ -19,7 +19,7 @@ namespace WordManipulation.Interfaces
         DocX ParagraphAkrivesAdigrafo(DocX doc, Gender gender, string documentNumber, string sumbolaiografos, string ofeileths);
         DocX ParagrafosPraxis(DocX doc, bool? isPraxi, string keimenoPraxis);
         DocX ParagrafosSuntaxisEkthesis(DocX doc);
-        DocX ParagrafosUpografis(DocX doc, bool? isPraxi, bool isFusikoProsopo);
+        DocX ParagrafosUpografis(DocX doc, bool? isPraxi, bool isFusikoProsopo, Signature signature);
         MemoryStream CreateAndReturnDocAsMemoryStream(DocX doc);
         MemoryStream EntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model);
         MemoryStream PraxiPlistiriasmou(LoanerInvitationModel model);
