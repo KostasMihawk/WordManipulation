@@ -125,11 +125,11 @@ namespace WordManipulation.BML
             DocXConstructor.AddNewLine(introParagraph);
             if(isFusikoProsopo)
             {
-                DocXConstructor.AddToParagraph(introParagraph, $"{location} , σήμερα στις ...................................... ");
+                DocXConstructor.AddToParagraph(introParagraph, $"{location}, σήμερα στις ...................................... ");
             }
             else
             {
-                DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias} , σήμερα στις ...................................... ");
+                DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias}, σήμερα στις ...................................... ");
             }
             DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα .......................................... και ώρα ........");
             DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας");
@@ -162,9 +162,9 @@ namespace WordManipulation.BML
             GenderManager genderManager = new GenderManager();
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
-            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν ");
-            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ  973 ΤΟΥ Κ.ΠΟΛ.Δ.,");
-            DocXConstructor.AddToParagraph(paragraph, $" {sumbolaiografos} κατά {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ 973 ΤΟΥ Κ.ΠΟΛ.Δ.,");
+            DocXConstructor.AddToParagraph(paragraph, $" {sumbolaiografos}κατά {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
 
@@ -267,7 +267,7 @@ namespace WordManipulation.BML
                     DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ.....                                             Η Δικαστική Επιμελήτρια ");
                     break;
                 case Signature.paredros:
-                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... Πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
                     break;
                 case Signature.ypallilos:
                     DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
@@ -305,7 +305,7 @@ namespace WordManipulation.BML
             paragraph.Alignment = Alignment.both;
             GenderManager genderManager = new GenderManager();
             TextManager textManager = new TextManager();            
-            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν ");
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
             DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} ");
             DocXConstructor.AddToParagraph(paragraph, $"της ως άνω συμβολαιογράφου κατά { genderManager.EpiloghArthrouBasiGenous(gender)}{ofeiletis}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
