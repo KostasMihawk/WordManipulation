@@ -23,6 +23,7 @@ namespace WordManipulation.Interfaces
         MemoryStream CreateAndReturnDocAsMemoryStream(DocX doc);
         MemoryStream EntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model);
         MemoryStream PraxiPlistiriasmou(LoanerInvitationModel model);
+        MemoryStream Katasxetiria(KatasxetirioModel model);
         
     }
 }

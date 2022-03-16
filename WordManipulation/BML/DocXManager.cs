@@ -156,6 +156,26 @@ namespace WordManipulation.BML
             return doc;
         }
 
+        public DocX EpispeudonKatasxetiriaParagraph(DocX doc, string perigrafh, bool isAnagastikiEktelesi, string date)
+        {
+            Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+            paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+            paragraph.Alignment = Alignment.both;
+            DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+            DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, perigrafh);
+            DocXConstructor.AddToParagraph(paragraph, $" την από {date} ");
+            if (!isAnagastikiEktelesi)
+            {
+                DocXConstructor.AddToParagraphBoldText(paragraph, $"ΕΠΙΒΟΛΗ ΣΥΝΤΗΡΗΤΙΚΗΣ ΚΑΤΑΣΧΕΣΗΣ-ΔΥΝΑΜΕΙ ΔΙΑΤΑΓΗΣ ΠΛΗΡΩΜΗΣ ");
+                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των:");
+            }
+            else
+            {
+                DocXConstructor.AddToParagraphBoldText(paragraph, $"");
+            }
+            return doc;
+        }
+
         public DocX ParagraphAkrivesAdigrafo(DocX doc ,Gender gender,  string documentNumber, string sumbolaiografos, string ofeileths)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
@@ -184,6 +204,29 @@ namespace WordManipulation.BML
             DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
                 $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif}, μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας {notary}" +
                 $", ως επί του πλειστηριασμού υπαλλήλου," );
+            return doc;
+        }
+
+        public DocX CreateIntroParagraphKatasxetiria(DocX doc, string KeimenoEisagoghs, string FullName, string DiakritikosTitlos, string Location)
+        {
+            Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+            paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+            paragraph.Alignment= Alignment.both;
+            DocXConstructor.AddToParagraph(paragraph, $"{Location}, σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
+                    $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών,...................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ΕΦΕΤΕΙΟΥ ΑΘΗΝΩΝ, Α.Φ.Μ. 996910057, με έδρα στην Αθήνα, οδός Νικηταρά αρ. 8-10" +
+                    $" κατόπιν της έγγραφης παραγγελίας της δικηγόρου Ναυπλίου ");
+            DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"Ευαγγελίας Ξυπνητού,");
+            DocXConstructor.AddToParagraph(paragraph, $" πληρεξουσίου του υπό ειδική εκκαθάριση πιστωτικού ιδρύματος με την επωνυμία    ");
+            DocXConstructor.AddToParagraphBoldText(paragraph,FullName);
+            DocXConstructor.AddToParagraph(paragraph, $" με το διακριτικό τίτλο ");
+            DocXConstructor.AddToParagraphBoldText(paragraph, DiakritikosTitlos +$" ");
+            DocXConstructor.AddToParagraph(paragraph, KeimenoEisagoghs);
+            DocXConstructor.AddToParagraph(paragraph, $" και εκπροσωπείται νόμιμα από τον Ειδικό Εκκαθαριστή αυτής ανώνυμη εταιρεία με την επωνυμία");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $" «PQH ΕΝΙΑΙΑ ΕΙΔΙΚΗ ΕΚΚΑΘΑΡΙΣΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ, ΕΙΔΙΚΟΣ ΕΚΚΑΘΑΡΙΣΤΗΣ ΠΙΣΤΩΤΙΚΩΝ ΙΔΡΥΜΑΤΩΝ»");
+            DocXConstructor.AddToParagraph(paragraph, $", με τον διακριτικό τίτλο ");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $"«PQH ΕΝΙΑΙΑ ΕΙΔΙΚΗ ΕΚΚΑΘΑΡΙΣΗ Α.Ε.»");
+            DocXConstructor.AddToParagraph(paragraph, $", με έδρα στο Δήμο Αμαρουσίου Αττικής, οδός Γραβιάς 3 και Γρανικού, με Α.Φ.Μ. 800721689, δυνάμει της υπ' αριθ. 182/1/4.4.2016 Απόφασης της Επιτροπής"+
+                $" Πιστωτικών και Ασφαλιστικών Θεμάτων της Τράπεζας της Ελλάδος (ΦΕΚ β' 925/5.4.2016), όπως νομίμως εκπροσωπείται,");
             return doc;
         }
 
@@ -340,6 +383,18 @@ namespace WordManipulation.BML
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
                 ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
+                return CreateAndReturnDocAsMemoryStream(doc);
+            }
+        }
+
+        public MemoryStream Katasxetiria(KatasxetirioModel model)
+        {
+            using(DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
+            {
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
+                AddHeaderToDocument(doc, null);
+                CreateIntroParagraphKatasxetiria(doc, model.KeimenoEisagoghs, model.FullName, model.DiakritikosTitlos, model.Location);
+                EpispeudonKatasxetiriaParagraph(doc, model.Upiresia, model.AnagastikiEktelesh, model.Date);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }

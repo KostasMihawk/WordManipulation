@@ -515,5 +515,119 @@ namespace WordManipulation.Models
             
             return list;
         }
+
+        public List<EkthesiEpidoshsModelKatasxetiria> GetZipFilesForKatasxetiria()
+        {
+            var list = new List<EkthesiEpidoshsModelKatasxetiria>();
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ",
+                Perigrafh = "προς την ανώνυμη εταιρεία με την επωνυμία «ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ»",
+                KeimenoEisagoghs = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2, με Α.Φ.Μ. 096123566, που τέθηκε σε ειδική εκκαθάριση",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην οδό Κύπρου 27 και Αρχιμήδους, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ»",
+                DiakritikosTitlos = "«ΕΥΒΟΙΚΗ ΠΙΣΤΗ»",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "1",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "2",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "3",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "4",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "5",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "6",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "7",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "8",
+                Perigrafh = "",
+                KeimenoEisagoghs = "",
+                Kleisimo = "",
+                FullName = "",
+                DiakritikosTitlos = "",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            return list;
+        }
     }
 }

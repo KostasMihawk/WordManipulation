@@ -169,6 +169,7 @@
     <Compile Include="Controllers\AnaggeliaController.cs" />
     <Compile Include="Controllers\API\AutoCompleteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KatasxetiriaController.cs" />
     <Compile Include="Controllers\LoanerInvitationController.cs" />
     <Compile Include="Controllers\SunexisiPlistriasmouController.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,7 +188,9 @@
     <Compile Include="Models\DocumentType.cs" />
     <Compile Include="Models\DropDownGenerator.cs" />
     <Compile Include="Models\EkthesiEpidoshsModel.cs" />
+    <Compile Include="Models\EkthesiEpidoshsModelKatasxetiria.cs" />
     <Compile Include="Models\Form.cs" />
+    <Compile Include="Models\KatasxetirioModel.cs" />
     <Compile Include="Models\LoanerInvitationModel.cs" />
     <Compile Include="Models\Summary.cs" />
     <Compile Include="Models\SunexisiPlistiriasmouModel.cs" />
@@ -198,6 +201,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AnaggeliaViewmodel.cs" />
     <Compile Include="ViewModels\CreateVM.cs" />
+    <Compile Include="ViewModels\KatasxetirioViewModel.cs" />
     <Compile Include="ViewModels\LoanerInvitationViewmodel.cs" />
     <Compile Include="ViewModels\SunexisiPlistirasmouViewmodel.cs" />
   </ItemGroup>
@@ -242,6 +246,7 @@
     <Content Include="Views\LoanerInvitation\LoanerInvitation.cshtml" />
     <Content Include="Views\LoanerInvitation\CreateLoanerInvitation.cshtml" />
     <Content Include="Views\SunexisiPlistriasmou\CreateSunexisiPlistiriasmou.cshtml" />
+    <Content Include="Views\Katasxetiria\CreateKatasxetirio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
