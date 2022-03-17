@@ -525,7 +525,7 @@ namespace WordManipulation.Models
                 Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ",
                 Perigrafh = "προς την ανώνυμη εταιρεία με την επωνυμία «ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ»",
                 KeimenoEisagoghs = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2, με Α.Φ.Μ. 096123566, που τέθηκε σε ειδική εκκαθάριση",
-                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα  της, στην οδό Κύπρου 27 και Αρχιμήδους, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Όθωνος αρ. 4, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
                 FullName = "«ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ»",
                 DiakritikosTitlos = "«ΕΥΒΟΙΚΗ ΠΙΣΤΗ»",
                 HasKleisimo = Kleisimo.exei,
@@ -534,96 +534,120 @@ namespace WordManipulation.Models
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "1",
-                Perigrafh = "",
-                KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Name = "ΑΛΦΑ ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «ΑΛΦΑ ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ»",
+                KeimenoEisagoghs = "που εδρεύει στην Αθήνα Αττικής, οδ΄λος Σταδίου αρ. 40, με Α.Φ.Μ. 094014249",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Σταδίου αρ. 40, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΑΛΦΑ ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ»",
+                DiakritikosTitlos = "«ALPHA BANK»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "2",
-                Perigrafh = "",
-                KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Name = "ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ»",
+                KeimenoEisagoghs = "που εδρεύει στην Αθήνα Αττικής, οδός Αμερικής αρ. 4, με Α.Φ.Μ. 094014298", //TODO ΑΠΟ ΚΑΤΩ Η ΔΙΕΥΘΥΝΣΗ ΜΑΛΛΟΝ ΕΙΝΑΙ ΛΑΘΟΣ ΚΑΘΩΣ ΠΑΜΕ ΣΤΗΝ ΑΛΕΞΑΝΔΡΑΣ
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Αμερικής αρ. 4, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ»",
+                DiakritikosTitlos = "«ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "3",
-                Perigrafh = "",
+                Name = "ΤΡΑΠΕΖΑ EUROBANK ERGASIAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ", //TODO ΑΥΤΗ ΜΑΛΛΟΝ ΔΕΝ ΛΕΓΕΤΑΙ ΕΤΣΙ 
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «ΤΡΑΠΕΖΑ EUROBANK ERGASIAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ»",
                 KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Όθωνος αρ. 8, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΤΡΑΠΕΖΑ EUROBANK ERGASIAS ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ»",
+                DiakritikosTitlos = "«EUROBANK ERGASIAS»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "4",
-                Perigrafh = "",
+                Name = "ATTICA BANK ΑΝΩΝΥΜΗ ΤΡΑΠΕΖΙΚΗ ΕΤΑΙΡΕΙΑ",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «ATTICA BANK ΑΝΩΝΥΜΗ ΤΡΑΠΕΖΙΚΗ ΕΤΑΙΡΕΙΑ»",
                 KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Ομήρου αρ. 23, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ATTICA BANK ΑΝΩΝΥΜΗ ΤΡΑΠΕΖΙΚΗ ΕΤΑΙΡΕΙΑ»",
+                DiakritikosTitlos = "«ATTICA BANK»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "5",
-                Perigrafh = "",
+                Name = "HSBC Confidental Greece Europe ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «HSBC Confidental Greece Europe ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ»",
                 KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Μεσογείων αρ. 109-111, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«HSBC Confidental Greece Europe ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ»",
+                DiakritikosTitlos = "«HSBC Confidental Greece Europe»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "6",
-                Perigrafh = "",
-                KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΧΑΝΙΩΝ ΣΥΝΕΤΑΙΡΙΣΜΟΣ ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΕΥΘΥΝΗΣ",
+                Perigrafh = "προς τον τραπεζικό συνεταιρισμό με την επωνυμία «ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΧΑΝΙΩΝ ΣΥΝΕΤΑΙΡΙΣΜΟΣ ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΕΥΘΥΝΗΣ»",
+                KeimenoEisagoghs = "", //TODO ΠΟΙΑ ΕΙΝΑΙ Η ΔΙΕΥΘΥΝΣΗ??
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Σταδίου αρ. 40, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΧΑΝΙΩΝ ΣΥΝΕΤΑΙΡΙΣΜΟΣ ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΕΥΘΥΝΗΣ»",
+                DiakritikosTitlos = "«ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΧΑΝΙΩΝ»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "7",
-                Perigrafh = "",
-                KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Name = "ΠΑΓΚΡΗΤΙΑ ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΣΥΝ.ΠΕ.",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «ΠΑΓΚΡΗΤΙΑ ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΣΥΝ.ΠΕ.»",
+                KeimenoEisagoghs = "",//TODO ΠΟΙΑ ΕΙΝΑΙ Η ΔΙΕΥΘΥΝΣΗ??
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Σταδίου αρ. 40, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΠΑΓΚΡΗΤΙΑ ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΣΥΝ.ΠΕ.»",
+                DiakritikosTitlos = "«ΠΑΓΚΡΗΤΙΑ ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στην Αθήνα",
-                Name = "8",
-                Perigrafh = "",
+                Name = "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.",
                 KeimenoEisagoghs = "",
-                Kleisimo = "",
-                FullName = "",
-                DiakritikosTitlos = "",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Αιόλου αρ. 86, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.»",
+                DiakritikosTitlos = "«ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.»",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στο Μαρούσι Αττικής",
+                Name = "OPTIMA BANK",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «OPTIMA BANK»",
+                KeimenoEisagoghs = "",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Αιγιαλείας αρ. 32, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«OPTIMA BANK»",
+                DiakritikosTitlos = "«OPTIMA BANK»",
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon
+            });
+            list.Add(new EkthesiEpidoshsModelKatasxetiria
+            {
+                Location = "Στην Αθήνα",
+                Name = "VIVA ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΩΜΩΝ Α.Ε.",
+                Perigrafh = "προς την ανώνυμη τραπεζική εταιρεία με την επωνυμία «VIVA ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΩΜΩΝ Α.Ε.»",
+                KeimenoEisagoghs = "",
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην Λεωφόρο Καποδιστρίου αρ. 2, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο.",
+                FullName = "«VIVA ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΩΜΩΝ Α.Ε.»",
+                DiakritikosTitlos = "«VIVA ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΩΜΩΝ Α.Ε.»",
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon
             });
