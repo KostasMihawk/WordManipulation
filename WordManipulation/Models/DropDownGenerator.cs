@@ -666,9 +666,105 @@ namespace WordManipulation.Models
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
+                Id = 2,
+                Name = "PROTON ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ",
+                DiakritikosTitlos = "PROTON BANK",
+                Edra = "που εδρεύει στην Αθήνα, οδός Κατεχάκη αρ.61Α και Βρανά ,",
+                AFM = "με Α.Φ.Μ. 099877056"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 3,
+                Name = "T BANK ΑΝΩΝΥΜΗ ΤΡΑΠΕΖΙΚΗ ΕΤΑΙΡΕΙΑ",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Αθήνα, οδός Βρανά αρ. 61,",
+                AFM = "με Α.Φ.Μ. 094351776"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 4,
+                Name = "ΑΧΑΙΚΗ ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΑΝΩΝΥΜΗ ΕΠΕΝΔΥΤΙΚΗΣ ΔΙΑΜΕΣΟΛΑΒΗΣΗΣ",
+                DiakritikosTitlos = "ΑΧΑΙΚΗ ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ Α.Ε.Ε.Δ.",
+                Edra = "που εδρεύει στην Πάτρα, οδός Μιχαλακοπούλου αρ. 66,",
+                AFM = "με Α.Φ.Μ. 099235674"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 5,
+                Name = "ΑΓΡΟΤΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ ΑΕ",
+                DiakritikosTitlos = "ΑΓΡΟΤΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ",
+                Edra = "που εδρεύει στην Αθήνα, οδός Πανεπιστημίου αρ. 23,",
+                AFM = "με Α.Φ.Μ. 094326270"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 6,
+                Name = "ΤΑΧΥΔΡΟΜΙΚΟ ΤΑΜΙΕΥΤΗΡΙΟ ΕΛΛΑΔΟΣ ΑΝΩΝΥΜΗ ΤΡΑΠΕΖΙΚΗ ΕΤΑΙΡΕΙΑ",
+                DiakritikosTitlos = "ΤΑΧΥΔΡΟΜΙΚΟ ΤΑΜΙΕΥΤΗΡΙΟ",
+                Edra = "που εδρεύει στην Αθήνα, οδός Κατεχάκη αρ. 61Α και Βρανά",
+                AFM = "με Α.Φ.Μ. 090038000"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
                 Id = 1,
-                Name = "PROTON",
-                DiakritikosTitlos = "PROTON",
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
                 Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
                 AFM = "με Α.Φ.Μ. 096123566"
             });
