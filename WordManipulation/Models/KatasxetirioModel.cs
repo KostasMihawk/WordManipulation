@@ -10,6 +10,7 @@ namespace WordManipulation.Models
     {
         public string Location { get; set; }
         public Zone Zone { get; set; }
+        public PistotikaIdrymataUpoEkkatharisi PistotikaIdrymataUpoEkkatharisi { get; set; }
         public bool Praxi { get; set; }
         public string Date { get; set; }
         public bool Eurobank { get; set; }

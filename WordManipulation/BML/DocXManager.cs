@@ -288,22 +288,6 @@ namespace WordManipulation.BML
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             DocXConstructor.AddNewLine(paragraph);            
-            //if(isFusikoProsopo == true)
-            //{
-            //    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
-            //}
-            //else if(isFusikoProsopo == false && isPraxi == false)
-            //{
-            //    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
-            //}
-            //else if(isFusikoProsopo == false && isPraxi == null)
-            //{
-            //    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
-            //}
-            //else
-            //{
-            //    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
-            //}
             switch(signature)
             {
                 case Signature.paralavon:
@@ -348,7 +332,7 @@ namespace WordManipulation.BML
             paragraph.Alignment = Alignment.both;
             GenderManager genderManager = new GenderManager();
             TextManager textManager = new TextManager();            
-            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν ");
             DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} ");
             DocXConstructor.AddToParagraph(paragraph, $"της ως άνω συμβολαιογράφου κατά { genderManager.EpiloghArthrouBasiGenous(gender)}{ofeiletis}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;

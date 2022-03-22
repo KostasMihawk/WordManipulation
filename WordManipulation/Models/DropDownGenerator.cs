@@ -653,5 +653,34 @@ namespace WordManipulation.Models
             });
             return list;
         }
+
+        public List<PistotikaIdrymataUpoEkkatharisi> GetBanks()
+        {
+            var list = new List<PistotikaIdrymataUpoEkkatharisi>();
+            list.Add(new PistotikaIdrymataUpoEkkatharisi{
+                Id = 1,
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.ΠΕ",
+                DiakritikosTitlos = "ΕΥΒΟΙΚΗ ΠΙΣΤΗ",
+                Edra ="που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "PROTON",
+                DiakritikosTitlos = "PROTON",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 1,
+                Name = "T BANK",
+                DiakritikosTitlos = "T BANK",
+                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096123566"
+            });
+            return list;
+        }
     }
 }

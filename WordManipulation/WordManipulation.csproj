@@ -192,6 +192,7 @@
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\KatasxetirioModel.cs" />
     <Compile Include="Models\LoanerInvitationModel.cs" />
+    <Compile Include="Models\PistotikaIdrymataUpoEkkatharisi.cs" />
     <Compile Include="Models\Summary.cs" />
     <Compile Include="Models\SunexisiPlistiriasmouModel.cs" />
     <Compile Include="Models\TextGenerator.cs" />

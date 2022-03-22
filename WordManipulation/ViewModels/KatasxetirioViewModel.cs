@@ -13,6 +13,8 @@ namespace WordManipulation.ViewModels
         public string Location { get; set; }   
         [Display(Name = "Ζώνη")]
         public int Zone { get; set; }
+        [Display(Name = "Τράπεζες υπό εκκαθάριση")]
+        public int PistotikaIdrymataUpoEkkatharisi { get; set; }
         [Display(Name = "Πράξη")]
         public bool Praxi { get; set;}
         [Display(Name = "Ημερομηνία")]
