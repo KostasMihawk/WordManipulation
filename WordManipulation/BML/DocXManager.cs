@@ -379,6 +379,9 @@ namespace WordManipulation.BML
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraphKatasxetiria(doc, model.KeimenoEisagoghs, model.FullName, model.DiakritikosTitlos, model.Location);
                 EpispeudonKatasxetiriaParagraph(doc, model.Upiresia, model.AnagastikiEktelesh, model.Date);
+                ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
+                ParagrafosSuntaxisEkthesis(doc);
+                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
                 return CreateAndReturnDocAsMemoryStream(doc);
             }
         }

@@ -55,6 +55,7 @@ namespace WordManipulation.Models
             this.Peiraios = vm.Peiraios;
             this.HSBC = vm.HSBC;
             this.Pagkritia = vm.Pagkritia;
+          
         }
 
         public void fillZipEntries(EkthesiEpidoshsModelKatasxetiria zipEntry)

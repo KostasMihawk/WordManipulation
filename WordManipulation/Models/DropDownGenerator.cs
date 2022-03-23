@@ -707,18 +707,18 @@ namespace WordManipulation.Models
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
                 Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
+                Name = "FBB ΠΡΩΤΗ ΕΠΙΧΕΙΡΗΜΑΤΙΚΗ ΤΡΑΠΕΖΑΖ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ",
+                DiakritikosTitlos = "FBBank",
+                Edra = "που εδρεύει Αθήνα, οδός Κατεχάκη  αρ. 61Α και Βρανα,",
+                AFM = "με Α.Φ.Μ. 999931359"
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
                 Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
+                Name = "ΤΡΑΠΕΖΑ PROBANK Ανώνυμη Εταιρεία",
+                DiakritikosTitlos = "PROBANK",
+                Edra = "που εδρεύει στην Μοσχάτο Αττικής, οδός Πειραιώς αρ. 74,",
+                AFM = "με Α.Φ.Μ. 099877019"
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
