@@ -29,7 +29,7 @@ namespace WordManipulation.Controllers
             DropDownGenerator generator = new DropDownGenerator();
             Summary s = new Summary();
 
-            var KatasxetirioModel = new KatasxetirioModel(vm);
+            var KatasxetirioModel = new KatasxetirioModel(vm);            
             var zipFiles = generator.GetZipFilesForKatasxetiria();
 
             using(MemoryStream stream = new MemoryStream())
