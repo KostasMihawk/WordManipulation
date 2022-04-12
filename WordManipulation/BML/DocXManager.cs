@@ -217,9 +217,9 @@ namespace WordManipulation.BML
                     $" κατόπιν της έγγραφης παραγγελίας της δικηγόρου Ναυπλίου ");
             DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"Ευαγγελίας Ξυπνητού,");
             DocXConstructor.AddToParagraph(paragraph, $" πληρεξουσίου του υπό ειδική εκκαθάριση πιστωτικού ιδρύματος με την επωνυμία    ");
-            DocXConstructor.AddToParagraphBoldText(paragraph,pistotikaIdrymata.Name);
+            DocXConstructor.AddToParagraphBoldText(paragraph, $"«" + pistotikaIdrymata.Name +"»");
             DocXConstructor.AddToParagraph(paragraph, $" με το διακριτικό τίτλο ");
-            DocXConstructor.AddToParagraphBoldText(paragraph, pistotikaIdrymata.DiakritikosTitlos +$" ");
+            DocXConstructor.AddToParagraphBoldText(paragraph,$"«"+ pistotikaIdrymata.DiakritikosTitlos +$"» ");
             DocXConstructor.AddToParagraph(paragraph, pistotikaIdrymata.Edra);
             DocXConstructor.AddToParagraph(paragraph, $" και εκπροσωπείται νόμιμα από τον Ειδικό Εκκαθαριστή αυτής ανώνυμη εταιρεία με την επωνυμία");
             DocXConstructor.AddToParagraphBoldText(paragraph, $" «PQH ΕΝΙΑΙΑ ΕΙΔΙΚΗ ΕΚΚΑΘΑΡΙΣΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ, ΕΙΔΙΚΟΣ ΕΚΚΑΘΑΡΙΣΤΗΣ ΠΙΣΤΩΤΙΚΩΝ ΙΔΡΥΜΑΤΩΝ»");
