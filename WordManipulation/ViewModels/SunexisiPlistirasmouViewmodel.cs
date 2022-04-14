@@ -22,6 +22,10 @@ namespace WordManipulation.ViewModels
         public Gender Gender { get; set; }
         [Display(Name = "Επισπεύδων (Φυσικό Πρόσωπο)")]
         public string Epispeudon { get; set; }
+        [Display(Name = "966")]
+        public bool Ar8ro966 { get; set; }
+
+
 
     }
 }

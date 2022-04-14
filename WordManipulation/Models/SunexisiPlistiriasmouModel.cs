@@ -15,6 +15,7 @@ namespace WordManipulation.Models
         public Gender Gender { get; set; }
         public string Location { get; set; }
         public string Epispeudon { get; set; }
+        public bool Ar8ro966 { get; set; }
 
         //We need the following attributes to fill up the zip procedure
         public bool IsFusikoProsopo { get; set; }
@@ -24,6 +25,7 @@ namespace WordManipulation.Models
         public bool? PraxiUpiresias { get; set; }
         public Kleisimo HasKleisimo { get; set; }
         public Signature Signature { get; set; }
+         
     
 
     public SunexisiPlistiriasmouModel()
@@ -41,6 +43,8 @@ namespace WordManipulation.Models
             this.Gender = vm.Gender;
             this.Location = vm.Location;
             this.Epispeudon = vm.Epispeudon??"";
+            this.Ar8ro966 = vm.Ar8ro966;
+
         }
 
         public void fillZipEntries(EkthesiEpidoshsModel zipEntry)

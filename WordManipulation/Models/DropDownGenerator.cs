@@ -351,7 +351,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "Α' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Α' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature= Signature.ypallilos,
                 FusikoProswpo = false                
@@ -361,7 +361,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "Β' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Β' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false
@@ -371,7 +371,7 @@ namespace WordManipulation.Models
                 Location = "Στον Πειραιά",
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
                 Perigrafh = "προς την Περιφερειακή Διεύθυνση ΚΕΑΟ Πειραιά,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false
@@ -381,7 +381,7 @@ namespace WordManipulation.Models
                 Location = "Στην Ελευσίνα",
                 Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
                 Perigrafh = "προς τη Περιφερειακή Διεύθυνση ΚΕΑΟ Ελευσίνας,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false

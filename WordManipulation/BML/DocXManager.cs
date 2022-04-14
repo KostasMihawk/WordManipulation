@@ -15,7 +15,8 @@ namespace WordManipulation.BML
     public class DocXManager:IDocXManager
     {
         private string fontFamily = "Times new roman";
-        DateManager dateMagager;        
+        DateManager dateMagager; 
+        TextManager textMagager;
         private Formatting Formatting = new Formatting
         {
             Spacing = 1.2,
@@ -25,7 +26,8 @@ namespace WordManipulation.BML
         public DocXManager()
         {
             DocXConstructor = new DocXConstructor();
-            dateMagager = new DateManager();            
+            dateMagager = new DateManager(); 
+            textMagager = new TextManager();    
         }
         public DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo)
         {
@@ -176,14 +178,14 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX ParagraphAkrivesAdigrafo(DocX doc ,Gender gender,  string documentNumber, string sumbolaiografos, string ofeileths)
+        public DocX ParagraphAkrivesAdigrafo(DocX doc ,Gender gender,  string documentNumber, string sumbolaiografos, string ofeileths, bool Article)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             GenderManager genderManager = new GenderManager();
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
-            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ 973 ΤΟΥ Κ.ΠΟΛ.Δ.,");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ "+textMagager.ArthroSunexisisPlistiriasmou(Article) +" ΤΟΥ Κ.ΠΟΛ.Δ.,");
             DocXConstructor.AddToParagraph(paragraph, $" {sumbolaiografos}κατά {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
@@ -347,7 +349,7 @@ namespace WordManipulation.BML
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon);
                 EpispeudonParagraph(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
-                ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor);
+                ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor, model.Ar8ro966);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
                 ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
