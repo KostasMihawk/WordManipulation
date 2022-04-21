@@ -30,5 +30,6 @@ namespace WordManipulation.ViewModels
         public bool IsBank { get; set; }
         [Display(Name = "Με Πίνακα")]
         public bool IsTable { get; set; }
+        
     }
 }

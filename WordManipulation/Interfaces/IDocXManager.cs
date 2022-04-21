@@ -16,7 +16,7 @@ namespace WordManipulation.Interfaces
         DocX AddHeaderToDocument(DocX doc, string fontFamilyCustom);
         DocX CreateIntroParagraph(DocX doc, string location, string locationUpiresias, bool isFusikoProsopo, string epispeudon);
         DocX EpispeudonParagraph(DocX doc, bool isFusikoProsopo, Gender gender, string ofeileths, string upiresia);
-        DocX ParagraphAkrivesAdigrafo(DocX doc, Gender gender, string documentNumber, string sumbolaiografos, string ofeileths);
+        DocX ParagraphAkrivesAdigrafo(DocX doc, Gender gender, string documentNumber, string sumbolaiografos, string ofeileths, bool Article);
         DocX ParagrafosPraxis(DocX doc, bool? isPraxi, string keimenoPraxis);
         DocX ParagrafosSuntaxisEkthesis(DocX doc);
         DocX ParagrafosUpografis(DocX doc, bool? isPraxi, bool isFusikoProsopo, Signature signature);

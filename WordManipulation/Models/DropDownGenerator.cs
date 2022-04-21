@@ -351,7 +351,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "Α' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Α' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature= Signature.ypallilos,
                 FusikoProswpo = false                
@@ -361,7 +361,7 @@ namespace WordManipulation.Models
                 Location = "Στην Αθήνα",
                 Name = "Β' ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ",
                 Perigrafh = "προς τη Β' Περιφερειακή Διεύθυνση ΚΕΑΟ Αττικής,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false
@@ -371,7 +371,7 @@ namespace WordManipulation.Models
                 Location = "Στον Πειραιά",
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
                 Perigrafh = "προς την Περιφερειακή Διεύθυνση ΚΕΑΟ Πειραιά,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false
@@ -381,7 +381,7 @@ namespace WordManipulation.Models
                 Location = "Στην Ελευσίνα",
                 Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
                 Perigrafh = "προς τη Περιφερειακή Διεύθυνση ΚΕΑΟ Ελευσίνας,",
-                Praxh = false,
+                Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false
@@ -706,7 +706,7 @@ namespace WordManipulation.Models
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
-                Id = 1,
+                Id = 7,
                 Name = "FBB ΠΡΩΤΗ ΕΠΙΧΕΙΡΗΜΑΤΙΚΗ ΤΡΑΠΕΖΑΖ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ",
                 DiakritikosTitlos = "FBBank",
                 Edra = "που εδρεύει Αθήνα, οδός Κατεχάκη  αρ. 61Α και Βρανα,",
@@ -714,7 +714,7 @@ namespace WordManipulation.Models
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
-                Id = 1,
+                Id = 8,
                 Name = "ΤΡΑΠΕΖΑ PROBANK Ανώνυμη Εταιρεία",
                 DiakritikosTitlos = "PROBANK",
                 Edra = "που εδρεύει στην Μοσχάτο Αττικής, οδός Πειραιώς αρ. 74,",
@@ -722,60 +722,44 @@ namespace WordManipulation.Models
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
-                Id = 1,
-                Name = "T BANK",
+                Id = 9,
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΔΩΔΕΚΑΝΗΣΟΥ ΣΥΝ.Π.Ε",
+                DiakritikosTitlos = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΔΩΔΕΚΑΝΗΣΟΥ ΣΥΝ.Π.Ε",
+                Edra = "που εδρεύει στην Ρόδο, οδός Καμείρου αρ. 76,",
+                AFM = "με Α.Φ.Μ. 096237510"
+            });
+            list.Add(new PistotikaIdrymataUpoEkkatharisi
+            {
+                Id = 10,
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΕΥΒΟΙΑΣ ΣΥΝ.Π.Ε",
                 DiakritikosTitlos = "T BANK",
                 Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
                 AFM = "με Α.Φ.Μ. 096123566"
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
-                Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
+                Id = 11,
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΣΥΝ. Π.Ε.",
+                DiakritikosTitlos = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΣΥΝ. Π.Ε.",
+                Edra = "που εδρεύει στην Κοζάνη, οδός Ελ. Βενιζέλου αρ. 2,",
+                AFM = "με Α.Φ.Μ. 096189647"
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
-                Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
+                Id = 12,
+                Name = "ΠΑΝΕΛΛΗΝΙΑ ΤΡΑΠΕΖΑ ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ",
+                DiakritikosTitlos = "ΠΑΝΕΛΛΗΝΙΑ ΤΡΑΠΕΖΑ",
+                Edra = "που εδρεύει στον Χολαργό Αττικής, Λεωφόρος Μεσογείων αρ. 290,",
+                AFM = "με Α.Φ.Μ. 999984630"
             });
             list.Add(new PistotikaIdrymataUpoEkkatharisi
             {
-                Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
-            });
-            list.Add(new PistotikaIdrymataUpoEkkatharisi
-            {
-                Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
-            });
-            list.Add(new PistotikaIdrymataUpoEkkatharisi
-            {
-                Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
-            });
-            list.Add(new PistotikaIdrymataUpoEkkatharisi
-            {
-                Id = 1,
-                Name = "T BANK",
-                DiakritikosTitlos = "T BANK",
-                Edra = "που εδρεύει στην Χαλκίδα του Δήμου Χαλκιδέων Ευβοίας, οδός Βελισσαρίου αρ. 2,",
-                AFM = "με Α.Φ.Μ. 096123566"
-            });
+                Id = 13,
+                Name = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΠΕΛΟΠΟΝΝΗΣΟΥ ΣΥΝ Π.Ε",
+                DiakritikosTitlos = "ΣΥΝΕΤΑΙΡΙΣΤΙΚΗ ΤΡΑΠΕΖΑ ΠΕΛΟΠΟΝΝΗΣΟΥ",
+                Edra = "που εδρεύει στην Κόρινθο, οδός Αδειμάντου αρ. 41,",
+                AFM = "με Α.Φ.Μ. 096158148"
+            });          
             return list;
         }
     }

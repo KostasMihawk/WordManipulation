@@ -11,5 +11,10 @@ namespace WordManipulation.BML
         {
             return isPinakas?"(ΠΙΝΑΚΑΣ ΚΑΤΑΤΑΞΗΣ - ΠΡΟΣΚΛΗΣΗ ΔΑΝΕΙΣΤΩΝ)": "(ΠΡΟΣΚΛΗΣΗΣ ΔΑΝΕΙΣΤΩΝ)";
         }
+
+        public string ArthroSunexisisPlistiriasmou(bool Article)
+        {
+            return Article ? "966" : "973";
+        }
     }
 }

@@ -15,7 +15,8 @@ namespace WordManipulation.BML
     public class DocXManager:IDocXManager
     {
         private string fontFamily = "Times new roman";
-        DateManager dateMagager;
+        DateManager dateMagager; 
+        TextManager textMagager;
         private Formatting Formatting = new Formatting
         {
             Spacing = 1.2,
@@ -25,7 +26,8 @@ namespace WordManipulation.BML
         public DocXManager()
         {
             DocXConstructor = new DocXConstructor();
-            dateMagager = new DateManager();
+            dateMagager = new DateManager(); 
+            textMagager = new TextManager();    
         }
         public DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo)
         {
@@ -176,14 +178,14 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX ParagraphAkrivesAdigrafo(DocX doc ,Gender gender,  string documentNumber, string sumbolaiografos, string ofeileths)
+        public DocX ParagraphAkrivesAdigrafo(DocX doc ,Gender gender,  string documentNumber, string sumbolaiografos, string ofeileths, bool Article)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             GenderManager genderManager = new GenderManager();
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment = Alignment.both;
             DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
-            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ 973 ΤΟΥ Κ.ΠΟΛ.Δ.,");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ "+textMagager.ArthroSunexisisPlistiriasmou(Article) +" ΤΟΥ Κ.ΠΟΛ.Δ.,");
             DocXConstructor.AddToParagraph(paragraph, $" {sumbolaiografos}κατά {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
@@ -207,7 +209,7 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX CreateIntroParagraphKatasxetiria(DocX doc, string KeimenoEisagoghs, string FullName, string DiakritikosTitlos, string Location)
+        public DocX CreateIntroParagraphKatasxetiria(DocX doc, string Location, PistotikaIdrymataUpoEkkatharisi pistotikaIdrymata)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -217,10 +219,10 @@ namespace WordManipulation.BML
                     $" κατόπιν της έγγραφης παραγγελίας της δικηγόρου Ναυπλίου ");
             DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"Ευαγγελίας Ξυπνητού,");
             DocXConstructor.AddToParagraph(paragraph, $" πληρεξουσίου του υπό ειδική εκκαθάριση πιστωτικού ιδρύματος με την επωνυμία    ");
-            DocXConstructor.AddToParagraphBoldText(paragraph,FullName);
+            DocXConstructor.AddToParagraphBoldText(paragraph, $"«" + pistotikaIdrymata.Name +"»");
             DocXConstructor.AddToParagraph(paragraph, $" με το διακριτικό τίτλο ");
-            DocXConstructor.AddToParagraphBoldText(paragraph, DiakritikosTitlos +$" ");
-            DocXConstructor.AddToParagraph(paragraph, KeimenoEisagoghs);
+            DocXConstructor.AddToParagraphBoldText(paragraph,$"«"+ pistotikaIdrymata.DiakritikosTitlos +$"» ");
+            DocXConstructor.AddToParagraph(paragraph, pistotikaIdrymata.Edra);
             DocXConstructor.AddToParagraph(paragraph, $" και εκπροσωπείται νόμιμα από τον Ειδικό Εκκαθαριστή αυτής ανώνυμη εταιρεία με την επωνυμία");
             DocXConstructor.AddToParagraphBoldText(paragraph, $" «PQH ΕΝΙΑΙΑ ΕΙΔΙΚΗ ΕΚΚΑΘΑΡΙΣΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ, ΕΙΔΙΚΟΣ ΕΚΚΑΘΑΡΙΣΤΗΣ ΠΙΣΤΩΤΙΚΩΝ ΙΔΡΥΜΑΤΩΝ»");
             DocXConstructor.AddToParagraph(paragraph, $", με τον διακριτικό τίτλο ");
@@ -347,7 +349,7 @@ namespace WordManipulation.BML
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon);
                 EpispeudonParagraph(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
-                ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor);
+                ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor, model.Ar8ro966);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
                 ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
@@ -377,7 +379,7 @@ namespace WordManipulation.BML
             {
                 CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
                 AddHeaderToDocument(doc, null);
-                CreateIntroParagraphKatasxetiria(doc, model.KeimenoEisagoghs, model.FullName, model.DiakritikosTitlos, model.Location);
+                CreateIntroParagraphKatasxetiria(doc, model.Location,model.PistotikaIdrymataUpoEkkatharisi);
                 EpispeudonKatasxetiriaParagraph(doc, model.Upiresia, model.AnagastikiEktelesh, model.Date);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);

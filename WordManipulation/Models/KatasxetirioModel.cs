@@ -25,6 +25,7 @@ namespace WordManipulation.Models
         public string KeimenoEisagoghs { get; set; }
         public string FullName { get; set; }
         public string DiakritikosTitlos { get; set; }
+        
         //We need the following attributes to fill up the zip procedure
 
         public bool IsFusikoProsopo { get; set; }
@@ -37,12 +38,13 @@ namespace WordManipulation.Models
 
         public KatasxetirioModel()
         {
-
+           
         }
         public KatasxetirioModel(KatasxetirioViewModel vm)
         {
             DropDownGenerator generator = new DropDownGenerator();
             this.Zone = generator.GetZones().SingleOrDefault(z => z.Id == vm.Zone);
+            this.PistotikaIdrymataUpoEkkatharisi = generator.GetBanks().SingleOrDefault(b => b.Id == vm.PistotikaIdrymataUpoEkkatharisi);
             this.Date = vm.Date;
             this.Location = vm.Location;
             this.AnagastikiEktelesh = vm.AnagastikiEktelesh;
