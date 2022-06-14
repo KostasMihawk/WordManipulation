@@ -48,7 +48,14 @@ namespace WordManipulation.Controllers
                     foreach (var doc in ZipFiles)
                     {
                         LoanerInvitationModel.fillZipEntries(doc);
-                        zip.AddEntry(doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));                       
+                        if(doc.Name.Contains("Εφοριες"))
+                        {    
+                            zip.AddEntry("Εφορίες/" + doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));
+                        }
+                        else
+                        {
+                            zip.AddEntry(doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));
+                        }
                     }
                     zip.Save(stream);
                 }

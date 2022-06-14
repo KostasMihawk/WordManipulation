@@ -35,6 +35,7 @@ namespace WordManipulation.Models
         public bool? PraxiUpiresias { get; set; }
         public Kleisimo HasKleisimo { get; set; }
         public Signature Signature { get; set; }
+        public bool ZoneB { get; set; }
 
         public KatasxetirioModel()
         {
@@ -71,6 +72,7 @@ namespace WordManipulation.Models
             this.DiakritikosTitlos = zipEntry.DiakritikosTitlos;
             this.KeimenoEisagoghs = zipEntry.KeimenoEisagoghs;
             this.Location = zipEntry.Location;
+            
             
         }
     }

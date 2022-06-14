@@ -12,7 +12,7 @@ namespace WordManipulation.Interfaces
 {
     interface IDocXManager
     {
-        DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo);
+        DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo, bool ZoneB);
         DocX AddHeaderToDocument(DocX doc, string fontFamilyCustom);
         DocX CreateIntroParagraph(DocX doc, string location, string locationUpiresias, bool isFusikoProsopo, string epispeudon);
         DocX EpispeudonParagraph(DocX doc, bool isFusikoProsopo, Gender gender, string ofeileths, string upiresia);

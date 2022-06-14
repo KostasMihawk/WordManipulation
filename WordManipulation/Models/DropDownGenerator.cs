@@ -440,7 +440,8 @@ namespace WordManipulation.Models
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
-                FusikoProswpo = false
+                FusikoProswpo = false,
+                ZoneB = true
             });
             list.Add(new EkthesiEpidoshsModel
             {
@@ -480,7 +481,8 @@ namespace WordManipulation.Models
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
-                FusikoProswpo = false
+                FusikoProswpo = false,
+                ZoneB = true
             });
             list.Add(new EkthesiEpidoshsModel
             {
@@ -500,7 +502,8 @@ namespace WordManipulation.Models
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
-                FusikoProswpo = false
+                FusikoProswpo = false,
+                ZoneB = true
             });
             list.Add(new EkthesiEpidoshsModel
             {
@@ -530,7 +533,8 @@ namespace WordManipulation.Models
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
-                FusikoProswpo = false
+                FusikoProswpo = false,
+                ZoneB = true
             });
             list.Add(new EkthesiEpidoshsModel
             {

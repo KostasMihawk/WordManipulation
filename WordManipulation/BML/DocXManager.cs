@@ -29,7 +29,7 @@ namespace WordManipulation.BML
             dateMagager = new DateManager(); 
             textMagager = new TextManager();    
         }
-        public DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo)
+        public DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo, bool ZoneB)
         {
             Table t = doc.AddTable(7, 2);
 
@@ -57,7 +57,24 @@ namespace WordManipulation.BML
                 t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: " + zone.TaxedValue.ToString("F")).Font(fontFamily);
             }
-            else
+            else if (ZoneB)
+            {
+                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
+                t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: Β").Font(fontFamily);
+                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[1].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: 55.00").Font(fontFamily);
+                t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[3].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[4].Cells[0].Paragraphs.First().Append("Π.Μιχοπούλου: 6986413493").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[4].Cells[1].Paragraphs.First().Append("ΦΠΑ 24%: 13.20").Font(fontFamily);
+                t.Rows[5].Cells[0].Paragraphs.First().Append("Μ.Ζούζουλα: 6955119261").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[5].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
+                t.Rows[6].Cells[0].Paragraphs.First().Append("email: odee.pmz@gmail.com").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[6].Cells[1].Paragraphs.First().Append("ΣΥΝΟΛΟ: 68.20").Font(fontFamily);
+            }
+            else 
             {
                 t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
                 t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: A").Font(fontFamily);
@@ -345,7 +362,7 @@ namespace WordManipulation.BML
         {
             using (DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
             {
-                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo, model.ZoneB);
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon);
                 EpispeudonParagraph(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
@@ -361,7 +378,7 @@ namespace WordManipulation.BML
         {
             using(DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
             {
-                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo, model.ZoneB);
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraphGiaPraxiDaneistwn(doc,model.Location, model.Address, model.IsFusikoProsopo, model.Baillif.Name, model.Notary.Description);
                 ParagrapfosProsOfeilethPraxisDaneistwn(doc, model.Gender, model.IsFusikoProsopo, model.Debtor, model.Upiresia);
@@ -377,7 +394,7 @@ namespace WordManipulation.BML
         {
             using(DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
             {
-                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo);
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo,model.ZoneB);
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraphKatasxetiria(doc, model.Location,model.PistotikaIdrymataUpoEkkatharisi);
                 EpispeudonKatasxetiriaParagraph(doc, model.Upiresia, model.AnagastikiEktelesh, model.Date);

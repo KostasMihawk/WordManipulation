@@ -28,6 +28,7 @@ namespace WordManipulation.Models
         public bool? PraxiUpiresias { get; set; }
         public Kleisimo HasKleisimo { get; set; }
         public Signature Signature { get; set; }
+        public bool ZoneB { get; set; }
     
 
     public LoanerInvitationModel()
@@ -59,6 +60,7 @@ namespace WordManipulation.Models
             this.KeimenoPraxis = zipEntry.Kleisimo;
             this.Signature = zipEntry.Signature;
             this.HasKleisimo = zipEntry.HasKleisimo;
+            this.ZoneB = zipEntry.ZoneB;
         }
 
     }

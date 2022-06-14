@@ -40,10 +40,7 @@ namespace WordManipulation.Controllers
 
                         model.fillZipEntries(doc);
                         if (doc.Name.Contains("Εφοριες"))
-                        {
-                            //Sto DoxcManager exei tis zones typwmenes hard.. 
-                            if (doc.Name.Contains("Γλυφάδα") || doc.Name.Contains("Παλλήνη") || doc.Name.Contains("Κηφισιά") || doc.Name.Contains("Ελευσίνα"))
-                                model.Zone = generator.GetZones().SingleOrDefault( z => z.Id == 2);
+                        {      
                             zip.AddEntry("Εφορίες/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
                         }
                         else
