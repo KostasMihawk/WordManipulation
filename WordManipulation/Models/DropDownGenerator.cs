@@ -398,6 +398,152 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
+                Location = "Στην Αθήνα",
+                Name = "Δ.Ο.Υ. (Εφοριες) Α Αθηνων",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Α Αθηνών,",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            }); list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στον Πειραιά",
+                Name = "Δ.Ο.Υ. (Εφοριες) Ε Πειραιά",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Ε Πειραιά,",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            }); list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στους Αγίους Αναργύρους Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Αγίοι Ανάργυροι",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Αγίων Αναργύρων,",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            }); list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Αθήνα",
+                Name = "Δ.Ο.Υ. (Εφοριες) ΙΓ Αθηνών",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ ΙΓ Αθηνών, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            }); list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στη Γλυφάδα Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Γλυφάδας",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Γλυφάδας, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Ηλιούπολη Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Ηλιούπολης",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Ηλιούπολης, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false                
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Αθήνα",
+                Name = "Δ.Ο.Υ. (Εφοριες) Δ Αθηνών",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Δ Αθηνών, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στη Νέα Ιωνία Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Νεας Ιωνίας",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Νέας Ιωνίας, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Κηφισιά Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Κηφισιάς",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Κηφισιάς, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στο Περιστέρι Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Α Περιστερίου",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Α Περιστερίου, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Ελευσίνα Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Ελευσίνας",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Ελευσίνας, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στον Πειραιά",
+                Name = "Δ.Ο.Υ. (Εφοριες) Α Πειραιά",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Α Πειραιά, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στον Πειραιά",
+                Name = "Δ.Ο.Υ. (Εφοριες) Πλοίων",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Πλοίων, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Παλλήνη Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Παλλήνης",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Παλλήνης, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στον Χολαργό Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Χολαργού",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Χολαργού, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
                 Location = "Στον Πειραιά",
                 Name = "ΤΕΛ",
                 Perigrafh = "προς την Τελωνειακή Περιφέρεια Αττικής,",

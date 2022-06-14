@@ -37,8 +37,19 @@ namespace WordManipulation.Controllers
                     zip.AlternateEncodingUsage = ZipOption.AsNecessary;
                     foreach (var doc in ZipFiles)
                     {
+
                         model.fillZipEntries(doc);
-                        zip.AddEntry(doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        if (doc.Name.Contains("Εφοριες"))
+                        {
+                            //Sto DoxcManager exei tis zones typwmenes hard.. 
+                            if (doc.Name.Contains("Γλυφάδα") || doc.Name.Contains("Παλλήνη") || doc.Name.Contains("Κηφισιά") || doc.Name.Contains("Ελευσίνα"))
+                                model.Zone = generator.GetZones().SingleOrDefault( z => z.Id == 2);
+                            zip.AddEntry("Εφορίες/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        }
+                        else
+                        {
+                            zip.AddEntry(doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        }
                     }
                     zip.Save(stream);
                 }
