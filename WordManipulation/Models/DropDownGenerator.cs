@@ -497,7 +497,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στο Περιστέρι Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Α Περιστερίου",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Α Περιστερίου, ",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Περιστερίου, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -564,6 +564,18 @@ namespace WordManipulation.Models
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false   
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στον Άλιμο Αττικής",
+                Name = "ΟΑΕΔ",
+                Perigrafh = "προς τον Οργανισμό Απασχόλησης Εργατικού Δυναμικού,",
+                Praxh = null,
+                HasKleisimo = Kleisimo.exei,
+                Signature = Signature.paralavon,
+                FusikoProswpo = false,
+                ZoneB = true,
+                Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω εταιρείας στην έδρα της στην οδό Εθνικής Αντιστάσεως αρ. 8 ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο. "
             });
             list.Add(new EkthesiEpidoshsModel
             {
