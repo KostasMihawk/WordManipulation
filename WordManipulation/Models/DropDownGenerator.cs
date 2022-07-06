@@ -547,6 +547,17 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
+                Location = "Στην Καλλιθέα Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) ΦΑΕ ΑΘΗΝΩΝ",
+                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΦΑΕ Αθηνών, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false,
+                ZoneB = true
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
                 Location = "Στον Χολαργό Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Χολαργού",
                 Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Χολαργού, ",
