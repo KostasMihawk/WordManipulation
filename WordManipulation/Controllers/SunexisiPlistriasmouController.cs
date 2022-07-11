@@ -51,6 +51,18 @@ namespace WordManipulation.Controllers
                         {
                             zip.AddEntry("doValue/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
                         }
+                        else if(doc.Name.Contains("Intrum"))
+                        {
+                            zip.AddEntry("Intrum/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        }
+                        else if(doc.Name.Contains("QQuant"))
+                        {
+                            zip.AddEntry("QQuant/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        }
+                        else if(doc.Name.Contains("ALfa"))
+                        {
+                            zip.AddEntry("Αλφα/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        }
                         else
                         {
                             zip.AddEntry(doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
