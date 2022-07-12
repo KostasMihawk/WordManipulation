@@ -185,8 +185,9 @@ namespace WordManipulation.BML
             DocXConstructor.AddToParagraph(paragraph, $" την από {date} ");
             if (!isAnagastikiEktelesi)
             {
-                DocXConstructor.AddToParagraphBoldText(paragraph, $"ΕΠΙΒΟΛΗ ΣΥΝΤΗΡΗΤΙΚΗΣ ΚΑΤΑΣΧΕΣΗΣ-ΔΥΝΑΜΕΙ ΔΙΑΤΑΓΗΣ ΠΛΗΡΩΜΗΣ ");
-                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των:");
+                DocXConstructor.AddToParagraphBoldText(paragraph, $"ΕΠΙΒΟΛΗ ΣΥΝΤΗΡΗΤΙΚΗΣ ΚΑΤΑΣΧΕΣΗΣ-ΔΥΝΑΜΕΙ ΔΙΑΤΑΓΗΣ ΠΛΗΡΩΜΗΣ ");//TODO TO MALAKISMENO 8ELEI KENO GIA NA GRAFEI KA8E FORA
+                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των:");//TODO EDW NA BEI SAN PARAMETER O OFEILETIS
+                DocXConstructor.AddToParagraph(paragraph, $"ΕΙΣ ΧΕΙΡΑΣ των: το περιεχόμενο της οποίας έχει όπως ακριβώς στην παρούσα αντιγράφεται, για να λάβει γνώση για τις νόμιμες συνέπειες,");//TODO EDO NA KOLLISW TA CHECKBOXES GIA NA KOLLISUN NA BEI H VIVA/OPTIMA/UNICREDIT/PROCREDIT/KENTRIKIS MAKEDONIAS/ KAI ENA CHECKBOX NA LEEI ΣΥΓΚΟΙΝΟΠΟΙΏΝΤΑΣ ΤΑ ΣΕ ΑΥΤΗ ΑΝΑΦΕΡΟΜΕΝΑ ΕΓΓΡΑΦΑ
             }
             else
             {
@@ -232,9 +233,9 @@ namespace WordManipulation.BML
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment= Alignment.both;
             DocXConstructor.AddToParagraph(paragraph, $"{Location}, σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
-                    $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών,...................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ΕΦΕΤΕΙΟΥ ΑΘΗΝΩΝ, Α.Φ.Μ. 996910057, με έδρα στην Αθήνα, οδός Νικηταρά αρ. 8-10" +
+                    $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ......................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ΕΦΕΤΕΙΟΥ ΑΘΗΝΩΝ, Α.Φ.Μ. 996910057, με έδρα στην Αθήνα, οδός Νικηταρά αρ. 8-10" +
                     $" κατόπιν της έγγραφης παραγγελίας της δικηγόρου Ναυπλίου ");
-            DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"Ευαγγελίας Ξυπνητού,");
+            DocXConstructor.AddtoParagraphWithUnderlineText(paragraph, $"Ευαγγελίας Ξυπνητού,");
             DocXConstructor.AddToParagraph(paragraph, $" πληρεξουσίου του υπό ειδική εκκαθάριση πιστωτικού ιδρύματος με την επωνυμία    ");
             DocXConstructor.AddToParagraphBoldText(paragraph, $"«" + pistotikaIdrymata.Name +"»");
             DocXConstructor.AddToParagraph(paragraph, $" με το διακριτικό τίτλο ");
