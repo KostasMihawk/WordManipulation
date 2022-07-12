@@ -33,6 +33,18 @@ namespace WordManipulation.ViewModels
         public bool HSBC { get; set; }
         [Display(Name = "Τράπεζα Χανίων")]
         public bool Chanion { get; set; }
+        [Display(Name ="Viva")]
+        public bool Viva { get; set; }
+        [Display(Name = "Unicredit")]
+        public bool Unicredit { get; set; }
+        [Display(Name = "Procredit")]
+        public bool Procredit { get; set; }
+        [Display(Name = "KentrikisMakedonias")]
+        public bool KentrikisMakedonias { get; set; }
+        [Display(Name = "Αναφερόμενα Έγγραφα")]
+        public bool AnaferomenaEggrafa { get; set; }
+        [Display(Name = "Οφειλέτης")]
+        public string Ofeiletis { get; set; }
         [Display(Name = "Παγκρήτια")]
         public bool Pagkritia { get; set; }
         [Display(Name = "Αναγκαστική Εκτέλεση")]

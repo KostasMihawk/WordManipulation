@@ -175,7 +175,7 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX EpispeudonKatasxetiriaParagraph(DocX doc, string perigrafh, bool isAnagastikiEktelesi, string date)
+        public DocX EpispeudonKatasxetiriaParagraph(DocX doc, string perigrafh,string ofeiletis,bool Eurobank, bool AlphaBank, bool Ethniki, bool Peiraios, bool Attica, bool HSBC, bool Chanion, bool Viva, bool Unicredit, bool Procredit, bool KentrikisMakedonias, bool AnaferomenaEggrafa, bool isAnagastikiEktelesi, string date)
         {
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -185,9 +185,30 @@ namespace WordManipulation.BML
             DocXConstructor.AddToParagraph(paragraph, $" την από {date} ");
             if (!isAnagastikiEktelesi)
             {
+                int counter = 1;
                 DocXConstructor.AddToParagraphBoldText(paragraph, $"ΕΠΙΒΟΛΗ ΣΥΝΤΗΡΗΤΙΚΗΣ ΚΑΤΑΣΧΕΣΗΣ-ΔΥΝΑΜΕΙ ΔΙΑΤΑΓΗΣ ΠΛΗΡΩΜΗΣ ");//TODO TO MALAKISMENO 8ELEI KENO GIA NA GRAFEI KA8E FORA
-                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των:");//TODO EDW NA BEI SAN PARAMETER O OFEILETIS
-                DocXConstructor.AddToParagraph(paragraph, $"ΕΙΣ ΧΕΙΡΑΣ των: το περιεχόμενο της οποίας έχει όπως ακριβώς στην παρούσα αντιγράφεται, για να λάβει γνώση για τις νόμιμες συνέπειες,");//TODO EDO NA KOLLISW TA CHECKBOXES GIA NA KOLLISUN NA BEI H VIVA/OPTIMA/UNICREDIT/PROCREDIT/KENTRIKIS MAKEDONIAS/ KAI ENA CHECKBOX NA LEEI ΣΥΓΚΟΙΝΟΠΟΙΏΝΤΑΣ ΤΑ ΣΕ ΑΥΤΗ ΑΝΑΦΕΡΟΜΕΝΑ ΕΓΓΡΑΦΑ
+                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των: " + ofeiletis + " ");//TODO EDW NA BEI SAN PARAMETER O OFEILETIS
+                DocXConstructor.AddToParagraph(paragraph, $"ΕΙΣ ΧΕΙΡΑΣ των: ");
+                if (Eurobank) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Eurobank ");
+                if (AlphaBank) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") AlphaBank ");
+                if (Ethniki) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Εθνική Τράπεζα ");
+                if (Peiraios) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Τράπεζα Πειραιώς ");
+                if (Attica) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Attica Bank ");
+                if (HSBC) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") HSBC ");
+                if (Chanion) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Χανίων ");
+                if (Viva) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Viva ");
+                if (Unicredit) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Unicredit ");
+                if (Procredit) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Procredit ");
+                if (KentrikisMakedonias) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Τράπεζα Κεντρικής Μακεδονίας ");
+
+                DocXConstructor.AddToParagraph(paragraph, ",το περιεχόμενο της οποίας έχει όπως ακριβώς στην παρούσα αντιγράφεται, για να λάβει γνώση για τις νόμιμες συνέπειες, ");
+
+                if(AnaferomenaEggrafa)
+                {
+                    DocXConstructor.AddToParagraph(paragraph, $"συγκοινοποιώντας τα σε αυτή αναφερόμενα έγγραφα,");
+                }
+
+                //);//TODO EDO NA KOLLISW TA CHECKBOXES GIA NA KOLLISUN NA BEI H VIVA/OPTIMA/UNICREDIT/PROCREDIT/KENTRIKIS MAKEDONIAS/ KAI ENA CHECKBOX NA LEEI ΣΥΓΚΟΙΝΟΠΟΙΏΝΤΑΣ ΤΑ ΣΕ ΑΥΤΗ ΑΝΑΦΕΡΟΜΕΝΑ ΕΓΓΡΑΦΑ
             }
             else
             {
@@ -398,7 +419,7 @@ namespace WordManipulation.BML
                 CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo,model.ZoneB);
                 AddHeaderToDocument(doc, null);
                 CreateIntroParagraphKatasxetiria(doc, model.Location,model.PistotikaIdrymataUpoEkkatharisi);
-                EpispeudonKatasxetiriaParagraph(doc, model.Upiresia, model.AnagastikiEktelesh, model.Date);
+                EpispeudonKatasxetiriaParagraph(doc, model.Upiresia,model.Ofeiletis, model.Eurobank, model.AlhpaBank, model.Ethniki, model.Peiraios, model.Attica, model. HSBC, model.Chanion, model. Viva, model.Unicredit, model.Procredit, model.KentrikisMakedonias, model.AnaferomenaEggrafa, model.AnagastikiEktelesh, model.Date);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
                 ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);

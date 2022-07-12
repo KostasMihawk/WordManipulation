@@ -1061,8 +1061,9 @@ namespace WordManipulation.Models
                 FullName = "«ΤΡΑΠΕΖΑ OPTIMA BANK»",
                 DiakritikosTitlos = "«ΤΡΑΠΕΖΑ OPTIMA BANK»",
                 HasKleisimo = Kleisimo.exei,
-                Signature = Signature.paralavon
-            });
+                Signature = Signature.paralavon,
+                ZoneB = true
+            }) ;
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {
                 Location = "Στο Αμαρούσιο Αττικής",
@@ -1073,7 +1074,8 @@ namespace WordManipulation.Models
                 FullName = "«VIVA ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΩΜΩΝ Α.Ε.»",
                 DiakritikosTitlos = "«VIVA ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΩΜΩΝ Α.Ε.»",
                 HasKleisimo = Kleisimo.exei,
-                Signature = Signature.paralavon
+                Signature = Signature.paralavon,
+                ZoneB = true
             });
             list.Add(new EkthesiEpidoshsModelKatasxetiria
             {

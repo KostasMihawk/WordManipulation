@@ -12,6 +12,7 @@ namespace WordManipulation.Models
         public Zone Zone { get; set; }
         public PistotikaIdrymataUpoEkkatharisi PistotikaIdrymataUpoEkkatharisi { get; set; }
         public bool Praxi { get; set; }
+        public string   Ofeiletis { get; set; }
         public string Date { get; set; }
         public bool Eurobank { get; set; }
         public bool AlhpaBank { get; set; }
@@ -21,6 +22,11 @@ namespace WordManipulation.Models
         public bool HSBC { get; set; }
         public bool Chanion { get; set; }
         public bool Pagkritia { get; set; }
+        public bool Viva { get; set; }
+        public bool Unicredit { get; set; }
+        public bool Procredit { get; set; }
+        public bool KentrikisMakedonias { get; set; }
+        public bool AnaferomenaEggrafa { get; set; }
         public bool AnagastikiEktelesh { get; set; }
         public string KeimenoEisagoghs { get; set; }
         public string FullName { get; set; }
@@ -58,6 +64,12 @@ namespace WordManipulation.Models
             this.Peiraios = vm.Peiraios;
             this.HSBC = vm.HSBC;
             this.Pagkritia = vm.Pagkritia;
+            this.Viva = vm.Viva;
+            this.Unicredit = vm.Unicredit;
+            this.Procredit = vm.Procredit;
+            this.KentrikisMakedonias = vm.KentrikisMakedonias;
+            this.AnaferomenaEggrafa = vm.AnaferomenaEggrafa;
+            this.Ofeiletis = vm.Ofeiletis;
           
         }
 
@@ -72,6 +84,7 @@ namespace WordManipulation.Models
             this.DiakritikosTitlos = zipEntry.DiakritikosTitlos;
             this.KeimenoEisagoghs = zipEntry.KeimenoEisagoghs;
             this.Location = zipEntry.Location;
+            this.ZoneB = zipEntry.ZoneB;
             
             
         }
