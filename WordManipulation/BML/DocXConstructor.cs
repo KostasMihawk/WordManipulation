@@ -37,9 +37,14 @@ namespace WordManipulation.BML
             paragraph.Append(text).Bold().UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontSize).Font(fontFamily);
             return paragraph;
         }
-         public Paragraph AddtoParagraphWithUnderlineText(Paragraph paragraph, string text)
+        public Paragraph AddtoParagraphWithUnderlineText(Paragraph paragraph, string text)
         {
             paragraph.Append(text).UnderlineStyle(UnderlineStyle.singleLine).FontSize(fontSize).Font(fontFamily);
+            return paragraph;
+        }
+        public Paragraph AddtoParagraphWithItalic(Paragraph paragraph, string text)
+        {
+            paragraph.Append(text).Italic().FontSize(fontSize).Font(fontFamily);
             return paragraph;
         }
     }

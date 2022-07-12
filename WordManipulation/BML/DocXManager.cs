@@ -187,7 +187,8 @@ namespace WordManipulation.BML
             {
                 int counter = 1;
                 DocXConstructor.AddToParagraphBoldText(paragraph, $"ΕΠΙΒΟΛΗ ΣΥΝΤΗΡΗΤΙΚΗΣ ΚΑΤΑΣΧΕΣΗΣ-ΔΥΝΑΜΕΙ ΔΙΑΤΑΓΗΣ ΠΛΗΡΩΜΗΣ ");//TODO TO MALAKISMENO 8ELEI KENO GIA NA GRAFEI KA8E FORA
-                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των: " + ofeiletis + " ");//TODO EDW NA BEI SAN PARAMETER O OFEILETIS
+                DocXConstructor.AddToParagraph(paragraph, $"(απαιτήσεων και πραγμάτων εις χείρας τρίτου - αρθ. 712, 724 και 982 επ ΚΠολΔ) της πρώτης κατά των: ");//TODO EDW NA BEI SAN PARAMETER O OFEILETIS
+                DocXConstructor.AddtoParagraphWithItalic(paragraph, ofeiletis + " ");
                 DocXConstructor.AddToParagraph(paragraph, $"ΕΙΣ ΧΕΙΡΑΣ των: ");
                 if (Eurobank) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Eurobank ");
                 if (AlphaBank) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") AlphaBank ");
