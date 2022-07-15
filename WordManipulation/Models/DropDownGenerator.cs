@@ -400,7 +400,7 @@ namespace WordManipulation.Models
             {
                 Location = "                 ",
                 Name = "Δ.Ο.Υ. (Εφοριες)",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo= Kleisimo.denExei,
@@ -410,7 +410,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Αθήνα",
                 Name = "Δ.Ο.Υ. (Εφοριες) Α Αθηνων",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Α Αθηνών,",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Α Αθηνών,",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -419,7 +419,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στον Πειραιά",
                 Name = "Δ.Ο.Υ. (Εφοριες) Ε Πειραιά",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Ε Πειραιά,",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Ε Πειραιά,",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -428,7 +428,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στους Αγίους Αναργύρους Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Αγίοι Ανάργυροι",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Αγίων Αναργύρων,",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Αγίων Αναργύρων,",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -437,7 +437,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Αθήνα",
                 Name = "Δ.Ο.Υ. (Εφοριες) ΙΓ Αθηνών",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ ΙΓ Αθηνών, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ ΙΓ Αθηνών, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -446,7 +446,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στη Γλυφάδα Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Γλυφάδας",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Γλυφάδας, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Γλυφάδας, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -457,7 +457,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Ηλιούπολη Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Ηλιούπολης",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Ηλιούπολης, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Ηλιούπολης, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -467,7 +467,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Αθήνα",
                 Name = "Δ.Ο.Υ. (Εφοριες) Δ Αθηνών",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Δ Αθηνών, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Δ Αθηνών, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -477,7 +477,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στη Νέα Ιωνία Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Νεας Ιωνίας",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Νέας Ιωνίας, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Νέας Ιωνίας, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -487,7 +487,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Κηφισιά Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Κηφισιάς",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Κηφισιάς, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Κηφισιάς, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -498,7 +498,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στο Περιστέρι Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Α Περιστερίου",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Περιστερίου, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Περιστερίου, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -508,7 +508,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Ελευσίνα Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Ελευσίνας",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Ελευσίνας, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Ελευσίνας, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -519,7 +519,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στον Πειραιά",
                 Name = "Δ.Ο.Υ. (Εφοριες) Α Πειραιά",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Α Πειραιά, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Α Πειραιά, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -529,7 +529,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στον Πειραιά",
                 Name = "Δ.Ο.Υ. (Εφοριες) Πλοίων",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Πλοίων, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Πλοίων, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -539,7 +539,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Παλλήνη Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Παλλήνης",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Παλλήνης, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Παλλήνης, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -550,7 +550,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στην Καλλιθέα Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) ΦΑΕ ΑΘΗΝΩΝ",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΦΑΕ Αθηνών, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ ΦΑΕ Αθηνών, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
@@ -561,7 +561,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στον Χολαργό Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Χολαργού",
-                Perigrafh = "προς τον προϊστάμενο της αναγγελθείσας ΔΟΥ Χολαργού, ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Χολαργού, ",
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
