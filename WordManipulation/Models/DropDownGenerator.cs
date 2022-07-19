@@ -569,6 +569,16 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
+                Location = "Στην Καλλιθέα Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) Καλλιθέας",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Καλλιθέας, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
                 Location = "Στον Πειραιά",
                 Name = "ΤΕΛ",
                 Perigrafh = "προς την Τελωνειακή Περιφέρεια Αττικής,",
