@@ -16,6 +16,7 @@ namespace WordManipulation.Models
         public string Location { get; set; }
         public string Epispeudon { get; set; }
         public bool Ar8ro966 { get; set; }
+        public DebtorForSunexisi DebtorDefaultList { get; set; }
 
         //We need the following attributes to fill up the zip procedure
         public bool IsFusikoProsopo { get; set; }
@@ -39,6 +40,7 @@ namespace WordManipulation.Models
             DropDownGenerator generator = new DropDownGenerator();
             this.Notary = generator.GetNotaries().SingleOrDefault(n => n.Id == vm.Notary);
             this.Zone = generator.GetZones().SingleOrDefault(a => a.Id == vm.Zone);
+            this.DebtorDefaultList = generator.GetDebtorsForSunexisi().SingleOrDefault(d => d.Id == vm.DebtorForSunexisi);
             this.CaseNumber = vm.CaseNumber;
             this.Debtor = vm.Debtor;
             this.Gender = vm.Gender;

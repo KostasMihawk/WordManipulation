@@ -136,7 +136,7 @@ namespace WordManipulation.BML
             return doc;
         }
 
-        public DocX CreateIntroParagraph(DocX doc,string location, string locationUpiresias, bool isFusikoProsopo, string epispeudon)
+        public DocX CreateIntroParagraph(DocX doc,string location, string locationUpiresias, bool isFusikoProsopo, string epispeudon, string DebtorDesc)
         {
             Paragraph introParagraph = doc.InsertParagraph("", false, Formatting);
             introParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
@@ -152,7 +152,15 @@ namespace WordManipulation.BML
             }
             DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα .......................................... και ώρα ........");
             DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας");
-            DocXConstructor.AddToParagraph(introParagraph, $" {epispeudon} ,");            
+            if(epispeudon == "")
+            {
+                DocXConstructor.AddToParagraph(introParagraph, $" {DebtorDesc},");
+            }
+            else
+            {
+                DocXConstructor.AddToParagraph(introParagraph, $" {epispeudon},");
+            }
+                       
             return doc;
         }
 
@@ -387,7 +395,7 @@ namespace WordManipulation.BML
             {
                 CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo, model.ZoneB);
                 AddHeaderToDocument(doc, null);
-                CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon);
+                CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon, model.DebtorDefaultList.Description);
                 EpispeudonParagraph(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
                 ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor, model.Ar8ro966);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);

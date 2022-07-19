@@ -25,6 +25,10 @@ namespace WordManipulation.ViewModels
         [Display(Name = "966")]
         public bool Ar8ro966 { get; set; }
 
+        [Display(Name = "Επισπευδον Δικηγορος")]
+        public int DebtorForSunexisi { get; set; }
+
+
 
 
     }

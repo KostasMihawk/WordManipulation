@@ -184,6 +184,7 @@
     <Compile Include="Models\Baillif.cs" />
     <Compile Include="Models\BankModel.cs" />
     <Compile Include="Models\DayCalculator.cs" />
+    <Compile Include="Models\DebtorForSunexisi.cs" />
     <Compile Include="Models\Defender.cs" />
     <Compile Include="Models\DocumentType.cs" />
     <Compile Include="Models\DropDownGenerator.cs" />
