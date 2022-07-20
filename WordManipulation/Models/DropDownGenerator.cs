@@ -554,8 +554,7 @@ namespace WordManipulation.Models
                 Praxh = null,
                 Signature = Signature.ypallilos,
                 HasKleisimo = Kleisimo.denExei,
-                FusikoProswpo = false,
-                ZoneB = true
+                FusikoProswpo = false                
             });
             list.Add(new EkthesiEpidoshsModel
             {
@@ -659,6 +658,7 @@ namespace WordManipulation.Models
                 FusikoProswpo = false,
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon,
+                ZoneB = true,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Παραδείσου 16, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -670,6 +670,7 @@ namespace WordManipulation.Models
                 FusikoProswpo = false,
                 HasKleisimo = Kleisimo.exei,
                 Signature = Signature.paralavon,
+                ZoneB = true,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Παραδείσου 16, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
@@ -680,6 +681,7 @@ namespace WordManipulation.Models
                 Praxh = true,
                 FusikoProswpo = false,
                 HasKleisimo = Kleisimo.exei,
+                ZoneB = true,
                 Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Παραδείσου 16, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });
@@ -691,6 +693,7 @@ namespace WordManipulation.Models
                 Praxh = true,
                 FusikoProswpo = false,
                 HasKleisimo = Kleisimo.exei,
+                ZoneB = true,
                 Signature = Signature.paralavon,
                 Kleisimo = "Αφού δεν βρήκα τον νόμιμο εκπρόσωπο της άνω Εταιρίας στην έδρα της, στην οδό Παραδείσου 16, ούτε Διευθυντή ή συνεργάτη, αλλά τ… εξουσιοδοτημέν… για την παραλαβή υπάλληλο αυτής …………………….……………, όπως μου δήλωσε, επέδωσα σ΄ αυτ…. το άνω δικόγραφο."
             });            
