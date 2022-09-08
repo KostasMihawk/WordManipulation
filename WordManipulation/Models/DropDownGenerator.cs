@@ -599,7 +599,7 @@ namespace WordManipulation.Models
             list.Add(new EkthesiEpidoshsModel
             {
                 Location = "Στο Λαύριο Αττικής",
-                Name = "ΤΕΛ",
+                Name = "Τελωνείου Λαυρίου",
                 Perigrafh = "προς Τελωνείο Λαυρίου,",
                 Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
