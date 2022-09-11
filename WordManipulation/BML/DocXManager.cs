@@ -42,11 +42,11 @@ namespace WordManipulation.BML
 
             if (isFusikoProswpo)
             {
-                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
+                t.Rows[0].Cells[0].Paragraphs.First().Append("ΑΘΑΝΑΣΙΟΣ ΓΕΩΡΓΑΝΤΟΠΟΥΛΟΣ - ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε. - δ.τ. «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.»").Font(fontFamily).Bold().Alignment = Alignment.center;
                 t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: " + zone.Name).Font(fontFamily);
-                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Ζωοδόχου Πηγής αρ. 12 - Αθήνα 10681").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[1].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
-                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Δ' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: " + zone.Value.ToString("F")).Font(fontFamily);
                 t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[3].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
@@ -59,11 +59,11 @@ namespace WordManipulation.BML
             }
             else if (ZoneB)
             {
-                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
+                t.Rows[0].Cells[0].Paragraphs.First().Append("ΑΘΑΝΑΣΙΟΣ ΓΕΩΡΓΑΝΤΟΠΟΥΛΟΣ - ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε. - δ.τ. «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.»").Font(fontFamily).Bold().Alignment = Alignment.center;
                 t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: Β").Font(fontFamily);
-                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Ζωοδόχου Πηγής αρ. 12 - Αθήνα 10681").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[1].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
-                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Δ' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: 55.00").Font(fontFamily);
                 t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[3].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
@@ -76,11 +76,11 @@ namespace WordManipulation.BML
             }
             else 
             {
-                t.Rows[0].Cells[0].Paragraphs.First().Append("ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.").Font(fontFamily).Bold().Alignment = Alignment.center;
+                t.Rows[0].Cells[0].Paragraphs.First().Append("ΑΘΑΝΑΣΙΟΣ ΓΕΩΡΓΑΝΤΟΠΟΥΛΟΣ - ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε. - δ.τ. «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.»").Font(fontFamily).Bold().Alignment = Alignment.center;
                 t.Rows[0].Cells[1].Paragraphs.First().Append("Ζώνη: A").Font(fontFamily);
-                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Νικηταρά αρ. 8-10 - Αθήνα 10678").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[1].Cells[0].Paragraphs.First().Append("Έδρα: Ζωοδόχου Πηγής αρ. 12 - Αθήνα 10681").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[1].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
-                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Α' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
+                t.Rows[2].Cells[0].Paragraphs.First().Append("Α.Φ.Μ.: 996910057 - Δ.Ο.Υ. Δ' Αθηνών").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[2].Cells[1].Paragraphs.First().Append("ΑΜΟΙΒΗ: 35.00").Font(fontFamily);
                 t.Rows[3].Cells[0].Paragraphs.First().Append("ΤΗΛ: 210 3300 294").Font(fontFamily).Alignment = Alignment.center;
                 t.Rows[3].Cells[1].Paragraphs.First().Append("").Font(fontFamily);
@@ -151,7 +151,7 @@ namespace WordManipulation.BML
                 DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias}, σήμερα στις ...................................... ");
             }
             DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα .......................................... και ώρα ........");
-            DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας");
+            DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας με την επωνυμία «ΑΘΑΝΑΣΙΟΣ ΓΕΩΡΓΑΝΤΟΠΟΥΛΟΣ - ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.» και το διακριτικό τίτλο «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, κατόπιν της έγγραφης παραγγελίας");
             if(epispeudon == "")
             {
                 DocXConstructor.AddToParagraph(introParagraph, $" {DebtorDesc},");
@@ -252,7 +252,7 @@ namespace WordManipulation.BML
                 DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias}, ");
             }            
             DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
-                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif}, μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., κατόπιν της έγγραφης παραγγελίας {notary}" +
+                $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif}, μέλος της εταιρείας με την επωνυμία «ΑΘΑΝΑΣΙΟΣ ΓΕΩΡΓΑΝΤΟΠΟΥΛΟΣ - ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.» και το διακριτικό τίτλο «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, κατόπιν της έγγραφης παραγγελίας {notary}" +
                 $", ως επί του πλειστηριασμού υπαλλήλου," );
             return doc;
         }
@@ -263,7 +263,7 @@ namespace WordManipulation.BML
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment= Alignment.both;
             DocXConstructor.AddToParagraph(paragraph, $"{Location}, σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
-                    $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ......................................................., μέλος της εταιρείας με την επωνυμία ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε., ΕΦΕΤΕΙΟΥ ΑΘΗΝΩΝ, Α.Φ.Μ. 996910057, με έδρα στην Αθήνα, οδός Νικηταρά αρ. 8-10" +
+                    $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ......................................................., μέλος της εταιρείας με την επωνυμία «ΑΘΑΝΑΣΙΟΣ ΓΕΩΡΓΑΝΤΟΠΟΥΛΟΣ - ΜΙΧΟΠΟΥΛΟΥ ΠΑΡΑΣΚΕΥΗ - ΖΟΥΖΟΥΛΑ ΜΑΤΟΥΛΑ Α.Ε.Ε.Δ.Ε.» και το διακριτικό τίτλο «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης," +
                     $" κατόπιν της έγγραφης παραγγελίας της δικηγόρου Ναυπλίου ");
             DocXConstructor.AddtoParagraphWithUnderlineText(paragraph, $"Ευαγγελίας Ξυπνητού,");
             DocXConstructor.AddToParagraph(paragraph, $" πληρεξουσίου του υπό ειδική εκκαθάριση πιστωτικού ιδρύματος με την επωνυμία    ");
