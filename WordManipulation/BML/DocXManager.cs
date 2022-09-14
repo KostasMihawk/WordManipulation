@@ -32,6 +32,9 @@ namespace WordManipulation.BML
         public DocX CreatePricingAndNameTable(DocX doc, Zone zone, bool isFusikoProswpo, bool ZoneB)
         {
             Table t = doc.AddTable(7, 2);
+            doc.MarginBottom = 0;
+            doc.MarginTop = 20;
+            doc.Ma
 
             t.SetColumnWidth(0, 350d);
             t.SetColumnWidth(1, 110d);
@@ -125,8 +128,8 @@ namespace WordManipulation.BML
             headerFormat.UnderlineStyle = UnderlineStyle.singleLine;
             headerFormat.Spacing = 1.2;
             Paragraph headParagraph = doc.InsertParagraph("", false, headerFormat);
-            headParagraph.AppendLine();
-            headParagraph.AppendLine();
+            //headParagraph.AppendLine();
+            //headParagraph.AppendLine();
             Paragraph headerTextParagraph = doc.InsertParagraph(header, false, headerFormat);
             headerTextParagraph.Alignment = Alignment.both;
             headerTextParagraph.Append("                                                                            ");
