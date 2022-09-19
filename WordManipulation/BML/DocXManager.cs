@@ -34,7 +34,7 @@ namespace WordManipulation.BML
             Table t = doc.AddTable(7, 2);
             doc.MarginBottom = 0;
             doc.MarginTop = 20;
-            doc.Ma
+            
 
             t.SetColumnWidth(0, 350d);
             t.SetColumnWidth(1, 110d);
