@@ -19,6 +19,7 @@ namespace WordManipulation.Models
         public KEAO KEAO { get; set; }
         public bool IsTable { get; set; }
         public bool IsBank { get; set; }
+        public bool IsAnaplistiriasmos { get; set; }
 
         //We need the following attributes to fill up the zip procedure
         public bool IsFusikoProsopo { get; set; }
@@ -49,6 +50,7 @@ namespace WordManipulation.Models
             this.IsTable = vm.IsTable;
             this.IsBank = vm.IsBank;
             this.PraxhPelath = vm.Praxi;
+            this.IsAnaplistiriasmos = vm.IsAnaplistiriasmos;
         }
 
         public void fillZipEntries(EkthesiEpidoshsModel zipEntry)

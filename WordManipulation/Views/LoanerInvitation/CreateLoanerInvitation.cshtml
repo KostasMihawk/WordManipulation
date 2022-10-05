@@ -77,7 +77,7 @@
         </div>
     </div>
 
-    
+
 
     @*<div class="form-group">
             @Html.LabelFor(model => model.FinishText, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -105,6 +105,16 @@
             <div class="checkbox">
                 @Html.EditorFor(model => model.IsTable)
                 @Html.ValidationMessageFor(model => model.IsTable, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.IsAnaplistiriasmos, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.IsAnaplistiriasmos)
+                @Html.ValidationMessageFor(model => model.IsAnaplistiriasmos, "", new { @class = "text-danger" })
             </div>
         </div>
     </div>
