@@ -386,11 +386,14 @@ namespace WordManipulation.BML
             GenderManager genderManager = new GenderManager();
             TextManager textManager = new TextManager();            
             DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν ");
-            if(!IsAnaplistiriasmos)
+            if (!IsAnaplistiriasmos)
             {
                 DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ {textManager.PraxiHPinakas(isPinakas)} ");
             }
-            DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ ΕΠΙΣΠΕΥΣΗΣ ΑΝΑΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΚΑΤ' ΑΡΘΡΟ 965 Κ.ΠΟΛ.Δ. ");
+            else
+            {
+                DocXConstructor.AddToParagraphBoldText(paragraph, $"{documentNumber} ΠΡΑΞΗΣ ΕΠΙΣΠΕΥΣΗΣ ΑΝΑΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΚΑΤ' ΑΡΘΡΟ 965 Κ.ΠΟΛ.Δ. ");
+            }
             DocXConstructor.AddToParagraph(paragraph, $"της ως άνω συμβολαιογράφου κατά { genderManager.EpiloghArthrouBasiGenous(gender)}{ofeiletis}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
