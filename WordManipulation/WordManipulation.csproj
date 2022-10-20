@@ -245,7 +245,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Arxiki.cshtml" />
     <Content Include="Views\Home\Plistiriamsos.cshtml" />
-    <Content Include="Views\LoanerInvitation\LoanerInvitation.cshtml" />
     <Content Include="Views\LoanerInvitation\CreateLoanerInvitation.cshtml" />
     <Content Include="Views\SunexisiPlistriasmou\CreateSunexisiPlistiriasmou.cshtml" />
     <Content Include="Views\Katasxetiria\CreateKatasxetirio.cshtml" />

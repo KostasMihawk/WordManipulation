@@ -6,14 +6,14 @@
     var Generator = new DropDownGenerator();
 }
 
-<h2>CreateSunexisiPlistiriasmou</h2>
+<h2>ΔΗΛΩΣΗ ΣΥΝΕΧΙΣΗΣ ΠΛΗΣΤΕΙΡΙΑΣΜΟΥ</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>SunexisiPlistirasmouViewmodel</h4>
+    
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
@@ -96,5 +96,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Πίσω στην αρχική οθόνη", "Arxiki", "Home")
 </div>
