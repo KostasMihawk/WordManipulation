@@ -242,16 +242,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Arxiki.cshtml" />
-    <Content Include="Views\Home\Plistiriamsos.cshtml" />
     <Content Include="Views\LoanerInvitation\CreateLoanerInvitation.cshtml" />
     <Content Include="Views\SunexisiPlistriasmou\CreateSunexisiPlistiriasmou.cshtml" />
     <Content Include="Views\Katasxetiria\CreateKatasxetirio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Anaggelia\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
