@@ -213,7 +213,7 @@ namespace WordManipulation.BML
                 if (Procredit) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Procredit ");
                 if (KentrikisMakedonias) DocXConstructor.AddToParagraphBoldText(paragraph, counter++ + ") Τράπεζα Κεντρικής Μακεδονίας ");
 
-                DocXConstructor.AddToParagraph(paragraph, ",το περιεχόμενο της οποίας έχει όπως ακριβώς στην παρούσα αντιγράφεται, για να λάβει γνώση για τις νόμιμες συνέπειες, ");
+                DocXConstructor.AddToParagraph(paragraph, ",το περιεχόμενο της οποίας έχει όπως ακριβώς στην παρούσα αντιγράφεται, για να λάβει γνώση και για τις νόμιμες συνέπειες, ");
 
                 if(AnaferomenaEggrafa)
                 {
