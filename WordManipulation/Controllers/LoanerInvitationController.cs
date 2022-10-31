@@ -72,6 +72,9 @@ namespace WordManipulation.Controllers
                         {
                             zip.AddEntry("Αλφα/" + doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));
                         }
+                        else if(doc.Name.Contains("pqh")){
+                            zip.AddEntry("Pqh/" + doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));
+                        }
                         else
                         {
                             zip.AddEntry(doc.Name + ".docx", s.CreateSunexisiPlistiriasmou(LoanerInvitationModel));

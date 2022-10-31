@@ -63,6 +63,10 @@ namespace WordManipulation.Controllers
                         {
                             zip.AddEntry("Αλφα/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
                         }
+                        else if (doc.Name.Contains("pqh"))
+                        {
+                            zip.AddEntry("pqh/" + doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
+                        }
                         else
                         {
                             zip.AddEntry(doc.Name + ".docx", s.CreateEntoliSunexisisPlistiriasmou(model));
