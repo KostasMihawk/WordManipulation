@@ -628,11 +628,23 @@ namespace WordManipulation.Models
             {
                 Location = "Στο Λαύριο Αττικής",
                 Name = "Τελωνείου Λαυρίου",
-                Perigrafh = "προς Τελωνείο Λαυρίου,",
+                Perigrafh = "προς το Τελωνείο Λαυρίου,",
                 Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
-                FusikoProswpo = false
+                FusikoProswpo = false,
+                ZoneB = true
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Ελευσίνα Αττικής",
+                Name = "Τελωνείο Ελευσίνας",
+                Perigrafh = "προς το Τελωνείο Ελευσίνας,",
+                Praxh = null,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
+                FusikoProswpo = false,
+                ZoneB = true
             });
             list.Add(new EkthesiEpidoshsModel
             {
