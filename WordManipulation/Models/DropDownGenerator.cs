@@ -686,8 +686,8 @@ namespace WordManipulation.Models
                 Perigrafh = "προς τον κ. Διοικητή Της Ανεξάρτητης Αρχής Δημοσίων Εσόδων (Α.Α.Δ.Ε.), ως εκπρόσωπο του Ελληνικού Δημοσίου, κατοικοεδρεύοντα στην Αθήνα,",
                 Praxh = null,
                 FusikoProswpo = false,
-                HasKleisimo = Kleisimo.exei,
-                Signature = Signature.paredros,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
                 Kleisimo = "Αφού δεν βρήκα τον ίδιο στην έδρα του Νομικού Συμβουλίου του Κράτους επί της οδού Ακαδημίας & Χαρ. Τρικούπη, όπου σύμφωνα με τον Νόμο γίνονται οι επιδόσεις προς αυτόν, ούτε Διευθυντή ή συνεργάτη του, αλλά τ... εξουσιοδοτημέν... γιά την παραλαβή Πάρεδρο Ν.Σ.Κ. ............................................, επέδωσα σ΄ αυτ... το άνω δικόγραφο."
             });
             list.Add(new EkthesiEpidoshsModel
