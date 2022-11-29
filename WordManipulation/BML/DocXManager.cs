@@ -237,7 +237,7 @@ namespace WordManipulation.BML
             paragraph.Alignment = Alignment.both;
             DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
             DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ "+textMagager.ArthroSunexisisPlistiriasmou(Article) +" ΤΟΥ Κ.ΠΟΛ.Δ.,");
-            DocXConstructor.AddToParagraph(paragraph, $" {sumbolaiografos}κατά {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
+            DocXConstructor.AddToParagraph(paragraph, $" {sumbolaiografos} κατά {genderManager.EpiloghArthrouBasiGenous(gender)} {ofeileths}, για να λάβει γνώση και για τις νόμιμες συνέπειες.");
             return doc;
         }
 
