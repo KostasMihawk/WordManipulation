@@ -606,7 +606,7 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
-                Location = "Στην Καλλιθέα Αττικής",
+                Location = "Στην Αθήνα",
                 Name = "Δ.Ο.Υ. (Εφοριες) ΦΑΕ ΑΘΗΝΩΝ",
                 Perigrafh = "προς τον προϊστάμενο της ΔΟΥ ΦΑΕ Αθηνών, ",
                 Praxh = null,
