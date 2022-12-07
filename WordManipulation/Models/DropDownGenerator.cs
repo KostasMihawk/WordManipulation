@@ -543,6 +543,17 @@ namespace WordManipulation.Models
             });
             list.Add(new EkthesiEpidoshsModel
             {
+                Location = "Στο Αμαρούσιο Αττικής Αττικής",
+                Name = "Δ.Ο.Υ. (Εφοριες) ΚΕΜΕΕΠ",
+                Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Κέντρο Ελέγχου Μεγάλων Επιχειρήσεων, ",
+                Praxh = null,
+                Signature = Signature.ypallilos,
+                HasKleisimo = Kleisimo.denExei,
+                FusikoProswpo = false,
+                ZoneB = true
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
                 Location = "Στο Περιστέρι Αττικής",
                 Name = "Δ.Ο.Υ. (Εφοριες) Α Περιστερίου",
                 Perigrafh = "προς τον προϊστάμενο της ΔΟΥ Περιστερίου, ",
@@ -642,6 +653,17 @@ namespace WordManipulation.Models
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
                 FusikoProswpo = false   
+            });
+            list.Add(new EkthesiEpidoshsModel
+            {
+                Location = "Στην Μεταμόρφωση Αττικής",
+                Name = "ΤΕΛΩΝΕΙΟ Α ΑΘΗΝΩΝ",
+                Perigrafh = "προς το ΤΕΛΩΝΕΙΟ Α ΑΘΗΝΩΝ,",
+                Praxh = null,
+                HasKleisimo = Kleisimo.denExei,
+                Signature = Signature.ypallilos,
+                ZoneB = true,
+                FusikoProswpo = false
             });
             list.Add(new EkthesiEpidoshsModel
             {
