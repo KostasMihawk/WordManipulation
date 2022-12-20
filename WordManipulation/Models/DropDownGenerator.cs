@@ -426,8 +426,8 @@ namespace WordManipulation.Models
             list.Add(new EkthesiEpidoshsModel
             {
                 Location = "Στην Ελευσίνα",
-                Name = "ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
-                Perigrafh = "προς τη Περιφερειακή Διεύθυνση ΚΕΑΟ Ελευσίνας,",
+                Name = "ΚΕΑΟ ΕΛΕΥΣΙΝΑΣ",
+                Perigrafh = "προς το e-ΕΦΚΑ, ΑΠΟΚΕΝΤΡΩΜΕΝΟ ΤΜΗΜΑ ΚΕΑΟ ΔΥΤΙΚΗΣ ΑΤΤΙΚΗΣ ΜΕ ΕΔΡΑ ΣΤΗΝ ΕΛΕΥΣΙΝΑ,",
                 Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
