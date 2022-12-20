@@ -417,7 +417,7 @@ namespace WordManipulation.Models
             {
                 Location = "Στον Πειραιά",
                 Name = "ΚΕΑΟ ΠΕΙΡΑΙΑ",
-                Perigrafh = "προς την Περιφερειακή Διεύθυνση ΚΕΑΟ Πειραιά,",
+                Perigrafh = "προς το ΠΕΡΙΦΕΡΕΙΑΚΟ ΚΕΑΟ ΠΕΙΡΑΙΩΣ ΒΟΡΕΙΟΥ ΚΑΙ ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ,",
                 Praxh = null,
                 HasKleisimo = Kleisimo.denExei,
                 Signature = Signature.ypallilos,
