@@ -153,7 +153,7 @@ namespace WordManipulation.BML
             {
                 DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias}, σήμερα στις ...................................... ");
             }
-            DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα .......................................... και ώρα ........");
+            DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι τρία (2023), ημέρα .......................................... και ώρα ........");
             DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, κατόπιν της έγγραφης παραγγελίας");
             if(epispeudon == "")
             {
@@ -254,7 +254,7 @@ namespace WordManipulation.BML
             {
                 DocXConstructor.AddToParagraph(paragraph, $"{locationUpiresias}, ");
             }            
-            DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
+            DocXConstructor.AddToParagraph(paragraph, $"σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι τρία (2023), ημέρα ................................ και ώρα ........," +
                 $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, {bailif}, μέλος της εταιρείας «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, κατόπιν της έγγραφης παραγγελίας {notary}" +
                 $", ως επί του πλειστηριασμού υπαλλήλου," );
             return doc;
@@ -265,7 +265,7 @@ namespace WordManipulation.BML
             Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
             paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
             paragraph.Alignment= Alignment.both;
-            DocXConstructor.AddToParagraph(paragraph, $"{Location}, σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι δύο (2022), ημέρα ................................ και ώρα ........," +
+            DocXConstructor.AddToParagraph(paragraph, $"{Location}, σήμερα στις .................................... (      ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι τρία (2023), ημέρα ................................ και ώρα ........," +
                     $" εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, ......................................................., μέλος της εταιρείας «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης," +
                     $" κατόπιν της έγγραφης παραγγελίας της δικηγόρου Ναυπλίου ");
             DocXConstructor.AddtoParagraphWithUnderlineText(paragraph, $"Ευαγγελίας Ξυπνητού,");
