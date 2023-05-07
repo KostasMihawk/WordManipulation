@@ -168,6 +168,7 @@
     <Compile Include="BML\TextManager.cs" />
     <Compile Include="Controllers\AnaggeliaController.cs" />
     <Compile Include="Controllers\API\AutoCompleteController.cs" />
+    <Compile Include="Controllers\DilosiSunexisisNewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KatasxetiriaController.cs" />
     <Compile Include="Controllers\LoanerInvitationController.cs" />
@@ -186,11 +187,13 @@
     <Compile Include="Models\DayCalculator.cs" />
     <Compile Include="Models\DebtorForSunexisi.cs" />
     <Compile Include="Models\Defender.cs" />
+    <Compile Include="Models\DilosiSunexisisModel.cs" />
     <Compile Include="Models\DocumentType.cs" />
     <Compile Include="Models\DropDownGenerator.cs" />
     <Compile Include="Models\EkthesiEpidoshsModel.cs" />
     <Compile Include="Models\EkthesiEpidoshsModelKatasxetiria.cs" />
     <Compile Include="Models\Form.cs" />
+    <Compile Include="Models\Fund.cs" />
     <Compile Include="Models\KatasxetirioModel.cs" />
     <Compile Include="Models\LoanerInvitationModel.cs" />
     <Compile Include="Models\PistotikaIdrymataUpoEkkatharisi.cs" />
@@ -203,6 +206,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AnaggeliaViewmodel.cs" />
     <Compile Include="ViewModels\CreateVM.cs" />
+    <Compile Include="ViewModels\DilosiSunexisisVm.cs" />
     <Compile Include="ViewModels\KatasxetirioViewModel.cs" />
     <Compile Include="ViewModels\LoanerInvitationViewmodel.cs" />
     <Compile Include="ViewModels\SunexisiPlistirasmouViewmodel.cs" />
@@ -246,6 +250,7 @@
     <Content Include="Views\LoanerInvitation\CreateLoanerInvitation.cshtml" />
     <Content Include="Views\SunexisiPlistriasmou\CreateSunexisiPlistiriasmou.cshtml" />
     <Content Include="Views\Katasxetiria\CreateKatasxetirio.cshtml" />
+    <Content Include="Views\DilosiSunexisisNew\CreateDilosi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

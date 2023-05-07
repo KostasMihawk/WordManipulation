@@ -398,7 +398,74 @@ namespace WordManipulation.BML
             return doc;
         }
 
-      
+        public DocX CreateIntroParagraphDilosiSunexisis(DocX doc, string location, string locationUpiresias, bool isFusikoProsopo, string DateOfConfiscation, string NotaryDescription, string DateOfOrder, string NotaryName, string NotaryCity)
+        {
+            Paragraph introParagraph = doc.InsertParagraph("", false, Formatting);
+            introParagraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+            introParagraph.Alignment = Alignment.both;
+            DocXConstructor.AddNewLine(introParagraph);
+            if (isFusikoProsopo)
+            {
+                DocXConstructor.AddToParagraph(introParagraph, $"{location}, σήμερα στις ...................................... ");
+            }
+            else
+            {
+                DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias}, σήμερα στις ...................................... ");
+            }
+            DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι τρία (2023), ημέρα .......................................... και ώρα ........");
+            DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, μετά την έγγραφη παραγγελία ");
+            DocXConstructor.AddToParagraph(introParagraph, "που μου δόθηκε στις ");
+            DocXConstructor.AddToParagraphBoldText(introParagraph,DateOfOrder);
+            DocXConstructor.AddToParagraph(introParagraph, " από την Συμβολαιογράφο " + NotaryCity + " ");
+            DocXConstructor.AddToParagraphBoldText(introParagraph, NotaryName + " ");
+            DocXConstructor.AddToParagraph(introParagraph, NotaryDescription + " ως υπάλληλο του πλειστηριασμού,");
+            return doc;
+        }
+
+        public DocX EpispeudonParagraphDilosi(DocX doc, bool isFusikoProsopo, Gender gender, string ofeileths, string upiresia)
+        {
+            Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+            paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+            paragraph.Alignment = Alignment.both;
+            GenderManager genderManager = new GenderManager();
+            if (isFusikoProsopo)
+            {
+                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"προς {genderManager.EpilogiArthrouBasiGenousGenikiPtwsh(gender)} {ofeileths},");
+            }
+            else
+            {
+                DocXConstructor.AddToParagraph(paragraph, $"ήλθα για να επιδώσω ");
+                DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, $"{upiresia}");
+            }
+            DocXConstructor.AddToParagraph(paragraph, " προς γνώση και για τις νόμιμες συνέπειες,");
+            return doc;
+        }
+
+        public DocX ParagraphAkrivesAdigrafoDilosi(DocX doc, Gender gender, string documentNumber, string sumbolaiografos, string ofeileths, bool Article, string DateOfConfiscation, string FundName, string FundDesc, string MaedapName, string MaedapAdress)
+        {
+            Paragraph paragraph = doc.InsertParagraph("", false, Formatting);
+            GenderManager genderManager = new GenderManager();
+            paragraph.SetLineSpacing(LineSpacingType.Line, 16.0f);
+            paragraph.Alignment = Alignment.both;
+            DocXConstructor.AddToParagraph(paragraph, $"ακριβές αντίγραφο της υπ΄ αριθμόν");
+            DocXConstructor.AddToParagraphBoldText(paragraph, $" {documentNumber} ΠΡΑΞΗΣ ΔΗΛΩΣΗΣ-ΕΝΤΟΛΗΣ ΣΥΝΕΧΙΣΗΣ ΠΛΕΙΣΤΗΡΙΑΣΜΟΥ ΑΚΙΝΗΤΟΥ ΚΑΤΑ ΤΟ ΑΡΘΡΟ " + textMagager.ArthroSunexisisPlistiriasmou(Article) + " ΤΟΥ Κ.ΠΟΛ.Δ.,");
+            DocXConstructor.AddToParagraph(paragraph, $" των πράξεων της ως άνω Συμβολαιογράφου, για πλειστηριασμό που θα διενεργηθεί στις ");
+            DocXConstructor.AddToParagraphBoldAndUnderlinedText(paragraph, DateOfConfiscation);
+            DocXConstructor.AddToParagraph(paragraph, " επισπευδόμενης από την εταιρεία ειδικού σκοπού τιτλοποίησης με την επωνυμία ");
+            DocXConstructor.AddToParagraphBoldText(paragraph, "«" + FundName + "»");
+            DocXConstructor.AddToParagraph(paragraph, " , " + FundDesc + ", επ' ονόματι και για λογαριασμό της οποίας ενεργεί η εταιρεία με την επωνυμία ");
+            DocXConstructor.AddToParagraphBoldText(paragraph, "«" + MaedapName + "»");
+            DocXConstructor.AddToParagraph(paragraph, " η οποία εδρεύει " + MaedapAdress + " όπως εκπροσωπείται νόμιμα,");
+            DocXConstructor.AddToParagraph(paragraph, " κατά " + genderManager.EpilogiArthouOfileti(gender) + " ");
+            DocXConstructor.AddToParagraphBoldText(paragraph, ofeileths);
+            DocXConstructor.AddToParagraph(paragraph, ",");
+            return doc;
+        }
+
+
+
+
         public MemoryStream EntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model)
         {
             using (DocX doc = DocX.Create(String.Format("Zip_{0}.docx", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"))))
@@ -408,6 +475,22 @@ namespace WordManipulation.BML
                 CreateIntroParagraph(doc, model.Location, model.Address, model.IsFusikoProsopo, model.Epispeudon, model.DebtorDefaultList.Description);
                 EpispeudonParagraph(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
                 ParagraphAkrivesAdigrafo(doc, model.Gender, model.CaseNumber, model.Notary.GiaSunexisi, model.Debtor, model.Ar8ro966);
+                ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
+                ParagrafosSuntaxisEkthesis(doc);
+                ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);
+                return CreateAndReturnDocAsMemoryStream(doc);
+            }
+        }
+        
+        public MemoryStream DilosiSunexisis(DilosiSunexisisModel model)
+        {
+            using(DocX doc = DocX.Create(String.Format(model.Debtor + ".docx", DateTime.Now)))
+            {
+                CreatePricingAndNameTable(doc, model.Zone, model.IsFusikoProsopo, model.ZoneB);
+                AddHeaderToDocument(doc, null);
+                CreateIntroParagraphDilosiSunexisis(doc, model.Location, model.Address, model.IsFusikoProsopo, model.DateOfConfiscation, model.Notary.Description, model.DateOfOrder, model.Notary.Name, model.Notary.City);
+                EpispeudonParagraphDilosi(doc, model.IsFusikoProsopo, model.Gender, model.Debtor, model.Upiresia);
+                ParagraphAkrivesAdigrafoDilosi(doc, model.Gender, model.CaseNumber, model.Notary.Name, model.Debtor, model.Ar8ro966, model.DateOfConfiscation, model.Fund.Name, model.Fund.Description, model.Fund.MAEDAP, model.Fund.MAEDAPAdress);
                 ParagrafosPraxis(doc, model.PraxiUpiresias, model.KeimenoPraxis);
                 ParagrafosSuntaxisEkthesis(doc);
                 ParagrafosUpografis(doc, model.PraxiUpiresias, model.IsFusikoProsopo, model.Signature);

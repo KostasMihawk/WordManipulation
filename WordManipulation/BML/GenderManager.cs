@@ -28,5 +28,17 @@ namespace WordManipulation.BML
             else
                 return "την";
         }
+
+        public string EpilogiArthouOfileti(Gender gender)
+        {
+            if (gender == Gender.Man)
+            {
+                return "του οφειλέτη";
+            }
+            else
+            {
+                return "της οφειλέτιδας";
+            }   
+        }
     }
 }
