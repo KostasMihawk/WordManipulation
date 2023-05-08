@@ -176,6 +176,23 @@ namespace WordManipulation.Models
                 MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
                 MAEDAPAdress = "στην Νέα Σμύρνη Αττικής, επί της Λεωφόρου Συγγρού αρ. 209-211, Α.Φ.Μ. 800715056, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά, με αρ. ΓΕΜΗ 138019601000"
             });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "SYMBOL INVESTMENT NPLCo DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Νέα Σμύρνη Αττικής, επί της Λεωφόρου Συγγρού αρ. 209-211, Α.Φ.Μ. 800715056, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά, με αρ. ΓΕΜΗ 138019601000"
+            });
+            list.Add(new Fund
+            {
+                //todo need to fix e8niki since it is not a fund
+                Id = id++,
+                Name = "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ",
+                Description = "",
+                MAEDAP = "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.",
+                MAEDAPAdress = "που εδρεύει στην Αθήνα, οδός Αιόλου αρ. 86 με Α.Φ.Μ.: 094014201 Δ.Ο.Υ. ΦΑΕ Αθηνών"
+            });
             return list;            
         }
         public List<Attorney> GetAttorneysList()
