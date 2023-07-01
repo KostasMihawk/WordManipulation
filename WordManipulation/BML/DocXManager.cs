@@ -344,16 +344,16 @@ namespace WordManipulation.BML
             switch(signature)
             {
                 case Signature.paralavon:
-                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ.....                                             Η Δικαστική Επιμελήτρια ");
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ.....                                             .. Δικαστικ... Επιμελ...... ");
                     break;
                 case Signature.paredros:
-                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... Πάρεδρος                                            Η Δικαστική Επιμελήτρια ");
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... Πάρεδρος                                            .. Δικαστικ... Επιμελ...... ");
                     break;
                 case Signature.ypallilos:
-                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                        Η Δικαστική Επιμελήτρια ");
+                    DocXConstructor.AddToParagraph(paragraph, $".. παραλαβ..... εξουσιοδοτημεν.... Υπάλληλος                       .. Δικαστικ... Επιμελ...... ");
                     break;
                 case Signature.genericMartyras:
-                    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     Η Δικαστική Επιμελήτρια ");
+                    DocXConstructor.AddToParagraph(paragraph, $".. .....αρ...........                                                                     .. Δικαστικ... Επιμελ...... ");
                     break;
                 default:
                     break;
@@ -413,7 +413,7 @@ namespace WordManipulation.BML
                 DocXConstructor.AddToParagraph(introParagraph, $"{locationUpiresias}, σήμερα στις ...................................... ");
             }
             DocXConstructor.AddToParagraph(introParagraph, "(     ) του μηνός " + dateMagager.GetCorrectMonthInFuckingGreek() + " του έτους δύο χιλιάδες είκοσι τρία (2023), ημέρα .......................................... και ώρα ........");
-            DocXConstructor.AddToParagraph(introParagraph, ", εγώ η δικαστική επιμελήτρια του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, μετά την έγγραφη παραγγελία ");
+            DocXConstructor.AddToParagraph(introParagraph, ", εγώ .. δικαστικ.. επιμελ....... του Εφετείου Αθηνών, .........................................................................., μέλος της εταιρείας «ΝΕΟΣ ΚΩΔΙΚΑΣ Α.Ε.Ε.Δ.Ε.», που εδρεύει στην Αθήνα, οδός Ζωοδόχου Πηγής αρ. 12, με Α.Φ.Μ. 996910057, νομίμως εκπροσωπούμενης, μετά την έγγραφη παραγγελία ");
             DocXConstructor.AddToParagraph(introParagraph, "που μου δόθηκε στις ");
             DocXConstructor.AddToParagraphBoldText(introParagraph,DateOfOrder);
             DocXConstructor.AddToParagraph(introParagraph, " από την Συμβολαιογράφο " + NotaryCity + " ");
@@ -459,7 +459,7 @@ namespace WordManipulation.BML
             DocXConstructor.AddToParagraph(paragraph, " η οποία εδρεύει " + MaedapAdress + " όπως εκπροσωπείται νόμιμα,");
             DocXConstructor.AddToParagraph(paragraph, " κατά " + genderManager.EpilogiArthouOfileti(gender) + " ");
             DocXConstructor.AddToParagraphBoldText(paragraph, ofeileths);
-            DocXConstructor.AddToParagraph(paragraph, ",");
+            DocXConstructor.AddToParagraph(paragraph, ".");
             return doc;
         }
 
