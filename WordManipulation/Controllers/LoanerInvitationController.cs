@@ -82,7 +82,7 @@ namespace WordManipulation.Controllers
                     }
                     zip.Save(stream);
                 }
-                return File(stream.ToArray(), "application/zip", "test.zip");
+                return File(stream.ToArray(), "application/zip", vm.Debtor + ".zip");
             }
         }
 

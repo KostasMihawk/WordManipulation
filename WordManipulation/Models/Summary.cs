@@ -34,7 +34,13 @@ namespace WordManipulation.Models
         public MemoryStream CreateEntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model)
         {
             return docXManager.EntoliSunexisisPlistiriasmou(model);            
-        }  
+        } 
+        
+        public MemoryStream CreateDilosiSunexisis(DilosiSunexisisModel model)
+        {
+            return docXManager.DilosiSunexisis(model);
+        }
+    
         
         public MemoryStream CreateKatasxetiria(KatasxetirioModel model)
         {

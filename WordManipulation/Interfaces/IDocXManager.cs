@@ -24,6 +24,8 @@ namespace WordManipulation.Interfaces
         MemoryStream EntoliSunexisisPlistiriasmou(SunexisiPlistiriasmouModel model);
         MemoryStream PraxiPlistiriasmou(LoanerInvitationModel model);
         MemoryStream Katasxetiria(KatasxetirioModel model);
-        
+        MemoryStream DilosiSunexisis(DilosiSunexisisModel model);
+
+
     }
 }
