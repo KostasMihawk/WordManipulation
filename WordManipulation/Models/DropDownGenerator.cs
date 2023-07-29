@@ -155,10 +155,57 @@ namespace WordManipulation.Models
             list.Add(new Fund
             {
                 Id = id++,
+<<<<<<< HEAD
                 Name = "FRONTIER ISSUER DESIGNATED ACTIVITY COMPANY",
                 Description = "με έδρα το Δουβλίνο Ιρλανδίας",
                 MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
                 MAEDAPAdress = "στο Μοσχάτο Αττικής, επί της Κύπρου αρ. 27 και Αρχιμήδους, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά,"
+=======
+                Name = "COSMOS SECURITISATION DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Νέα Σμύρνη Αττικής, επί της Λεωφόρου Συγγρού αρ. 209-211, Α.Φ.Μ. 800715056, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά, με αρ. ΓΕΜΗ 138019601000"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "ORION X SECURITISATION DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Νέα Σμύρνη Αττικής, επί της Λεωφόρου Συγγρού αρ. 209-211, Α.Φ.Μ. 800715056, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά, με αρ. ΓΕΜΗ 138019601000"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "FRONTIER ISSUER DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στo Μοσχάτο Αττικής, επί της Κύπρου αρ. 27, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "CAIRO I DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στo Μοσχάτο Αττικής, επί της Κύπρου αρ. 27, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "MEXICO DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στo Μοσχάτο Αττικής, επί της Κύπρου αρ. 27, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "CAIRO IΙ DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στo Μοσχάτο Αττικής, επί της Κύπρου αρ. 27, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά"
+>>>>>>> 722c9368203c59a341f9efa05e12f6364e1c78fb
             });
             list.Add(new Fund
             {
