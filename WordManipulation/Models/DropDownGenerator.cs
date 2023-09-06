@@ -155,6 +155,12 @@ namespace WordManipulation.Models
             list.Add(new Fund
             {
                 Id = id++,
+<<<<<<< HEAD
+                Name = "FRONTIER ISSUER DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στο Μοσχάτο Αττικής, επί της Κύπρου αρ. 27 και Αρχιμήδους, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά,"
+=======
                 Name = "COSMOS SECURITISATION DESIGNATED ACTIVITY COMPANY",
                 Description = "με έδρα το Δουβλίνο Ιρλανδίας",
                 MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
@@ -199,6 +205,7 @@ namespace WordManipulation.Models
                 Description = "με έδρα το Δουβλίνο Ιρλανδίας",
                 MAEDAP = "DOVALUE GREECE ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
                 MAEDAPAdress = "στo Μοσχάτο Αττικής, επί της Κύπρου αρ. 27, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά"
+>>>>>>> 722c9368203c59a341f9efa05e12f6364e1c78fb
             });
             list.Add(new Fund
             {
