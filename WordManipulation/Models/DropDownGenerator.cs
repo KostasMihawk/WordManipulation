@@ -234,6 +234,14 @@ namespace WordManipulation.Models
             });
             list.Add(new Fund
             {
+                Id = id++,
+                Name = "SUNRISE I NPL FINANCE DAC",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "INTRUM HELLAS ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Αθήνα, επί της Λεωφόρου Μεσογείων αρ. 109-111, Α.Φ.Μ. 801215902, Δ.Ο.Υ. Φ.Α.Ε. Αθηνών"
+            });
+            list.Add(new Fund
+            {
                 //todo need to fix e8niki since it is not a fund
                 Id = id++,
                 Name = "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ",
