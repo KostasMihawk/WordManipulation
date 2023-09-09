@@ -13,10 +13,10 @@ namespace WordManipulation.Controllers
     public class KatasxetiriaController : Controller
     {
         // GET: Katasxetiria
-        public ActionResult Index()
-        {
-            return View();
-        }
+        // public ActionResult Index()
+        // {
+        //     return View();
+        // }
 
         public ActionResult CreateKatasxetirio()
         {

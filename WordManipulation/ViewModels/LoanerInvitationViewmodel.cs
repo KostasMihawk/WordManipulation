@@ -32,6 +32,7 @@ namespace WordManipulation.ViewModels
         public bool IsTable { get; set; }
         [Display(Name = "Αναπλειστηριασμός")]
         public bool IsAnaplistiriasmos { get; set; }
-
+        [Display(Name = "ΠΡΟΣΚΛΗΣΗ ΕΙΚΑΖΟΜΕΝΩΝ")]
+        public bool IsEikazomenon { get; set; }
     }
 }
