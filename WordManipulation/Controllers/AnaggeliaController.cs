@@ -11,21 +11,21 @@ namespace WordManipulation.Controllers
     public class AnaggeliaController : Controller
     {
         // GET: Anaggelia
-        public ActionResult Anaggelia()
-        {
-            return View();
-        }
-
-        [HttpPost()]
-        public ActionResult Anaggelia(AnaggeliaViewmodel vm)
-        {
-            DropDownGenerator generator = new DropDownGenerator();
-            Summary s = new Summary();
-            Form form = new Form();
-
-
-
-            return View();
-        }
+        // public ActionResult Anaggelia()
+        // {
+        //     return View();
+        // }
+        //
+        // [HttpPost()]
+        // public ActionResult Anaggelia(AnaggeliaViewmodel vm)
+        // {
+        //     DropDownGenerator generator = new DropDownGenerator();
+        //     Summary s = new Summary();
+        //     Form form = new Form();
+        //
+        //
+        //
+        //     return View();
+        // }
     }
 }

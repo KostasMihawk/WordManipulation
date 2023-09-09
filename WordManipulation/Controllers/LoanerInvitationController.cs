@@ -18,10 +18,10 @@ namespace WordManipulation.Controllers
     public class LoanerInvitationController : Controller
     {
         // GET: LoanerInvitation
-        public ActionResult LoanerInvitation()
-        {
-            return View();
-        }
+        // public ActionResult LoanerInvitation()
+        // {
+        //     return View();
+        // }
 
         public ActionResult CreateLoanerInvitation()
         {

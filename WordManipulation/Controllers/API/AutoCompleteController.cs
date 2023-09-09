@@ -60,25 +60,14 @@ namespace WordManipulation.Controllers.API
             info.Verb = "print";
             info.CreateNoWindow = true;
             info.WindowStyle = ProcessWindowStyle.Hidden;
-            string fileName;
             Process p = new Process();
-
             using (ZipFile zip = new ZipFile())
             {
                 foreach (var doc in foreis)
                 {
                     form.Defender.Text = doc.Key;
                     form.Defender.legalEntity = doc.Value;
-                    //fileName = s.CreateSunexisiPlistiriasmou(form);
-                    //zip.AddFile(fileName, @"C:\ektheseis\kanonikes");
-                    //Process.Start("WINWORD.EXE", fileName);
-                    //info.FileName = fileName;
-
-                    //p.StartInfo = info;
-                    //p.Start();
-
-                    //p.WaitForInputIdle();
-                    //System.Threading.Thread.Sleep(3000);
+                    
 
                 }
                 string zipName = String.Format("Zip_{0}.zip", DateTime.Now.ToString("yyyy-MMM-dd-HHmmss"));
