@@ -163,6 +163,14 @@ namespace WordManipulation.Models
             list.Add(new Fund
             {
                 Id = id++,
+                Name = "MEXICO FINANCE DAC",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στο Μοσχάτο Αττικής, επί της Κύπρου αρ. 27 και Αρχιμήδους, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά,"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
                 Name = "GALAXY II FUNDING DESIGNATED ACTIVITY COMPANY",
                 Description = "με έδρα το Δουβλίνο Ιρλανδίας",
                 MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
@@ -180,6 +188,14 @@ namespace WordManipulation.Models
             {
                 Id = id++,
                 Name = "GALAXY IV FUNDING DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Νέα Σμύρνη Αττικής, επί της Λεωφόρου Συγγρού αρ. 209-211, Α.Φ.Μ. 800715056, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά, με αρ. ΓΕΜΗ 138019601000"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "Poseidon Financial Investor Designated Activity Company",
                 Description = "με έδρα το Δουβλίνο Ιρλανδίας",
                 MAEDAP = "CEPAL HELLAS ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΕΣ ΥΠΗΡΕΣΙΕΣ ΜΟΝΟΠΡΟΣΩΠΗ ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
                 MAEDAPAdress = "στην Νέα Σμύρνη Αττικής, επί της Λεωφόρου Συγγρού αρ. 209-211, Α.Φ.Μ. 800715056, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά, με αρ. ΓΕΜΗ 138019601000"
@@ -208,6 +224,30 @@ namespace WordManipulation.Models
                 Description = "",
                 MAEDAP = "ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ ΤΗΣ ΕΛΛΑΔΟΣ Α.Ε.",
                 MAEDAPAdress = "που εδρεύει στην Αθήνα, οδός Αιόλου αρ. 86 με Α.Φ.Μ.: 094014201 Δ.Ο.Υ. ΦΑΕ Αθηνών"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "VEGA I NPL FINANCE DAC",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "INTRUM HELLAS ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Αθήνα, επί της Λεωφόρου Μεσογείων αρ. 109-111, Α.Φ.Μ. 801215902, Δ.Ο.Υ. Φ.Α.Ε. Αθηνών"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "VEGA II NPL FINANCE DAC",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "INTRUM HELLAS ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Αθήνα, επί της Λεωφόρου Μεσογείων αρ. 109-111, Α.Φ.Μ. 801215902, Δ.Ο.Υ. Φ.Α.Ε. Αθηνών"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "VEGA III NPL FINANCE DAC",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "INTRUM HELLAS ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στην Αθήνα, επί της Λεωφόρου Μεσογείων αρ. 109-111, Α.Φ.Μ. 801215902, Δ.Ο.Υ. Φ.Α.Ε. Αθηνών"
             });
             return list;            
         }
