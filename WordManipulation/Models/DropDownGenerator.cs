@@ -163,6 +163,30 @@ namespace WordManipulation.Models
             list.Add(new Fund
             {
                 Id = id++,
+                Name = "CAIRO 2 FINANCE DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στο Μοσχάτο Αττικής, επί της Κύπρου αρ. 27 και Αρχιμήδους, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά,"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "CAIRO 1 FINANCE DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στο Μοσχάτο Αττικής, επί της Κύπρου αρ. 27 και Αρχιμήδους, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά,"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
+                Name = "POSEIDON DESIGNATED ACTIVITY COMPANY",
+                Description = "με έδρα το Δουβλίνο Ιρλανδίας",
+                MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
+                MAEDAPAdress = "στο Μοσχάτο Αττικής, επί της Κύπρου αρ. 27 και Αρχιμήδους, Α.Φ.Μ. 099755919, Δ.Ο.Υ. Φ.Α.Ε. Πειραιά,"
+            });
+            list.Add(new Fund
+            {
+                Id = id++,
                 Name = "MEXICO FINANCE DAC",
                 Description = "με έδρα το Δουβλίνο Ιρλανδίας",
                 MAEDAP = "DOVALUE GREECE  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ ΔΙΑΧΕΙΡΙΣΗΣ ΑΠΑΙΤΗΣΕΩΝ ΑΠΟ ΔΑΝΕΙΑ ΚΑΙ ΠΙΣΤΩΣΕΙΣ",
